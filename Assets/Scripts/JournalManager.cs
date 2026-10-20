@@ -10,6 +10,22 @@ public class JournalManager : MonoBehaviour
 {
     public static JournalManager Instance { get; private set; }
 
+    [System.Serializable]
+    private class HypothesisDefinition
+    {
+        [Header("Identity")]
+        public string hypothesisID;
+        public string informationEntryID;
+        public string title;
+
+        [TextArea(3, 8)]
+        public string description;
+
+        [Header("Required Information")]
+        public string requiredInformationID1;
+        public string requiredInformationID2;
+    }
+
     [Header("Journal UI")]
     [SerializeField] private GameObject journalPanel;
     [SerializeField] private TMP_Text journalEntriesText;
@@ -27,6 +43,10 @@ public class JournalManager : MonoBehaviour
     [SerializeField] private Button connectButton;
     [SerializeField] private TMP_Text connectionStatusText;
 
+    [SerializeField]
+    private List<HypothesisDefinition> hypothesisDefinitions =
+        new List<HypothesisDefinition>();
+
     private readonly List<string> selectedInformationIDs =
         new List<string>();
 
@@ -42,7 +62,7 @@ public class JournalManager : MonoBehaviour
         new List<Button>();
 
     private readonly HashSet<string> formedHypothesisIDs =
-    new HashSet<string>();
+        new HashSet<string>();
 
     public string SelectedInformationID { get; private set; }
 
@@ -70,23 +90,26 @@ public class JournalManager : MonoBehaviour
         if (discoveryNotificationText != null)
             discoveryNotificationText.gameObject.SetActive(false);
 
-        closeButton.onClick.AddListener(CloseJournal);
+        if (closeButton != null)
+            closeButton.onClick.AddListener(CloseJournal);
 
-        connectButton.onClick.AddListener(ConnectSelectedEntries);
+        if (connectButton != null)
+            connectButton.onClick.AddListener(ConnectSelectedEntries);
 
         if (connectionStatusText != null)
-        {
             connectionStatusText.text = "";
-        }
+
         if (journalEntriesText != null)
             journalEntriesText.gameObject.SetActive(false);
 
         UpdateJournalUI();
     }
+
     public bool HasHypothesis(string hypothesisID)
     {
         return formedHypothesisIDs.Contains(hypothesisID);
     }
+
     public bool HasInformation(string informationID)
     {
         return discoveredIDs.Contains(informationID);
@@ -99,6 +122,14 @@ public class JournalManager : MonoBehaviour
         string informationType,
         string informationSource)
     {
+        if (string.IsNullOrWhiteSpace(informationID))
+        {
+            Debug.LogError(
+                "JournalManager: Cannot add an entry without an ID."
+            );
+            return;
+        }
+
         if (discoveredIDs.Contains(informationID))
         {
             Debug.Log("Already recorded: " + title);
@@ -147,6 +178,9 @@ public class JournalManager : MonoBehaviour
 
         entryButtons.Clear();
 
+        if (entryList == null || entryButtonPrefab == null)
+            return;
+
         foreach (JournalEntry entry in entries)
         {
             Button button = Instantiate(
@@ -171,6 +205,7 @@ public class JournalManager : MonoBehaviour
     private void SelectEntry(string informationID)
     {
         SelectedInformationID = informationID;
+
         if (selectedInformationIDs.Contains(informationID))
         {
             selectedInformationIDs.Remove(informationID);
@@ -181,11 +216,9 @@ public class JournalManager : MonoBehaviour
         }
         else
         {
-            if (connectionStatusText != null)
-            {
-                connectionStatusText.text =
-                    "You can select only two entries at a time.";
-            }
+            SetConnectionStatus(
+                "You can select only two entries at a time."
+            );
         }
 
         JournalEntry entry = entries.Find(
@@ -207,6 +240,13 @@ public class JournalManager : MonoBehaviour
                 entry.Title + "\n" +
                 entry.Description;
         }
+
+        if (selectedInformationIDs.Count == 0)
+            SetConnectionStatus("No entries selected.");
+        else if (selectedInformationIDs.Count == 1)
+            SetConnectionStatus("Select one more entry.");
+        else
+            SetConnectionStatus("Two entries selected.");
     }
 
     private void ShowDiscoveryNotification(string title)
@@ -230,23 +270,27 @@ public class JournalManager : MonoBehaviour
     {
         yield return new WaitForSeconds(notificationDuration);
 
-        discoveryNotificationText.gameObject.SetActive(false);
+        if (discoveryNotificationText != null)
+            discoveryNotificationText.gameObject.SetActive(false);
+
         notificationCoroutine = null;
     }
 
     public void OpenJournal()
     {
-        journalPanel.SetActive(true);
+        if (journalPanel != null)
+            journalPanel.SetActive(true);
     }
 
     public void CloseJournal()
     {
-        journalPanel.SetActive(false);
+        if (journalPanel != null)
+            journalPanel.SetActive(false);
     }
 
     public bool IsJournalOpen()
     {
-        return journalPanel.activeSelf;
+        return journalPanel != null && journalPanel.activeSelf;
     }
 
     private void Update()
@@ -262,6 +306,7 @@ public class JournalManager : MonoBehaviour
                 OpenJournal();
         }
     }
+
     private void ConnectSelectedEntries()
     {
         if (selectedInformationIDs.Count != 2)
@@ -273,42 +318,64 @@ public class JournalManager : MonoBehaviour
         string firstID = selectedInformationIDs[0];
         string secondID = selectedInformationIDs[1];
 
-        bool validCombination =
-            (firstID == "daniel_newspaper" &&
-             secondID == "resident_daniel_statement") ||
-            (firstID == "resident_daniel_statement" &&
-             secondID == "daniel_newspaper");
+        HypothesisDefinition matchedHypothesis = null;
 
-        if (validCombination)
+        foreach (HypothesisDefinition definition
+                 in hypothesisDefinitions)
         {
-            formedHypothesisIDs.Add("newspaper_resident_connection");
-            AddEntry(
-                "hypothesis_newspaper_resident",
-                "Hypothesis: The accounts are connected",
-                "The newspaper account and the resident's statement " +
-                "can be considered together. Further investigation " +
-                "may clarify the circumstances of Daniel's disappearance.",
-                "Hypothesis",
-                "Player interpretation"
-            );
+            if (definition == null)
+                continue;
 
-            SetConnectionStatus("Hypothesis formed.");
+            bool matches =
+                (firstID == definition.requiredInformationID1 &&
+                 secondID == definition.requiredInformationID2) ||
+                (firstID == definition.requiredInformationID2 &&
+                 secondID == definition.requiredInformationID1);
+
+            if (matches)
+            {
+                matchedHypothesis = definition;
+                break;
+            }
         }
-        else
+
+        selectedInformationIDs.Clear();
+
+        if (matchedHypothesis == null)
         {
             SetConnectionStatus(
                 "These pieces of information do not form a known hypothesis."
             );
+            return;
         }
 
-        selectedInformationIDs.Clear();
+        if (formedHypothesisIDs.Contains(
+                matchedHypothesis.hypothesisID))
+        {
+            SetConnectionStatus(
+                "You have already formed this hypothesis."
+            );
+            return;
+        }
+
+        formedHypothesisIDs.Add(
+            matchedHypothesis.hypothesisID
+        );
+
+        AddEntry(
+            matchedHypothesis.informationEntryID,
+            matchedHypothesis.title,
+            matchedHypothesis.description,
+            "Hypothesis",
+            "Player interpretation"
+        );
+
+        SetConnectionStatus("Hypothesis formed.");
     }
 
     private void SetConnectionStatus(string message)
     {
         if (connectionStatusText != null)
-        {
             connectionStatusText.text = message;
-        }
     }
 }
