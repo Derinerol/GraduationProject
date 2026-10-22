@@ -1,14 +1,15 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Stores significant knowledge and interactions for one NPC.
-/// Add this component to each NPC that needs persistent
-/// memory during the current play session.
+/// Stores an NPC's knowledge, remembered events and asked questions.
+/// Runtime changes survive scene reloads within the current play session.
 /// </summary>
 public class NPCMemory : MonoBehaviour
 {
+    [Header("Persistent Identity")]
+    [SerializeField] private string npcID = "";
+
     [Header("Information This NPC Knows")]
     [SerializeField] private List<string> knownInformationIDs = new();
 
@@ -22,79 +23,105 @@ public class NPCMemory : MonoBehaviour
     private HashSet<string> rememberedEvents;
     private HashSet<string> askedQuestions;
 
+    private class MemoryState
+    {
+        public readonly HashSet<string> KnownInformation = new();
+        public readonly HashSet<string> RememberedEvents = new();
+        public readonly HashSet<string> AskedQuestions = new();
+    }
+
+    private static readonly Dictionary<string, MemoryState> savedMemories = new();
+
+    // Unity resets static fields at the beginning of a new Play session,
+    // including when Enter Play Mode Options disables domain reload.
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetRuntimeMemories()
+    {
+        savedMemories.Clear();
+    }
+
     private void Awake()
     {
-        // Build fast lookup collections from the Inspector lists.
         knownInformation = new HashSet<string>(knownInformationIDs);
         rememberedEvents = new HashSet<string>(rememberedEventIDs);
         askedQuestions = new HashSet<string>(askedQuestionIDs);
+
+        if (string.IsNullOrWhiteSpace(npcID))
+        {
+            Debug.LogWarning($"NPCMemory on '{name}' has no NPC ID. Its memory won't persist between scenes.", this);
+            return;
+        }
+
+        if (savedMemories.TryGetValue(npcID, out MemoryState saved))
+        {
+            knownInformation.UnionWith(saved.KnownInformation);
+            rememberedEvents.UnionWith(saved.RememberedEvents);
+            askedQuestions.UnionWith(saved.AskedQuestions);
+            SyncInspectorLists();
+        }
+        else
+        {
+            SaveCurrentState();
+        }
     }
 
-    public bool KnowsInformation(string informationID)
-    {
-        return HasID(knownInformation, informationID);
-    }
+    public bool KnowsInformation(string informationID) => HasID(knownInformation, informationID);
+    public bool RemembersEvent(string eventID) => HasID(rememberedEvents, eventID);
+    public bool HasBeenAsked(string questionID) => HasID(askedQuestions, questionID);
 
-    public bool RemembersEvent(string eventID)
-    {
-        return HasID(rememberedEvents, eventID);
-    }
-
-    public bool HasBeenAsked(string questionID)
-    {
-        return HasID(askedQuestions, questionID);
-    }
-
-    /// <summary>
-    /// Records information disclosed to this NPC.
-    /// Returns true only if this is new information for them.
-    /// </summary>
     public bool LearnInformation(string informationID)
     {
-        if (!AddID(knownInformation, informationID))
-            return false;
-
+        if (!AddID(knownInformation, informationID)) return false;
         knownInformationIDs.Add(informationID);
+        SaveCurrentState();
         return true;
     }
 
-    /// <summary>
-    /// Records a significant event experienced by this NPC.
-    /// Returns true only the first time the event is recorded.
-    /// </summary>
     public bool RememberEvent(string eventID)
     {
-        if (!AddID(rememberedEvents, eventID))
-            return false;
-
+        if (!AddID(rememberedEvents, eventID)) return false;
         rememberedEventIDs.Add(eventID);
+        SaveCurrentState();
         return true;
     }
 
-    /// <summary>
-    /// Records a question so it can be asked only once
-    /// if the dialogue design requires that behavior.
-    /// </summary>
     public bool RecordQuestion(string questionID)
     {
-        if (!AddID(askedQuestions, questionID))
-            return false;
-
+        if (!AddID(askedQuestions, questionID)) return false;
         askedQuestionIDs.Add(questionID);
+        SaveCurrentState();
         return true;
+    }
+
+    private void SaveCurrentState()
+    {
+        if (string.IsNullOrWhiteSpace(npcID)) return;
+
+        if (!savedMemories.TryGetValue(npcID, out MemoryState state))
+        {
+            state = new MemoryState();
+            savedMemories.Add(npcID, state);
+        }
+
+        state.KnownInformation.UnionWith(knownInformation);
+        state.RememberedEvents.UnionWith(rememberedEvents);
+        state.AskedQuestions.UnionWith(askedQuestions);
+    }
+
+    private void SyncInspectorLists()
+    {
+        knownInformationIDs = new List<string>(knownInformation);
+        rememberedEventIDs = new List<string>(rememberedEvents);
+        askedQuestionIDs = new List<string>(askedQuestions);
     }
 
     private static bool HasID(HashSet<string> collection, string id)
     {
-        return !string.IsNullOrWhiteSpace(id)
-            && collection != null
-            && collection.Contains(id);
+        return !string.IsNullOrWhiteSpace(id) && collection != null && collection.Contains(id);
     }
 
     private static bool AddID(HashSet<string> collection, string id)
     {
-        return !string.IsNullOrWhiteSpace(id)
-            && collection != null
-            && collection.Add(id);
+        return !string.IsNullOrWhiteSpace(id) && collection != null && collection.Add(id);
     }
 }

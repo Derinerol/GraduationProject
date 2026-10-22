@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -63,15 +64,16 @@ public class Interactable : MonoBehaviour
     [TextArea(3, 8)]
     [SerializeField]
     private string informationDescription =
-        "An anonymous package contains a photocopy of a dated " +
-        "maintenance record, a fragment of a work order, and a note: " +
-        "\"They didn't look in the right place.\" The documents raise " +
-        "questions about the accepted account of Daniel Mercer's " +
-        "disappearance, but do not establish what happened to him.";
+        "An anonymous sender sent me two waterworks records and a " +
+        "note claiming the original search missed something.";
 
     [SerializeField]
     private InformationType informationType =
         InformationType.Evidence;
+
+    [Header("Scene Exit")]
+    [SerializeField] private bool isSceneExit = false;
+    [SerializeField] private string destinationScene = "Diner_Investigation";
 
     // Fallback memory for NPCs without an NPCMemory component.
     private readonly HashSet<string> localQuestions =
@@ -88,6 +90,13 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
+        // Scene exits take priority over other interaction types.
+        if (isSceneExit)
+        {
+            ExitToScene();
+            return;
+        }
+
         if (isInformationSource)
         {
             InteractWithInformationSource();
@@ -160,41 +169,22 @@ public class Interactable : MonoBehaviour
         if (!ValidateDialogueManager())
             return;
 
-        List<DialogueChoice> choices =
-            new List<DialogueChoice>();
+        List<DialogueChoice> choices = new List<DialogueChoice>();
 
-        bool hasAskedAboutDaniel =
-            HasAsked("evelyn_asked_about_daniel");
-
-        bool hasAskedAboutLastDays =
-            HasAsked("evelyn_asked_about_last_days");
-
-        bool hasAskedAboutOriginalAccount =
-            HasAsked("evelyn_asked_about_original_account");
-
-        bool hasAskedAboutWaterworks =
-            HasAsked("evelyn_asked_about_waterworks");
-
-        bool knowsAboutPackage =
-            KnowsInformation("anonymous_package");
-
-        bool playerHasPackage =
-            JournalManager.Instance != null &&
-            JournalManager.Instance.HasInformation(
-                "anonymous_package"
-            );
-
-        bool hasDisclosedPackage =
-            KnowsInformation("anonymous_package");
+        bool hasAskedAboutDaniel = HasAsked("evelyn_asked_about_daniel");
+        bool hasAskedAboutLastDays = HasAsked("evelyn_asked_about_last_days");
+        bool hasAskedAboutOriginalAccount = HasAsked("evelyn_asked_about_original_account");
+        bool hasAskedAboutWaterworks = HasAsked("evelyn_asked_about_waterworks");
+        bool knowsAboutPackage = KnowsInformation("anonymous_package");
+        bool playerHasPackage = JournalManager.Instance != null &&
+            JournalManager.Instance.HasInformation("anonymous_package");
 
         string currentOpeningLine;
-
-        if (hasDisclosedPackage)
+        if (knowsAboutPackage)
         {
             currentOpeningLine =
-                "You mentioned that package you received. " +
-                "I've been thinking about what you asked me " +
-                "about Daniel.";
+                "I've been thinking about those papers you showed me. " +
+                "I wish I remembered more.";
         }
         else if (hasAskedAboutDaniel)
         {
@@ -205,160 +195,123 @@ public class Interactable : MonoBehaviour
         else
         {
             currentOpeningLine =
-                "Afternoon. You don't look like you're passing " +
-                "through. What brings you to Shaw's?";
+                "Afternoon. You don't look like you're passing through. " +
+                "What brings you to Shaw's?";
         }
 
-        // 1. Establish Evelyn's memory of Daniel.
+        // First establish Evelyn's familiarity with Daniel.
         if (!hasAskedAboutDaniel)
         {
             choices.Add(new DialogueChoice(
                 "Ask Evelyn about Daniel Mercer",
-                "Daniel? He used to come in here fairly often. " +
-                "Quiet fellow. Kept mostly to himself. When he " +
-                "disappeared, people said he'd decided to leave. " +
-                "After a while, that became the story everyone told.",
+                "Daniel? Sure, I remember him. Came in a few times a week, " +
+                "usually by himself. Quiet fellow. Always polite. When he " +
+                "disappeared, people said he'd left town. I never heard anything definite.",
                 () =>
                 {
-                    RecordQuestionOnce(
-                        "evelyn_asked_about_daniel"
-                    );
-
+                    RecordQuestionOnce("evelyn_asked_about_daniel");
                     RecordClaimOnce(
                         "evelyn_daniel_memory",
-                        "Evelyn — Daniel Mercer",
-                        "Evelyn remembers Daniel as a fairly regular, " +
-                        "quiet customer. She says the town came to " +
-                        "accept the explanation that he had left.",
-                        "Evelyn Shaw"
-                    );
+                        "Daniel at the Diner",
+                        "Evelyn remembers Daniel as a quiet regular. " +
+                        "She heard he left town but never knew for certain.",
+                        "Evelyn Shaw");
                 }
             ));
         }
 
-        // 2. Ask about the period shortly before the disappearance.
         if (hasAskedAboutDaniel && !hasAskedAboutLastDays)
         {
             choices.Add(new DialogueChoice(
                 "Ask what Daniel was like shortly before he disappeared",
-                "He seemed distracted toward the end. Not frightened, " +
-                "exactly. More like he had something on his mind and " +
-                "couldn't settle. I didn't press him. People come in " +
-                "here with their own troubles.",
+                "He seemed distracted that last week. I remember bringing " +
+                "him coffee and having to ask twice whether he wanted " +
+                "anything to eat. That's not how he usually was. I figured " +
+                "something was bothering him, but I didn't ask.",
                 () =>
                 {
-                    RecordQuestionOnce(
-                        "evelyn_asked_about_last_days"
-                    );
-
+                    RecordQuestionOnce("evelyn_asked_about_last_days");
                     RecordClaimOnce(
                         "evelyn_daniel_last_days",
-                        "Evelyn — Daniel's last days",
-                        "Evelyn recalls that Daniel seemed distracted " +
-                        "shortly before he disappeared, although she " +
-                        "did not know what was troubling him.",
-                        "Evelyn Shaw"
-                    );
+                        "Daniel's Last Days",
+                        "Evelyn noticed Daniel seemed unusually distracted " +
+                        "during the week before he disappeared. She doesn't know why.",
+                        "Evelyn Shaw");
                 }
             ));
         }
 
-        // 3. Ask about the explanation accepted by the town.
         if (hasAskedAboutDaniel && !hasAskedAboutOriginalAccount)
         {
             choices.Add(new DialogueChoice(
                 "Ask whether she believed Daniel left voluntarily",
-                "I couldn't tell you what I believed. The authorities " +
-                "treated it as a departure, and there wasn't much " +
-                "for the rest of us to go on. People have a way of " +
-                "accepting an explanation when there's nothing else " +
-                "to hold on to.",
+                "At the time? I suppose I did. That's what everyone was " +
+                "saying, and the sheriff's office didn't seem to think " +
+                "anything else had happened. But I never saw him leave. " +
+                "I don't know anyone who did.",
                 () =>
                 {
-                    RecordQuestionOnce(
-                        "evelyn_asked_about_original_account"
-                    );
-
+                    RecordQuestionOnce("evelyn_asked_about_original_account");
                     RecordClaimOnce(
                         "evelyn_accepted_account",
-                        "Evelyn — the accepted explanation",
-                        "Evelyn says the authorities treated Daniel's " +
-                        "disappearance as a voluntary departure. She " +
-                        "does not claim to know whether that account " +
-                        "was true.",
-                        "Evelyn Shaw"
-                    );
+                        "Voluntary Departure",
+                        "Evelyn believed Daniel left because everyone said so. " +
+                        "She never saw him leave.",
+                        "Evelyn Shaw");
                 }
             ));
         }
 
-        // 4. Disclose the package only after the player has found it.
-        // Knowledge is recorded only when the player selects this option.
-        if (playerHasPackage && !hasDisclosedPackage)
+        // The player must actively disclose the package.
+        if (playerHasPackage && !knowsAboutPackage)
         {
             choices.Add(new DialogueChoice(
                 "Tell Evelyn about the anonymous package",
-                "A maintenance record? I can't tell you what that " +
-                "proves. Daniel had been asking questions about " +
-                "something at the old waterworks, though. I never " +
-                "knew exactly what he was looking for. I didn't " +
-                "connect it to his disappearance at the time.",
+                "Someone sent you waterworks records? That's strange. " +
+                "Daniel asked me something about the old waterworks not " +
+                "long before he disappeared. I didn't think much of it then. " +
+                "I couldn't tell you what he was looking for.",
                 () =>
                 {
                     LearnInformationOnce("anonymous_package");
-
-                    RememberEventOnce(
-                        "anonymous_package_disclosed_to_evelyn"
-                    );
-
+                    RememberEventOnce("anonymous_package_disclosed_to_evelyn");
                     RecordClaimOnce(
                         "evelyn_package_reaction",
-                        "Evelyn — reaction to the package",
-                        "After being told about the anonymous package, " +
-                        "Evelyn recalls that Daniel had been asking " +
-                        "questions about the old waterworks. She does " +
-                        "not know what he was investigating or what " +
-                        "happened to him.",
-                        "Evelyn Shaw"
-                    );
+                        "Evelyn's Recollection",
+                        "Mentioning the package reminded Evelyn that Daniel " +
+                        "had asked about the old waterworks shortly before disappearing.",
+                        "Evelyn Shaw");
                 }
             ));
         }
 
-        // 5. The waterworks lead becomes available after disclosure.
-        // This is a separate question, not an automatic conclusion.
+        // Follow-up only after Evelyn learns about the package.
         if (knowsAboutPackage && !hasAskedAboutWaterworks)
         {
             choices.Add(new DialogueChoice(
                 "Ask what Daniel said about the waterworks",
-                "I only remember him bringing it up. He asked whether " +
-                "the place still kept its own records. I told him I " +
-                "had no idea. I worked here, not for the town. That's " +
-                "all I can honestly tell you.",
+                "He asked whether the old waterworks kept its own records " +
+                "or if everything went through the town office. I told him " +
+                "I wouldn't know. He didn't say what he needed them for, " +
+                "and I didn't think to ask.",
                 () =>
                 {
-                    RecordQuestionOnce(
-                        "evelyn_asked_about_waterworks"
-                    );
-
+                    RecordQuestionOnce("evelyn_asked_about_waterworks");
                     RecordClaimOnce(
                         "evelyn_waterworks_statement",
-                        "Evelyn — Daniel and the waterworks",
-                        "Evelyn recalls Daniel asking whether the old " +
-                        "waterworks kept its own records. She does not " +
-                        "know why he was interested.",
-                        "Evelyn Shaw"
-                    );
+                        "Waterworks Records",
+                        "Daniel asked Evelyn where the waterworks records " +
+                        "were kept. She didn't know.",
+                        "Evelyn Shaw");
                 }
             ));
         }
 
-        // 6. Always offer a low-stakes topic.
         choices.Add(new DialogueChoice(
             "Ask about the town",
-            "Same people, same tables, same arguments over the " +
-            "weather. Small towns don't change as quickly as " +
-            "people imagine.",
+            "Grayford doesn't change much. Same faces, same tables, " +
+            "same complaints about the weather. People remember things, " +
+            "though. Even when they'd rather not talk about them.",
             null
         ));
 
@@ -478,5 +431,20 @@ public class Interactable : MonoBehaviour
         );
 
         return false;
+    }
+    private void ExitToScene()
+    {
+        if (string.IsNullOrWhiteSpace(destinationScene))
+        {
+            Debug.LogError(
+                "Interactable: No destination scene configured.",
+                this
+            );
+            return;
+        }
+
+        Debug.Log("Leaving for scene: " + destinationScene);
+
+        SceneManager.LoadScene(destinationScene);
     }
 }

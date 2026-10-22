@@ -75,6 +75,7 @@ public class JournalManager : MonoBehaviour
         public string Source;
     }
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -85,7 +86,11 @@ public class JournalManager : MonoBehaviour
 
         Instance = this;
 
-        journalPanel.SetActive(false);
+        // Keep the journal manager and its attached UI between scenes.
+        DontDestroyOnLoad(gameObject);
+
+        if (journalPanel != null)
+            journalPanel.SetActive(false);
 
         if (discoveryNotificationText != null)
             discoveryNotificationText.gameObject.SetActive(false);
@@ -103,6 +108,57 @@ public class JournalManager : MonoBehaviour
             journalEntriesText.gameObject.SetActive(false);
 
         UpdateJournalUI();
+    }
+
+    public void BindSceneUI(
+        GameObject newJournalPanel,
+        TMP_Text newJournalEntriesText,
+        Button newCloseButton,
+        Transform newEntryList,
+        Button newEntryButtonPrefab,
+        TMP_Text newDiscoveryNotificationText,
+        Button newConnectButton,
+        TMP_Text newConnectionStatusText)
+    {
+        // Connect the persistent manager to this scene's UI.
+        journalPanel = newJournalPanel;
+        journalEntriesText = newJournalEntriesText;
+        closeButton = newCloseButton;
+        entryList = newEntryList;
+        entryButtonPrefab = newEntryButtonPrefab;
+        discoveryNotificationText = newDiscoveryNotificationText;
+        connectButton = newConnectButton;
+        connectionStatusText = newConnectionStatusText;
+
+        // Prevent duplicate listeners when reconnecting UI.
+        if (closeButton != null)
+        {
+            closeButton.onClick.RemoveListener(CloseJournal);
+            closeButton.onClick.AddListener(CloseJournal);
+        }
+
+        if (connectButton != null)
+        {
+            connectButton.onClick.RemoveListener(ConnectSelectedEntries);
+            connectButton.onClick.AddListener(ConnectSelectedEntries);
+        }
+
+        if (journalPanel != null)
+            journalPanel.SetActive(false);
+
+        if (discoveryNotificationText != null)
+            discoveryNotificationText.gameObject.SetActive(false);
+
+        if (journalEntriesText != null)
+            journalEntriesText.gameObject.SetActive(false);
+
+        if (connectionStatusText != null)
+            connectionStatusText.text = "";
+
+        // Recreate the entry buttons from the persistent journal data.
+        UpdateJournalUI();
+
+        Debug.Log("JournalManager connected to the current scene's UI.");
     }
 
     public bool HasHypothesis(string hypothesisID)
