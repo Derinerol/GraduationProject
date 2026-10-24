@@ -43,6 +43,13 @@ public class JournalManager : MonoBehaviour
     [SerializeField] private Button connectButton;
     [SerializeField] private TMP_Text connectionStatusText;
 
+    [Header("Selection Display (Optional)")]
+    [SerializeField] private TMP_Text selectionSlot1Text;
+    [SerializeField] private TMP_Text selectionSlot2Text;
+    [SerializeField] private Button clearSelectionButton;
+    [SerializeField] private Color selectedEntryColor = new Color(0.39f, 0.47f, 0.52f);
+    private readonly Dictionary<string, Button> buttonsByID = new Dictionary<string, Button>();
+
     [SerializeField]
     private List<HypothesisDefinition> hypothesisDefinitions =
         new List<HypothesisDefinition>();
@@ -233,6 +240,7 @@ public class JournalManager : MonoBehaviour
         }
 
         entryButtons.Clear();
+        buttonsByID.Clear();
 
         if (entryList == null || entryButtonPrefab == null)
             return;
@@ -255,7 +263,10 @@ public class JournalManager : MonoBehaviour
             );
 
             entryButtons.Add(button);
+            buttonsByID[entry.ID] = button;
         }
+
+        RefreshSelectionUI();
     }
 
     private void SelectEntry(string informationID)
@@ -296,6 +307,8 @@ public class JournalManager : MonoBehaviour
                 entry.Title + "\n" +
                 entry.Description;
         }
+
+        RefreshSelectionUI();
 
         if (selectedInformationIDs.Count == 0)
             SetConnectionStatus("No entries selected.");
@@ -396,6 +409,7 @@ public class JournalManager : MonoBehaviour
         }
 
         selectedInformationIDs.Clear();
+        RefreshSelectionUI();
 
         if (matchedHypothesis == null)
         {
@@ -427,6 +441,60 @@ public class JournalManager : MonoBehaviour
         );
 
         SetConnectionStatus("Hypothesis formed.");
+    }
+
+    // Called by the optional JournalSelectionUIBinder on the always-active UI root.
+    public void BindConnectionUI(TMP_Text firstSlot, TMP_Text secondSlot, Button clearButton)
+    {
+        if (clearSelectionButton != null)
+            clearSelectionButton.onClick.RemoveListener(ClearSelection);
+
+        selectionSlot1Text = firstSlot;
+        selectionSlot2Text = secondSlot;
+        clearSelectionButton = clearButton;
+
+        if (clearSelectionButton != null)
+            clearSelectionButton.onClick.AddListener(ClearSelection);
+
+        RefreshSelectionUI();
+    }
+
+    public void ClearSelection()
+    {
+        selectedInformationIDs.Clear();
+        RefreshSelectionUI();
+        SetConnectionStatus("No entries selected.");
+    }
+
+    private void RefreshSelectionUI()
+    {
+        if (selectionSlot1Text != null)
+            selectionSlot1Text.text = GetSelectedTitle(0);
+        if (selectionSlot2Text != null)
+            selectionSlot2Text.text = GetSelectedTitle(1);
+        if (clearSelectionButton != null)
+            clearSelectionButton.interactable = selectedInformationIDs.Count > 0;
+
+        foreach (var pair in buttonsByID)
+        {
+            if (pair.Value == null) continue;
+            bool selected = selectedInformationIDs.Contains(pair.Key);
+            ColorBlock colors = pair.Value.colors;
+            // Use a normal-state tint to make selection visible without
+            // relying on Unity's transient UI Selected navigation state.
+            colors.normalColor = selected ? selectedEntryColor : Color.white;
+            colors.selectedColor = colors.normalColor;
+            pair.Value.colors = colors;
+        }
+    }
+
+    private string GetSelectedTitle(int index)
+    {
+        if (index >= selectedInformationIDs.Count)
+            return index == 0 ? "Select first entry" : "Select second entry";
+
+        JournalEntry entry = entries.Find(e => e.ID == selectedInformationIDs[index]);
+        return entry != null ? entry.Title : "Unknown entry";
     }
 
     private void SetConnectionStatus(string message)
