@@ -34,6 +34,7 @@ public class JournalManager : MonoBehaviour
     [Header("Selectable Entries")]
     [SerializeField] private Transform entryList;
     [SerializeField] private Button entryButtonPrefab;
+    [SerializeField] private ScrollRect noteScrollRect;
 
     [Header("Discovery Notification")]
     [SerializeField] private TMP_Text discoveryNotificationText;
@@ -58,6 +59,7 @@ public class JournalManager : MonoBehaviour
         new List<string>();
 
     private Coroutine notificationCoroutine;
+    private Coroutine noteScrollResetCoroutine;
 
     private readonly List<JournalEntry> entries =
         new List<JournalEntry>();
@@ -125,7 +127,8 @@ public class JournalManager : MonoBehaviour
         Button newEntryButtonPrefab,
         TMP_Text newDiscoveryNotificationText,
         Button newConnectButton,
-        TMP_Text newConnectionStatusText)
+        TMP_Text newConnectionStatusText,
+        ScrollRect newNoteScrollRect = null)
     {
         // Connect the persistent manager to this scene's UI.
         journalPanel = newJournalPanel;
@@ -136,6 +139,8 @@ public class JournalManager : MonoBehaviour
         discoveryNotificationText = newDiscoveryNotificationText;
         connectButton = newConnectButton;
         connectionStatusText = newConnectionStatusText;
+        if (newNoteScrollRect != null)
+            noteScrollRect = newNoteScrollRect;
 
         // Prevent duplicate listeners when reconnecting UI.
         if (closeButton != null)
@@ -306,6 +311,8 @@ public class JournalManager : MonoBehaviour
                 "Source: " + entry.Source + "\n" +
                 entry.Title + "\n" +
                 entry.Description;
+
+            ResetNoteScrollToTop();
         }
 
         RefreshSelectionUI();
@@ -316,6 +323,37 @@ public class JournalManager : MonoBehaviour
             SetConnectionStatus("Select one more entry.");
         else
             SetConnectionStatus("Two entries selected.");
+    }
+
+    // Refresh the layout after changing note text, then return to the top.
+    private void ResetNoteScrollToTop()
+    {
+        if (noteScrollRect == null)
+            return;
+
+        if (noteScrollResetCoroutine != null)
+            StopCoroutine(noteScrollResetCoroutine);
+
+        noteScrollResetCoroutine = StartCoroutine(ResetNoteScrollNextFrame());
+    }
+
+    private IEnumerator ResetNoteScrollNextFrame()
+    {
+        // TextMeshPro and the Content Size Fitter need a layout pass
+        // before ScrollRect can calculate the correct scroll range.
+        yield return null;
+
+        if (noteScrollRect != null && noteScrollRect.isActiveAndEnabled)
+        {
+            Canvas.ForceUpdateCanvases();
+            if (noteScrollRect.content != null)
+                LayoutRebuilder.ForceRebuildLayoutImmediate(noteScrollRect.content);
+
+            noteScrollRect.StopMovement();
+            noteScrollRect.verticalNormalizedPosition = 1f;
+        }
+
+        noteScrollResetCoroutine = null;
     }
 
     private void ShowDiscoveryNotification(string title)
@@ -441,6 +479,39 @@ public class JournalManager : MonoBehaviour
         );
 
         SetConnectionStatus("Hypothesis formed.");
+    }
+
+    // Debug helpers used by InvestigationDebug.
+    public bool DebugGrantInformation(string id)
+    {
+        if (string.IsNullOrWhiteSpace(id)) return false;
+        if (HasInformation(id)) return true;
+        AddEntry(id.Trim(), "[DEBUG] " + id.Trim(),
+            "Granted for testing. Discover this normally to see its real description.",
+            "Debug", "Developer tools");
+        return HasInformation(id.Trim());
+    }
+
+    public bool DebugGrantHypothesis(string id)
+    {
+        if (string.IsNullOrWhiteSpace(id)) return false;
+        id = id.Trim();
+        if (HasHypothesis(id)) return true;
+
+        HypothesisDefinition definition = hypothesisDefinitions.Find(
+            h => h != null && h.hypothesisID == id);
+        if (definition == null)
+        {
+            Debug.LogWarning("Debug: Hypothesis not configured in JournalManager: " + id);
+            return false;
+        }
+
+        DebugGrantInformation(definition.requiredInformationID1);
+        DebugGrantInformation(definition.requiredInformationID2);
+        formedHypothesisIDs.Add(id);
+        AddEntry(definition.informationEntryID, definition.title,
+            definition.description, "Hypothesis", "Player interpretation");
+        return true;
     }
 
     // Called by the optional JournalSelectionUIBinder on the always-active UI root.

@@ -119,6 +119,158 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16014152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16014153}
+  - component: {fileID: 16014157}
+  - component: {fileID: 16014156}
+  - component: {fileID: 16014155}
+  - component: {fileID: 16014154}
+  m_Layer: 0
+  m_Name: PoliceActivityLog_1991
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16014153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16014152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0.62, y: 1.111, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &16014154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16014152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: dwyer_oct17_activity_log
+  informationTitle: October 17 Police Activity Log
+  informationSource: Grayford Sheriff's Department
+  informationDescription: An archived police activity log documenting Deputy Michael Dwyer's evening patrol on October 17, 1991. The log records a dispatch to North County Waterworks at 7:05 PM and a return to general patrol at 8:10 PM. No corresponding incident report is referenced.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: 
+  unavailableMessage: 
+  department: Grayford Sheriff's Department
+  documentTitle: "Deputy Activity Log \u2014 Evening Shift"
+  reference: GSD-PAL-91-1017
+  documentDate: October 17, 1991
+  documentBody: "Assigned Officer: Deputy Michael Dwyer\n\n18:15 \u2014 Routine patrol, eastern district.\n\n19:05 \u2014 Dispatched to North County Waterworks.\nReason: Site security inquiry.\n\n20:10 \u2014 Returned to general patrol.\nNo incident report reference entered.\n\nAdministrative Note\n\nNo corresponding incident report is indexed under the waterworks dispatch entry. The specific reason for the inquiry and its outcome are not documented in this activity log."
+  evidenceID: dwyer_oct17_activity_log
+  evidenceTitle: October 17 Police Activity Log
+  journalNote: An archived sheriff's department activity log records Deputy Michael Dwyer being dispatched to North County Waterworks at 7:05 PM on October 17, 1991, for a site security inquiry. He returned to general patrol at 8:10 PM. No corresponding incident report is referenced, leaving the purpose and outcome of the dispatch unclear.
+  evidenceSource: 'Grayford Sheriff''s Department '
+--- !u!65 &16014155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16014152}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &16014156
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16014152}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &16014157
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16014152}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &69456526
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +500,158 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149209104}
   m_CullTransparentMesh: 1
+--- !u!1 &152857476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152857477}
+  - component: {fileID: 152857481}
+  - component: {fileID: 152857480}
+  - component: {fileID: 152857479}
+  - component: {fileID: 152857478}
+  m_Layer: 0
+  m_Name: MunicipalWaterworksArchivedFloorPlan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152857477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152857476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 1.096, y: 1.111, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &152857478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152857476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: municipal_waterworks_archived_floor_plan
+  informationTitle: Archived Waterworks Floor Plan
+  informationSource: Grayford Municipal Records
+  informationDescription: An archived North County Waterworks floor plan, revised in 1987, depicts the lower service corridor and an adjoining inspection chamber accessed through the original service doorway. The chamber is identified as part of the facility's drainage inspection infrastructure. The plan predates the alterations recorded in 1991 and does not establish the chamber's later condition or use.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: hypothesis_unexplained_access_obstruction
+  unavailableMessage: The engineering archive contains numerous historical drawings. You have no reason yet to request the original lower-service layout.
+  department: "Grayford Public Works \u2014 Engineering Archives"
+  documentTitle: Waterworks Floor Plan
+  reference: NCW-PL-87-04 / Sheet L2
+  documentDate: June 16, 1987
+  documentBody: "NORTH COUNTY WATERWORKS\r\n\r\nLOWER SERVICE LEVEL \u2014 GENERAL ARRANGEMENT\r\n\r\nIDENTIFIED AREAS\r\n\r\nL-01 \u2014 Lower Service Corridor\r\n\r\nL-02 \u2014 Drainage Inspection Chamber\r\n\r\nL-03 \u2014 Auxiliary Pump Access\r\n\r\nL-04 \u2014 Pipe Maintenance Recess\r\n\r\nACCESS ARRANGEMENT\r\n\r\nThe drainage inspection chamber (L-02) is accessed from the lower service corridor (L-01) through a hinged service doorway.\r\n\r\nThe doorway is shown as part of the original facility arrangement. No secondary barrier is indicated on this revision.\r\n\r\nARCHIVE NOTE\r\n\r\nThis drawing represents the facility arrangement as recorded in June 1987. Subsequent modifications may not be reflected.\r\n\r\nLater revisions should be consulted before relying on this plan for current access or safety information."
+  evidenceID: municipal_waterworks_archived_floor_plan
+  evidenceTitle: Archived Waterworks Floor Plan
+  journalNote: An archived North County Waterworks floor plan, revised June 16, 1987, identifies a drainage inspection chamber designated L-02, accessible through a hinged doorway from the lower service corridor (L-01). The drawing shows no secondary barrier obstructing this entrance. As the plan predates the documented 1991 alterations, it does not establish the chamber's subsequent condition or accessibility.
+  evidenceSource: Grayford Municipal Records Office
+--- !u!65 &152857479
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152857476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &152857480
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152857476}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &152857481
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152857476}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +891,221 @@ Transform:
   m_Children: []
   m_Father: {fileID: 801187113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &276328552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276328553}
+  - component: {fileID: 276328557}
+  - component: {fileID: 276328556}
+  - component: {fileID: 276328555}
+  - component: {fileID: 276328554}
+  m_Layer: 0
+  m_Name: IdentificationReport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &276328553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276328552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 2.35, y: 0.045, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &276328554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276328552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: daniel_remains_identification_report
+  informationTitle: Identification of Daniel Mercer's Remains
+  informationSource: County Medical Examiner's Office
+  informationDescription: A supplemental forensic identification report confirms that the human remains recovered from Chamber L-02 belong to Daniel Mercer. Identification was established through comparison with historical dental records. The cause and manner of death remain undetermined.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: waterworks_preliminary_examination_report
+  unavailableMessage: The remains recovered from Chamber L-02 have not yet been formally examined. A preliminary examination report must be available before the supplemental identification findings can be accessed.
+  department: County Medical Examiner's Office
+  documentTitle: "Supplemental Identification Report \u2014 Waterworks Remains"
+  reference: CME-98-104-S1
+  documentDate: October 1998
+  documentBody: 'Recovery Location:
+
+    North County Waterworks
+
+    Lower Inspection Chamber L-02
+
+
+    Subject:
+
+    Previously unidentified human skeletal remains
+
+
+    IDENTIFICATION FINDINGS
+
+
+    Historical dental records obtained for
+
+    Daniel Mercer were compared with the
+
+    dental structures preserved in the
+
+    recovered remains.
+
+
+    Multiple corresponding dental features
+
+    were identified, including the position
+
+    and configuration of previous restorations.
+
+
+    No unexplained discrepancies were observed.
+
+
+    CONCLUSION
+
+
+    The recovered remains are identified
+
+    as those of Daniel Mercer.
+
+
+    CAUSE OF DEATH:
+
+    Undetermined.
+
+
+    MANNER OF DEATH:
+
+    Undetermined.
+
+
+    The identification findings do not,
+
+    by themselves, establish the circumstances
+
+    of death or the date on which the remains
+
+    were deposited in the chamber.
+
+
+    Further investigative correlation is
+
+    recommended.'
+  evidenceID: daniel_remains_identification_report
+  evidenceTitle: Daniel Mercer's Remains Identified
+  journalNote: A supplemental forensic report identifies the skeletal remains recovered from Chamber L-02 as Daniel Mercer through comparison with historical dental records. The cause and manner of death remain undetermined. The discovery establishes that Daniel's remains were present inside the sealed waterworks chamber.
+  evidenceSource: County Medical Examiner's Office
+--- !u!65 &276328555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276328552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &276328556
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276328552}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 32081141ef6c2fa429a336cf94191587, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &276328557
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276328552}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &290188895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2625,7 @@ GameObject:
   - component: {fileID: 732945956}
   - component: {fileID: 732945960}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2233,6 +2752,158 @@ MonoBehaviour:
   isSceneExit: 1
   destinationScene: MainStreet
   destinationSpawnID: outside_records
+--- !u!1 &740238591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740238592}
+  - component: {fileID: 740238596}
+  - component: {fileID: 740238595}
+  - component: {fileID: 740238594}
+  - component: {fileID: 740238593}
+  m_Layer: 0
+  m_Name: DispatchCommunicationsSlip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740238592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740238591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.21, y: 1.111, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &740238593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740238591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: dwyer_oct17_dispatch_slip
+  informationTitle: October 17 Dispatch Communications Slip
+  informationSource: Grayford Sheriff's Department
+  informationDescription: An archived dispatch communications slip records a telephone request from North County Waterworks on October 17, 1991, asking for a deputy to attend the lower service area. The caller was not identified. The slip was associated with Deputy Michael Dwyer's 7:05 PM dispatch.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: dwyer_oct17_activity_log
+  unavailableMessage: The dispatch communications slips are filed separately from the patrol activity logs. Without a corresponding dispatch date and reference, there isn't enough information to identify the correct record.
+  department: Grayford Sheriff's Department
+  documentTitle: "Dispatch Communications Slip \u2014 North County Waterworks"
+  reference: GSD-COM-91-1017-07
+  documentDate: October 17, 1991
+  documentBody: "Time Received: 18:58\nCommunication Type: Incoming telephone call\n\nOrigin: North County Waterworks\nCaller: Not identified\nNature of Call: Site security assistance\n\nOperator's Note:\n\"Request for deputy to attend lower service area.\nCaller reports a problem requiring attention.\nNo further details provided.\"\n\n19:05 \u2014 Deputy M. Dwyer dispatched.\n\nDisposition: See patrol activity log.\nIncident Report Number: Not entered."
+  evidenceID: dwyer_oct17_dispatch_slip
+  evidenceTitle: October 17 Dispatch Communications Slip
+  journalNote: A dispatch communications slip records an unidentified caller at North County Waterworks requesting police assistance in the lower service area at 6:58 PM on October 17, 1991. Deputy Michael Dwyer was dispatched seven minutes later. The record does not identify the caller or explain what occurred at the site.
+  evidenceSource: 'Grayford Sheriff''s Department '
+--- !u!65 &740238594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740238591}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &740238595
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740238591}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &740238596
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740238591}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &751038984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +3007,16 @@ Transform:
   m_Children:
   - {fileID: 367186843}
   - {fileID: 690925505}
+  - {fileID: 1334071062}
   - {fileID: 647971854}
+  - {fileID: 152857477}
+  - {fileID: 1399026269}
+  - {fileID: 16014153}
+  - {fileID: 740238592}
+  - {fileID: 1812258368}
+  - {fileID: 1790924075}
+  - {fileID: 276328553}
+  - {fileID: 1523847485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &801187112
@@ -2520,6 +3200,50 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &994092335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994092337}
+  - component: {fileID: 994092336}
+  m_Layer: 0
+  m_Name: InvestigationDebug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &994092336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994092335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49534e0715d25d1479d2ba25080da2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InvestigationDebug
+--- !u!4 &994092337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994092335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.49159, y: 2.025, z: 1.29331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1002652768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +4530,158 @@ Transform:
   m_Children: []
   m_Father: {fileID: 801187113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334071061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334071062}
+  - component: {fileID: 1334071066}
+  - component: {fileID: 1334071065}
+  - component: {fileID: 1334071064}
+  - component: {fileID: 1334071063}
+  m_Layer: 0
+  m_Name: FacilitiesAlterationRegister
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1334071062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334071061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0.4, y: 1.82, z: 0.38}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1334071063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334071061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: anonymous_package
+  informationTitle: Anonymous package
+  informationSource: Anonymous package
+  informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: helen_facilities_register_lead
+  unavailableMessage: The facilities alteration register is filed separately from the general maintenance records. You should ask the records clerk where to find it before examining this document.
+  department: "Grayford Public Works \u2014 Facilities Division"
+  documentTitle: Facilities Alteration Register
+  reference: FAR-90-93 / Entry 184-A
+  documentDate: February 18, 1992
+  documentBody: "GRAYFORD PUBLIC WORKS\r\nFACILITIES ALTERATION REGISTER\r\nExtract: January 1990 \u2013 December 1993\r\n\r\nENTRY 041 \u2014 MARCH 12, 1990\r\nFacility: Municipal Garage\r\nWork: Replacement of exterior access doors\r\nAuthorization: PW-90-041\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nENTRY 116 \u2014 JUNE 4, 1991\r\nFacility: North County Waterworks\r\nWork: Upper pump housing ventilation modifications\r\nAuthorization: PW-91-116\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nENTRY 184-A \u2014 OCTOBER 1991\r\nFacility: North County Waterworks\r\nArea: Lower service access\r\nWork: Access / barrier arrangement\r\nAssociated reference: WW-91-184\r\nAuthorization: Not entered\r\nContractor: Not entered\r\nCompletion date: Not entered\r\nStatus: Unconfirmed\r\n\r\nENTRY 022 \u2014 FEBRUARY 18, 1992\r\nFacility: Municipal Storage Annex\r\nWork: Internal partition installation\r\nAuthorization: PW-92-022\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nCLERK'S NOTE:\r\nEntry 184-A refers to associated maintenance documentation not included with this register extract. No installation specification or completion confirmation is attached."
+  evidenceID: municipal_facilities_alteration_register
+  evidenceTitle: Facilities Alteration Register
+  journalNote: A municipal facilities register contains an October 1991 entry concerning the lower service access at North County Waterworks, associated with WW-91-184. The authorization, contractor, and completion fields are blank. The entry refers to maintenance documentation that is not attached, leaving the nature and completion of the alteration unresolved.
+  evidenceSource: Grayford Public Works
+--- !u!65 &1334071064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334071061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1334071065
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334071061}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1334071066
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334071061}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1335581761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,6 +4832,179 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357389413}
   m_CullTransparentMesh: 1
+--- !u!1 &1399026268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399026269}
+  - component: {fileID: 1399026273}
+  - component: {fileID: 1399026272}
+  - component: {fileID: 1399026271}
+  - component: {fileID: 1399026270}
+  m_Layer: 0
+  m_Name: DanielMissingPersonReport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399026269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399026268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -2.04, y: 1.111, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1399026270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399026268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: daniel_original_police_report
+  informationTitle: Original Missing Person Report
+  informationSource: Grayford Sheriff's Department, GF-91-1047
+  informationDescription: An archived missing-person report dated October 19, 1991, identifies Deputy Michael Dwyer as the officer responsible for the initial investigation into Daniel Mercer's disappearance. The report records no confirmed movements after October 17 and states that no verified evidence of criminal involvement was established. The case remained unresolved.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: 
+  unavailableMessage: 
+  department: Grayford Sheriff's Department
+  documentTitle: Missing Person Report
+  reference: Case No. GF-91-1047
+  documentDate: October 19, 1991
+  documentBody: 'Subject: Daniel Mercer
+
+    Last reported seen: October 17, 1991
+
+    Reporting officer: Deputy Michael Dwyer
+
+    Case status: Unresolved
+
+
+    Summary of initial investigation
+
+
+    Daniel Mercer was reported missing after failing to return home. Initial inquiries with local residents produced no confirmed account of his whereabouts after October 17.
+
+
+    No verified evidence of criminal involvement was identified during the preliminary investigation. The subject''s last known movements remain undetermined.
+
+
+    Disposition
+
+
+    Case remains open pending additional information.'
+  evidenceID: daniel_original_police_report
+  evidenceTitle: Original Missing Person Report
+  journalNote: An archived missing-person report filed on October 19, 1991, identifies Deputy Michael Dwyer as the officer responsible for investigating Daniel Mercer's disappearance. The report states that Daniel's movements after October 17 could not be confirmed and that no verified evidence of criminal involvement was established. The case remained unresolved.
+  evidenceSource: Grayford Sheriff's Office
+--- !u!65 &1399026271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399026268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1399026272
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399026268}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1399026273
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399026268}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1412419418
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,6 +5195,147 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1523847484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523847485}
+  - component: {fileID: 1523847489}
+  - component: {fileID: 1523847488}
+  - component: {fileID: 1523847487}
+  - component: {fileID: 1523847486}
+  m_Layer: 0
+  m_Name: PreliminaryReportFolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1523847485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523847484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -3.49, y: 1.111, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1523847486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523847484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e682213c894ab0d4eb279e48746f37ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterworksPreliminaryReport
+  interactionName: Resident
+  isInformationSource: 0
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: anonymous_package
+  informationTitle: Anonymous package
+  informationSource: Anonymous package
+  informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1523847487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523847484}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1523847488
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523847484}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1523847489
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523847484}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1564732675
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +6136,397 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754000416}
   m_CullTransparentMesh: 1
+--- !u!1 &1790924074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790924075}
+  - component: {fileID: 1790924079}
+  - component: {fileID: 1790924078}
+  - component: {fileID: 1790924077}
+  - component: {fileID: 1790924076}
+  m_Layer: 0
+  m_Name: TraumaAssessment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790924075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790924074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 3.27, y: 0.045, z: -2.88}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1790924076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790924074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: daniel_skeletal_trauma_assessment
+  informationTitle: Supplemental Skeletal Trauma Assessment
+  informationSource: County Medical Examiner's Office
+  informationDescription: A supplemental examination of Daniel Mercer's remains identifies skeletal fractures consistent with substantial blunt-force trauma. A fall from height is among the possible mechanisms, but the examination cannot establish the precise circumstances or determine whether the injuries caused death.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: daniel_remains_identification_report
+  unavailableMessage: The supplemental trauma assessment is filed under the identified subject's examination record. The remains must first be formally identified before the corresponding report can be located.
+  department: County Medical Examiner's Office
+  documentTitle: "Supplemental Skeletal Trauma Assessment \u2014 Daniel Mercer"
+  reference: CME-98-104-S2
+  documentDate: October 1998
+  documentBody: 'Subject: Daniel Mercer
+
+    Recovery Location:
+
+    North County Waterworks, Chamber L-02
+
+
+    EXAMINATION FINDINGS
+
+
+    Examination identified fractures involving
+
+    the skeletal structures of the torso
+
+    and upper extremity.
+
+
+    The observed injury pattern is consistent
+
+    with substantial blunt-force trauma.
+
+
+    A fall from an elevated position is one
+
+    possible mechanism.
+
+
+    The skeletal findings do not establish
+
+    the precise mechanism of injury.
+
+
+    The available evidence is insufficient
+
+    to determine whether the identified
+
+    injuries directly caused death.
+
+
+    CONCLUSION
+
+
+    Significant skeletal trauma is present.
+
+
+    CAUSE OF DEATH:
+
+    Undetermined.
+
+
+    MANNER OF DEATH:
+
+    Undetermined.
+
+
+    Correlation with scene findings and
+
+    investigative evidence is recommended.
+
+
+    End of supplemental assessment.'
+  evidenceID: daniel_skeletal_trauma_assessment
+  evidenceTitle: Daniel's Skeletal Trauma
+  journalNote: A supplemental forensic assessment identifies fractures consistent with substantial blunt-force trauma. A fall from height is one possible explanation. The medical examiner cannot determine the precise mechanism, cause of death, or manner of death from the skeletal findings alone.
+  evidenceSource: County Medical Examiner's Office
+--- !u!65 &1790924077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790924074}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1790924078
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790924074}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 32081141ef6c2fa429a336cf94191587, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1790924079
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790924074}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1812258367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812258368}
+  - component: {fileID: 1812258372}
+  - component: {fileID: 1812258371}
+  - component: {fileID: 1812258370}
+  - component: {fileID: 1812258369}
+  m_Layer: 0
+  m_Name: EquipmentAssignmentRegister
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1812258368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812258367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 3.27, y: 0.045, z: -2.025}
+  m_LocalScale: {x: 0.02, y: 0.5, z: 0.47}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776739282}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1812258369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812258367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab16c4c9be9f4134e9e1280441fa2bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MunicipalRecord
+  interactionName: Resident
+  isInformationSource: 1
+  npcProfile: 0
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: dwyer_equipment_assignment_register
+  informationTitle: Sheriff's Equipment Assignment Register
+  informationSource: Grayford Sheriff's Department
+  informationDescription: An archived October 1991 equipment register lists a portable inspection lamp assigned to Deputy Michael Dwyer. The lamp's inventory identifier corresponds to the partially legible marking on a corroded equipment tag recovered from Waterworks Chamber L-02. The register records the lamp as unreturned following its assignment.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+  requiredInformationID: chamber_equipment_tag_marking
+  unavailableMessage: The equipment assignment registers contain numerous archived entries. A department marking or inventory identifier is needed to locate the relevant assignment.
+  department: Grayford Sheriff's Department
+  documentTitle: Equipment Assignment Register
+  reference: GSD-EAR-91-10
+  documentDate: October 31, 1991
+  documentBody: 'Equipment Assignment Entry
+
+
+    Item: Portable Inspection Lamp
+
+    Inventory ID: GSD-2714
+
+    Assigned Officer: Deputy Michael Dwyer
+
+    Date Issued: October 12, 1991
+
+
+    Return Status: Not Recorded
+
+
+    Administrative Remarks:
+
+    Equipment listed as outstanding during the
+
+    October inventory reconciliation.
+
+
+    No transfer or disposal authorization is
+
+    attached to this entry.
+
+
+    Disposition: Pending verification.'
+  evidenceID: dwyer_equipment_assignment_register
+  evidenceTitle: Dwyer's Equipment Assignment
+  journalNote: An October 1991 sheriff's department equipment register identifies portable inspection lamp GSD-2714 as assigned to Deputy Michael Dwyer. The lamp was listed as outstanding during the monthly inventory reconciliation, with no recorded return or authorized transfer. Its identifier may correspond to the corroded equipment tag recovered from Chamber L-02, although the incomplete marking prevents a definitive match.
+  evidenceSource: Grayford Sheriff's Department
+--- !u!65 &1812258370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812258367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1812258371
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812258367}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 32081141ef6c2fa429a336cf94191587, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1812258372
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812258367}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1915123313
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,3 +7207,4 @@ SceneRoots:
   - {fileID: 776739282}
   - {fileID: 801187113}
   - {fileID: 1167921037}
+  - {fileID: 994092337}

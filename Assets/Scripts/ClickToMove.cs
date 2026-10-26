@@ -37,7 +37,8 @@ public class ClickToMove : MonoBehaviour
 
             if (NewspaperReaderUI.Instance != null &&
     NewspaperReaderUI.Instance.IsOpen)
-                {
+
+            {
                 return;
             }
             HandleClick();

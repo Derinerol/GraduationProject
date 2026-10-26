@@ -2605,6 +2605,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117035708}
   m_CullTransparentMesh: 1
+--- !u!1 &1152563544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152563546}
+  - component: {fileID: 1152563545}
+  m_Layer: 0
+  m_Name: InvestigationDebug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1152563545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152563544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49534e0715d25d1479d2ba25080da2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InvestigationDebug
+--- !u!4 &1152563546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152563544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.49159, y: 2.025, z: 1.29331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166421716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,8 +3295,8 @@ Transform:
   m_GameObject: {fileID: 1424273952}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -2.8}
-  m_LocalScale: {x: 0.7, y: 1, z: 0.7}
+  m_LocalPosition: {x: -2.04, y: 0.8, z: -2.8}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 817717962}
@@ -3609,6 +3653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalUIRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 3141073760002811926, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3359827545702142196, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3707,7 +3755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7578884096428917661, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8057342978158730624, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4419,6 +4467,10 @@ MonoBehaviour:
   notificationDuration: 3
   connectButton: {fileID: 0}
   connectionStatusText: {fileID: 0}
+  selectionSlot1Text: {fileID: 0}
+  selectionSlot2Text: {fileID: 0}
+  clearSelectionButton: {fileID: 0}
+  selectedEntryColor: {r: 0.39, g: 0.47, b: 0.52, a: 1}
   hypothesisDefinitions:
   - hypothesisID: newspaper_resident_connection
     informationEntryID: hypothesis_newspaper_resident
@@ -4599,3 +4651,4 @@ SceneRoots:
   - {fileID: 1166421718}
   - {fileID: 582417219}
   - {fileID: 2034492492}
+  - {fileID: 1152563546}
