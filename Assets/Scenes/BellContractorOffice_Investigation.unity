@@ -1277,7 +1277,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: bell_job_ledger
-  unavailableMessage: The dispatch sheets are organized by job reference. I should identify Bell's internal job entry first.
+  unavailableMessage: "The dispatch files are indexed by Bell\u2019s job numbers. I haven\u2019t located the matching job entry."
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Equipment Dispatch Sheet
   reference: WW-91-184
@@ -1285,6 +1285,8 @@ MonoBehaviour:
   documentBody: 'BELL MUNICIPAL SERVICES
 
     EQUIPMENT DISPATCH SHEET
+
+
 
 
 
@@ -1296,9 +1298,13 @@ MonoBehaviour:
 
 
 
+
+
     Vehicle Assigned:
 
     Utility Truck 02
+
+
 
 
 
@@ -1312,9 +1318,13 @@ MonoBehaviour:
 
 
 
+
+
     Crew:
 
     Two field personnel
+
+
 
 
 
@@ -1324,16 +1334,20 @@ MonoBehaviour:
 
 
 
+
+
     Return Time: Not entered
 
     Site Work Completed: Not indicated
 
 
 
+
+
     This sheet records an equipment assignment, not confirmation of work performed.'
   evidenceID: bell_dispatch_sheet
   evidenceTitle: Equipment Dispatch Sheet
-  journalNote: A Bell Municipal Services dispatch sheet dated October 9, 1991, assigns Utility Truck 02, drainage equipment, and two workers to the North County Waterworks. No return time or completion status is recorded.
+  journalNote: Bell assigned two workers, Utility Truck 02, and drainage equipment to the waterworks on October 9, 1991. No return or completion is recorded.
   evidenceSource: Bell Municipal Services
 --- !u!1 &412015060
 GameObject:
@@ -1455,6 +1469,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1958871734}
     m_Modifications:
+    - target: {fileID: 1805931203247795187, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+      propertyPath: noteScrollRect
+      value: 
+      objectReference: {fileID: 503671208}
     - target: {fileID: 3141073760002811926, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_Name
       value: JournalUIRoot
@@ -1577,6 +1595,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3359827545702142196, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
   m_PrefabInstance: {fileID: 503671206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &503671208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1762157244338385332, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+  m_PrefabInstance: {fileID: 503671206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
 --- !u!1 &504171805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,15 +1806,17 @@ MonoBehaviour:
   isSceneExit: 0
   destinationScene: Diner_Investigation
   destinationSpawnID: 
-  requiredInformationID: hypothesis_unresolved_barrier_responsibility
-  unavailableMessage: This supplementary access log concerns the unresolved waterworks service-barrier work. Review the original dispatch records and establish the outstanding responsibility question before examining this file.
+  requiredInformationID: bell_dispatch_sheet
+  unavailableMessage: The supplementary logs are filed alongside the original dispatch records. I need the relevant job file first.
   department: "Bell Municipal Services \u2014 Field Operations"
-  documentTitle: Equipment Dispatch Sheet
+  documentTitle: Supplementary Site Access Log
   reference: BMS-SAL-91-10
   documentDate: 18 OCT 1991
   documentBody: 'BELL MUNICIPAL SERVICES
 
     SUPPLEMENTARY SITE ACCESS LOG
+
+
 
 
 
@@ -1797,9 +1828,13 @@ MonoBehaviour:
 
 
 
+
+
     ASSOCIATED JOB: WW-91-184
 
     FACILITY: NORTH COUNTY WATERWORKS
+
+
 
 
 
@@ -1815,6 +1850,8 @@ MonoBehaviour:
 
 
 
+
+
     OCTOBER 12, 1991
 
     Area: Waterworks service facilities
@@ -1824,6 +1861,8 @@ MonoBehaviour:
     Purpose: Follow-up request
 
     Status: Unconfirmed
+
+
 
 
 
@@ -1847,12 +1886,14 @@ MonoBehaviour:
 
 
 
+
+
     ADMINISTRATIVE NOTE:
 
     Supplementary visits may be entered independently of the original work order. This register records scheduled or reported site activity and does not independently verify attendance or work completion.'
   evidenceID: bell_supplementary_access_log
   evidenceTitle: Supplementary Site Access Log
-  journalNote: An internal Bell Municipal Services access log records a supplementary site check assigned to Frank Bell at North County Waterworks on October 17, 1991, the date of Daniel Mercer's disappearance. No arrival time, departure time, accompanying personnel, or completion report is recorded. The entry does not independently confirm that Frank attended the site or establish the purpose of the visit beyond the stated site check.
+  journalNote: "Bell\u2019s log lists Frank for a waterworks site check on October 17, 1991. It records neither his arrival nor the outcome."
   evidenceSource: Bell Municipal Services
 --- !u!65 &512023528
 BoxCollider:
@@ -2074,7 +2115,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: municipal_status_ledger
-  unavailableMessage: The billing files are organized by client and work order. I should establish the relevant municipal reference first.
+  unavailableMessage: The invoices are filed by work order. I need a reliable reference to find the right one.
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Contractor Billing Copy
   reference: WW-91-184
@@ -2082,7 +2123,7 @@ MonoBehaviour:
   documentBody: "BELL MUNICIPAL SERVICES\r\nCONTRACTOR BILLING COPY\r\n\r\nInvoice Reference: BMS-91-184\r\nRelated Work Order: WW-91-184\r\nDate: October 15, 1991\r\nBilled To: Grayford Public Works\r\n\r\nDescription:\r\nWaterworks lower-access inspection and associated service work.\r\n\r\nCharges:\r\nInspection and assessment \u2014 $180.00\r\nLabor allocation \u2014 $320.00\r\nEquipment use \u2014 $150.00\r\n\r\nTOTAL SUBMITTED: $650.00\r\n\r\nPayment Status: Not indicated on this copy.\r\n\r\nSupporting completion report: Not attached."
   evidenceID: bell_billing_copy
   evidenceTitle: Contractor Billing Copy
-  journalNote: Bell Municipal Services submitted a $650 invoice for work associated with WW-91-184 on October 15, 1991. The available billing copy does not include a completion report.
+  journalNote: Bell billed $650 for WW-91-184 on October 15, 1991. No completion report accompanies the invoice.
   evidenceSource: Bell Municipal Services
 --- !u!1 &558058276
 GameObject:
@@ -2789,15 +2830,15 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: evelyn_waterworks_statement
-  unavailableMessage: The contractor's archived correspondence covers numerous municipal projects. Without a specific connection between Daniel Mercer and the waterworks records, there is no clear reason to examine this particular file.
+  unavailableMessage: The correspondence archive is extensive. Nothing here yet points to a particular exchange involving Daniel.
   department: Bell Municipal Services
   documentTitle: "North County Waterworks \u2014 Contract Review Correspondence"
   reference: BMS-CR-91-17
   documentDate: October 1991
-  documentBody: "Contents:\nPhotocopied correspondence and financial\nnotes concerning maintenance expenditures,\ninspection approvals, and contractor invoices.\n\nSeveral pages bear the name Daniel Mercer.\n\nSelected annotation on attached sheet:\n\n\"Mercer \u2014 Oct. 17, 6:30.\nWaterworks.\nBring the original figures.\nF.B.\"\n\nThe annotation is handwritten.\nNo signature or acknowledgment is attached.\n\nThe file contains no minutes or written\naccount of the proposed meeting."
+  documentBody: "Contents:\r\nPhotocopied correspondence and financial\r\nnotes concerning maintenance expenditures,\r\ninspection approvals, and contractor invoices.\r\n\r\nSeveral pages bear the name Daniel Mercer.\r\n\r\nSelected annotation on attached sheet:\r\n\r\n\"Mercer \u2014 Oct. 17, 6:30.\r\nWaterworks.\r\nBring the original figures.\r\nF.B.\"\r\n\r\nThe annotation is handwritten.\r\nNo signature or acknowledgment is attached.\r\n\r\nThe file contains no minutes or written\r\naccount of the proposed meeting."
   evidenceID: bell_daniel_meeting_note
   evidenceTitle: Daniel and Bell's Possible Meeting
-  journalNote: A folder in Bell Municipal Services' office contains copies of Daniel Mercer's investigation into waterworks contract discrepancies. A handwritten annotation refers to a meeting at the waterworks at 6:30 PM on October 17, 1991, and bears the initials F.B. The note suggests a planned meeting between Daniel and Frank Bell, but does not establish that it occurred.
+  journalNote: "Bell\u2019s files contain Daniel\u2019s waterworks contract research and a note initialed F.B. proposing a 6:30 PM meeting on October 17, 1991. The meeting is not independently confirmed."
   evidenceSource: Bell Municipal Services
 --- !u!65 &779569013
 BoxCollider:
@@ -2989,6 +3030,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1848669703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &939664828
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1321846921}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Name
+      value: Journalist
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8a0bfeeccec4b2448974737d64312dfa, type: 2}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 939664831}
+  m_SourcePrefab: {fileID: 100100000, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+--- !u!4 &939664829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 939664828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &939664830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 939664828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &939664831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939664830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dbb56416d5fbc41b1dd2cb6848ef2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JournalistAnimationController
+  agent: {fileID: 1321846917}
+  smoothTime: 0.12
+  movementThreshold: 0.05
 --- !u!1 &986509788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,6 +3488,7 @@ MonoBehaviour:
   closeButton: {fileID: 0}
   entryList: {fileID: 0}
   entryButtonPrefab: {fileID: 8510403111830143084, guid: 5f4b0cffd74292b43af0a0cb6a51660a, type: 3}
+  noteScrollRect: {fileID: 0}
   discoveryNotificationText: {fileID: 0}
   notificationDuration: 3
   connectButton: {fileID: 0}
@@ -3673,15 +3828,15 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: bell_dispatch_sheet
-  unavailableMessage: The company's archived maintenance orders are filed by job assignment. Without identifying the contractor responsible for the lower service barrier, there is no clear way to locate the original order.
+  unavailableMessage: "The archived orders cover many jobs. I haven\u2019t identified the relevant barrier order yet."
   department: "Bell Municipal Services \u2014 Maintenance Operations"
   documentTitle: "Lower Service Access \u2014 Emergency Closure"
   reference: BMS-WO-91-1018
   documentDate: October 18, 1991
-  documentBody: "Location: North County Waterworks\nArea: Lower Service Passage / L-02 Access\n\nWork Classification: Emergency Closure\nAuthorized By: F. Bell\n\nRequired Work:\n\n1. Install permanent barrier across the\n   lower service passage adjoining L-02.\n\n2. Secure existing access hardware and\n   prevent entry through the passage.\n\n3. Remove temporary maintenance materials\n   from the outer corridor.\n\n4. Do not enter the adjoining inspection\n   chamber during closure operations.\n\nDocumentation Instructions:\n\nRecord the completed barrier installation\nunder general facility maintenance.\n\nDo not include the interior condition of\nChamber L-02 in the completion report.\n\nCompletion:\nOctober 18, 1991\n\nSupervisor Authorization:\nF. Bell\n\nCrew Signatures:\nNot attached to archived copy."
+  documentBody: "Location: North County Waterworks\r\nArea: Lower Service Passage / L-02 Access\r\n\r\nWork Classification: Emergency Closure\r\nAuthorized By: F. Bell\r\n\r\nRequired Work:\r\n\r\n1. Install permanent barrier across the\r\n   lower service passage adjoining L-02.\r\n\r\n2. Secure existing access hardware and\r\n   prevent entry through the passage.\r\n\r\n3. Remove temporary maintenance materials\r\n   from the outer corridor.\r\n\r\n4. Do not enter the adjoining inspection\r\n   chamber during closure operations.\r\n\r\nDocumentation Instructions:\r\n\r\nRecord the completed barrier installation\r\nunder general facility maintenance.\r\n\r\nDo not include the interior condition of\r\nChamber L-02 in the completion report.\r\n\r\nCompletion:\r\nOctober 18, 1991\r\n\r\nSupervisor Authorization:\r\nF. Bell\r\n\r\nCrew Signatures:\r\nNot attached to archived copy."
   evidenceID: bell_original_barrier_work_order
   evidenceTitle: Bell's Original Barrier Work Order
-  journalNote: An original Bell Municipal Services work order authorized by Frank Bell directed the permanent closure of the lower service passage adjoining Chamber L-02 on October 18, 1991. It instructed workers not to enter the chamber or document its interior condition. The instructions were more specific than the corresponding municipal alteration record.
+  journalNote: Bell authorized sealing the passage beside Chamber L-02 on October 18, 1991, and instructed workers not to enter or document the chamber.
   evidenceSource: Bell Municipal Services
 --- !u!65 &1094386675
 BoxCollider:
@@ -3982,7 +4137,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: municipal_retention_index
-  unavailableMessage: The contractor's job register contains years of entries. The municipal records should help identify the relevant work order.
+  unavailableMessage: "The contractor\u2019s ledger covers years of work. A municipal reference would help narrow the search."
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Contractor Job Ledger
   reference: WW-91-184
@@ -3990,7 +4145,7 @@ MonoBehaviour:
   documentBody: "BELL MUNICIPAL SERVICES\r\nCONTRACTOR JOB REGISTER \u2014 OCTOBER 1991\r\n\r\nJob Reference: WW-91-184\r\nClient: Grayford Public Works\r\nLocation: North County Waterworks\r\nDate Opened: October 8, 1991\r\n\r\nRequested Work:\r\nInspect drainage conditions near lower service access. Assess possible clearance and sealing requirements.\r\n\r\nPersonnel Assigned:\r\nField crew \u2014 two workers\r\nSupervisor \u2014 F. Bell\r\n\r\nStatus:\r\nJob opened and personnel assigned.\r\n\r\nFinal inspection or completion confirmation not included in this register."
   evidenceID: bell_job_ledger
   evidenceTitle: Contractor Job Ledger
-  journalNote: Bell Municipal Services opened job WW-91-184 on October 8, 1991, and assigned a two-person field crew under Frank Bell's supervision. The register does not confirm completion.
+  journalNote: "Bell opened WW-91-184 on October 8, 1991, under Frank\u2019s supervision. The ledger does not confirm completion."
   evidenceSource: Bell Municipal Services
 --- !u!1 &1249631758
 GameObject:
@@ -4242,6 +4397,159 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1848669703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1321846915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321846921}
+  - component: {fileID: 1321846920}
+  - component: {fileID: 1321846919}
+  - component: {fileID: 1321846918}
+  - component: {fileID: 1321846917}
+  - component: {fileID: 1321846916}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1321846916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
+  gameCamera: {fileID: 0}
+  interactionDistance: 1.5
+--- !u!195 &1321846917
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 180
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &1321846918
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1321846919
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1321846920
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1321846921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321846915}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.59, y: 0.79999995, z: -2.63}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 939664829}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359589783
 GameObject:
@@ -5005,158 +5313,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1689749366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1689749372}
-  - component: {fileID: 1689749371}
-  - component: {fileID: 1689749370}
-  - component: {fileID: 1689749369}
-  - component: {fileID: 1689749368}
-  - component: {fileID: 1689749367}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1689749367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
-  gameCamera: {fileID: 2125617825}
-  interactionDistance: 1.5
---- !u!195 &1689749368
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!136 &1689749369
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1689749370
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1689749371
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1689749372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689749366}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.568, y: 0.8, z: -2.508}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705094882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5622,15 +5778,15 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: bell_dispatch_sheet
-  unavailableMessage: The personnel assignments are filed by job reference. I should examine the equipment dispatch records before trying to identify the workers assigned to this job.
+  unavailableMessage: The personnel files are indexed by job. The relevant assignment is not yet clear.
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Personnel Assignment Register
   reference: WW-91-184
   documentDate: 09 OCT 1991
-  documentBody: "BELL MUNICIPAL SERVICES\r\nPERSONNEL ASSIGNMENT REGISTER \u2014 OCTOBER 1991\r\n\r\nJob Reference: WW-91-184\r\nDate: October 9, 1991\r\nClient: Grayford Public Works\r\nLocation: North County Waterworks\r\n\r\nASSIGNED PERSONNEL\r\n\r\nSupervisor:\r\nF. Bell\r\n\r\nField Worker 01:\r\nCaleb Turner\r\n\r\nField Worker 02:\r\nR. Hayes\r\n\r\nASSIGNMENT DETAILS\r\n\r\nTask:\r\nLower-access drainage inspection and assessment.\r\n\r\nAssigned Vehicle:\r\nUtility Truck 02\r\n\r\nEquipment:\r\nPortable drainage pump, inspection lamps, and general maintenance tools.\r\n\r\nAssignment Authorized By:\r\nF. Bell\r\n\r\nADMINISTRATIVE NOTES\r\n\r\nPersonnel assigned to the job as listed above.\r\n\r\nIndividual attendance confirmations: Not attached.\r\nField statements: Not attached.\r\nWork completion status: Not indicated.\r\n\r\nThis register documents personnel assignments only. It does not establish whether the listed workers attended the site or completed the assigned work.\n"
+  documentBody: "BELL MUNICIPAL SERVICES\r\nPERSONNEL ASSIGNMENT REGISTER \u2014 OCTOBER 1991\r\n\r\nJob Reference: WW-91-184\r\nDate: October 9, 1991\r\nClient: Grayford Public Works\r\nLocation: North County Waterworks\r\n\r\nASSIGNED PERSONNEL\r\n\r\nSupervisor:\r\nF. Bell\r\n\r\nField Worker 01:\r\nCaleb Turner\r\n\r\nField Worker 02:\r\nR. Hayes\r\n\r\nASSIGNMENT DETAILS\r\n\r\nTask:\r\nLower-access drainage inspection and assessment.\r\n\r\nAssigned Vehicle:\r\nUtility Truck 02\r\n\r\nEquipment:\r\nPortable drainage pump, inspection lamps, and general maintenance tools.\r\n\r\nAssignment Authorized By:\r\nF. Bell\r\n\r\nADMINISTRATIVE NOTES\r\n\r\nPersonnel assigned to the job as listed above.\r\n\r\nIndividual attendance confirmations: Not attached.\r\nField statements: Not attached.\r\nWork completion status: Not indicated.\r\n\r\nThis register documents personnel assignments only. It does not establish whether the listed workers attended the site or completed the assigned work.\r\n"
   evidenceID: bell_personnel_register
   evidenceTitle: Personnel Assignment Register
-  journalNote: Bell's personnel register identifies Caleb Turner and R. Hayes as the two workers assigned to WW-91-184 on October 9, 1991. It does not confirm their presence at the site.
+  journalNote: Caleb Turner and R. Hayes were assigned to WW-91-184 on October 9, 1991. Their attendance is unconfirmed.
   evidenceSource: Bell Municipal Services
 --- !u!65 &1830719286
 BoxCollider:
@@ -6624,7 +6780,6 @@ SceneRoots:
   - {fileID: 2125617829}
   - {fileID: 1190882498}
   - {fileID: 1069394991}
-  - {fileID: 1689749372}
   - {fileID: 1958871734}
   - {fileID: 379459537}
   - {fileID: 353928196}
@@ -6633,3 +6788,4 @@ SceneRoots:
   - {fileID: 1595676502}
   - {fileID: 383925786}
   - {fileID: 98795042}
+  - {fileID: 1321846921}

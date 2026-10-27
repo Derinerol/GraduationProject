@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WaterworksDrainageEvidence : Interactable
 {
-    private const string RequiredHypothesisID =
-        "possible_chamber_activity";
 
     private const string EvidenceID =
         "chamber_trapped_fabric";
@@ -21,8 +19,7 @@ public class WaterworksDrainageEvidence : Interactable
         if (journal == null || dialogue == null)
             return;
 
-        bool canInspect =
-            journal.HasHypothesis(RequiredHypothesisID);
+        bool canInspect = true;
 
         bool alreadyRecorded =
             journal.HasInformation(EvidenceID);
@@ -39,12 +36,9 @@ public class WaterworksDrainageEvidence : Interactable
                 () => journal.AddEntry(
                     EvidenceID,
                     "Fabric Trapped in Drainage Grate",
-                    "A small fragment of dark fabric is trapped " +
-                    "beneath a drainage grate in Chamber L-02. " +
-                    "The material is heavily discolored and partly " +
-                    "embedded in accumulated sediment. Its origin, " +
-                    "age, and possible connection to the events " +
-                    "of October 1991 remain unknown.",
+                    "A fragment of dark fabric is trapped beneath " +
+"a drainage grate in Chamber L-02, partly embedded " +
+"in sediment.",
                     "Observation",
                     Source
                 )

@@ -169,7 +169,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &206822509
+--- !u!1 &72715992
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,147 +177,236 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 206822515}
-  - component: {fileID: 206822514}
-  - component: {fileID: 206822513}
-  - component: {fileID: 206822512}
-  - component: {fileID: 206822511}
-  - component: {fileID: 206822510}
+  - component: {fileID: 72715994}
+  - component: {fileID: 72715993}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Journalmanager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &206822510
+--- !u!114 &72715993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
+  m_GameObject: {fileID: 72715992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cb88c33ac7b12447b79c6fd74f0c647, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
-  gameCamera: {fileID: 0}
-  interactionDistance: 1.5
---- !u!195 &206822511
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!136 &206822512
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &206822513
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &206822514
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &206822515
+  m_EditorClassIdentifier: Assembly-CSharp::JournalManager
+  journalPanel: {fileID: 0}
+  journalEntriesText: {fileID: 0}
+  closeButton: {fileID: 0}
+  entryList: {fileID: 0}
+  entryButtonPrefab: {fileID: 8510403111830143084, guid: 5f4b0cffd74292b43af0a0cb6a51660a, type: 3}
+  noteScrollRect: {fileID: 0}
+  discoveryNotificationText: {fileID: 0}
+  notificationDuration: 3
+  connectButton: {fileID: 0}
+  connectionStatusText: {fileID: 0}
+  selectionSlot1Text: {fileID: 0}
+  selectionSlot2Text: {fileID: 0}
+  clearSelectionButton: {fileID: 0}
+  selectedEntryColor: {r: 0.39, g: 0.47, b: 0.52, a: 1}
+  hypothesisDefinitions:
+  - hypothesisID: unresolved_waterworks_work
+    informationEntryID: hypothesis_unresolved_waterworks_work
+    title: Unresolved Waterworks Work
+    description: The anonymous package contains two incomplete records concerning the waterworks. Bell Municipal Services appears connected to the paperwork, but the purpose of the work remains unclear.
+    requiredInformationID1: maintenance_record_copy
+    requiredInformationID2: work_order_fragment
+  - hypothesisID: unverified_departure
+    informationEntryID: hypothesis_unverified_departure
+    title: An Unverified Departure
+    description: Evelyn accepted the departure explanation without witnessing it, and the Gazette's follow-up cited no witness to Daniel leaving. The published account appears to lack independent confirmation.
+    requiredInformationID1: evelyn_accepted_account
+    requiredInformationID2: gazette_followup_report
+  - hypothesisID: unresolved_pump_return
+    informationEntryID: hypothesis_unresolved_pump_return
+    title: Unresolved Pump Return
+    description: Caleb's log lacks a pump return entry. A possibly related Bell pump remains in his workshop.
+    requiredInformationID1: caleb_equipment_log
+    requiredInformationID2: caleb_stored_equipment
+  - hypothesisID: unverified_lower_access_maintenance
+    informationEntryID: hypothesis_unverified_lower_access_maintenance
+    title: Unverified Lower Access Maintenance
+    description: WW-91-184 is marked at the lower access, but the municipal ledger does not confirm completion.
+    requiredInformationID1: municipal_status_ledger
+    requiredInformationID2: waterworks_inspection_marks
+  - hypothesisID: unexplained_service_barrier
+    informationEntryID: hypothesis_unexplained_service_barrier
+    title: Unexplained Service Barrier
+    description: 'The sealed service barrier shows signs of previous adjustment or removal, but the available maintenance records do not identify it or explain its installation. The physical condition of the barrier and the documentary gap leave its history unresolved. Further records or testimony may clarify when and why the passage was closed.
+
+'
+    requiredInformationID1: waterworks_barrier_fasteners
+    requiredInformationID2: waterworks_barrier_record_gap
+  - hypothesisID: changed_service_access
+    informationEntryID: hypothesis_changed_service_access
+    title: Changed Service Access
+    description: Caleb remembers a gate where a solid barrier now blocks the lower passage.
+    requiredInformationID1: waterworks_service_barrier
+    requiredInformationID2: caleb_barrier_recollection
+  - hypothesisID: unverified_access_alteration
+    informationEntryID: hypothesis_unverified_access_alteration
+    title: Unverified Access Alteration
+    description: The alteration register may document the changed access, but its authorization and completion are unclear.
+    requiredInformationID1: municipal_facilities_alteration_register
+    requiredInformationID2: caleb_barrier_recollection
+  - hypothesisID: unresolved_barrier_responsibility
+    informationEntryID: hypothesis_unresolved_barrier_responsibility
+    title: Unresolved Barrier Responsibility
+    description: Bell Municipal Services dispatched workers and equipment to the lower waterworks access in October 1991. Frank Bell acknowledges the assignment but maintains that the available records do not establish who altered the service barrier. The dispatch sheet confirms Bell's involvement in maintenance at the site, but neither it nor Frank's statement identifies who installed or modified the barrier. Responsibility remains unresolved.
+    requiredInformationID1: bell_dispatch_sheet
+    requiredInformationID2: frank_barrier_responsibility
+  - hypothesisID: unconfirmed_oct17_visit
+    informationEntryID: hypothesis_unconfirmed_oct17_visit
+    title: Unconfirmed October 17 Visit
+    description: Bell's log lists an October 17 site check, but he will not confirm attending that day.
+    requiredInformationID1: bell_supplementary_access_log
+    requiredInformationID2: frank_oct17_site_visit
+  - hypothesisID: frank_lower_access_familiarity
+    informationEntryID: hypothesis_frank_lower_access_familiarity
+    title: Frank's Knowledge of Lower Access
+    description: Frank Bell referred to the waterworks' lower service entrance without being questioned about that part of the facility. The entrance is obstructed by a service barrier whose installation and authorization remain inadequately documented. Frank's familiarity with the area may be explained by his contracting work, but his unsolicited dismissal of its significance warrants further investigation.
+    requiredInformationID1: waterworks_service_barrier
+    requiredInformationID2: frank_lower_access_knowledge
+  - hypothesisID: unexplained_access_obstruction
+    informationEntryID: hypothesis_unexplained_access_obstruction
+    title: Unexplained Access Obstruction
+    description: The municipal facilities alteration register records a change to the lower service access, but its authorization, installation details, and completion status remain unresolved. Physical inspection reveals that the newer barrier obstructs an older doorway whose frame and hardware appear intact. The two findings suggest that the original access arrangement was deliberately blocked, although the purpose, timing, and responsible parties have not been established.
+    requiredInformationID1: municipal_facilities_alteration_register
+    requiredInformationID2: waterworks_original_access_mechanism
+  - hypothesisID: sealed_inspection_chamber
+    informationEntryID: hypothesis_sealed_inspection_chamber
+    title: The Sealed Inspection Chamber
+    description: The barrier blocks the original entrance to Inspection Chamber L-02.
+    requiredInformationID1: municipal_waterworks_archived_floor_plan
+    requiredInformationID2: waterworks_original_access_mechanism
+  - hypothesisID: possible_oct17_attendance
+    informationEntryID: hypothesis_possible_oct17_attendance
+    title: Possible October 17 Attendance
+    description: A gatekeeper's entry places someone recorded as F. Bell at the waterworks at 6:40 PM on October 17.
+    requiredInformationID1: hypothesis_unconfirmed_oct17_visit
+    requiredInformationID2: waterworks_gatekeeper_register
+  - hypothesisID: possible_secondary_chamber_access
+    informationEntryID: hypothesis_possible_secondary_chamber_access
+    title: Possible Secondary Chamber Access
+    description: An opening near the auxiliary pump may provide another route into L-02.
+    requiredInformationID1: hypothesis_sealed_inspection_chamber
+    requiredInformationID2: waterworks_auxiliary_pump_connection
+  - hypothesisID: possible_chamber_activity
+    informationEntryID: hypothesis_possible_chamber_activity
+    title: Possible Activity in Chamber L-02
+    description: The disturbed floor and partially emptied maintenance cabinet suggest that Chamber L-02 may have been accessed or used after its original construction. Neither observation establishes when this occurred or whether it was connected to Daniel Mercer's disappearance.
+    requiredInformationID1: chamber_disturbed_floor
+    requiredInformationID2: chamber_maintenance_cabinet
+  - hypothesisID: unexplained_chamber_disturbance
+    informationEntryID: hypothesis_unexplained_chamber_disturbance
+    title: Unexplained Disturbance in L-02
+    description: The fabric trapped beneath the drainage grate and the marks on the pump maintenance cover suggest that the chamber contains physical traces of activity whose origin and timing have not been established. These observations warrant further investigation but do not yet identify who entered the chamber or why.
+    requiredInformationID1: chamber_trapped_fabric
+    requiredInformationID2: chamber_pump_cover_marks
+  - hypothesisID: oct17_lower_service_access
+    informationEntryID: hypothesis_oct17_lower_service_access
+    title: October 17 Lower Service Access
+    description: An October 17 access request coincides with Bell's recorded arrival at the waterworks.
+    requiredInformationID1: chamber_concealed_access_note
+    requiredInformationID2: waterworks_gatekeeper_register
+  - hypothesisID: possible_daniel_metal_tag
+    informationEntryID: hypothesis_possible_daniel_metal_tag
+    title: Possible Connection to Daniel's Investigation
+    description: The object in L-02 may resemble the numbered tag Evelyn remembers Daniel carrying.
+    requiredInformationID1: chamber_recess_personal_effect
+    requiredInformationID2: evelyn_daniel_metal_tag
+  - hypothesisID: metal_tag_record_connection
+    informationEntryID: hypothesis_metal_tag_record_connection
+    title: Possible Waterworks Record Connection
+    description: The object's partial marking, 184, may relate to work order WW-91-184.
+    requiredInformationID1: chamber_metal_tag_marking
+    requiredInformationID2: municipal_facilities_alteration_register
+  - hypothesisID: deliberate_chamber_concealment
+    informationEntryID: hypothesis_deliberate_chamber_concealment
+    title: Possible Deliberate Concealment
+    description: Daniel's remains were found behind an altered access barrier, suggesting possible deliberate concealment.
+    requiredInformationID1: waterworks_preliminary_examination_report
+    requiredInformationID2: hypothesis_unverified_access_alteration
+  - hypothesisID: original_investigation_gap
+    informationEntryID: hypothesis_original_investigation_gap
+    title: Gap in the Original Investigation
+    description: The original missing-person investigation did not locate Daniel's remains at the waterworks.
+    requiredInformationID1: daniel_original_police_report
+    requiredInformationID2: waterworks_preliminary_examination_report
+  - hypothesisID: dwyer_unrecorded_waterworks_lead
+    informationEntryID: hypothesis_dwyer_unrecorded_waterworks_lead
+    title: Possible Unrecorded Waterworks Lead
+    description: Evelyn recalls telling Dwyer about Daniel's waterworks concerns, but the surviving report omits them.
+    requiredInformationID1: daniel_original_police_report
+    requiredInformationID2: evelyn_dwyer_investigation_recollection
+  - hypothesisID: bell_dwyer_oct17_overlap
+    informationEntryID: hypothesis_bell_dwyer_oct17_overlap
+    title: Bell and Dwyer at the Waterworks
+    description: Bell was recorded arriving at 6:40 PM; Dwyer was dispatched to the waterworks at 7:05 PM.
+    requiredInformationID1: waterworks_gatekeeper_register
+    requiredInformationID2: dwyer_oct17_activity_log
+  - hypothesisID: dwyer_lower_access_dispatch
+    informationEntryID: hypothesis_dwyer_lower_access_dispatch
+    title: Dwyer's Lower-Access Dispatch
+    description: Dwyer's October 17 dispatch specifically concerned the lower service area.
+    requiredInformationID1: dwyer_oct17_activity_log
+    requiredInformationID2: dwyer_oct17_dispatch_slip
+  - hypothesisID: dwyer_lower_access_guidance
+    informationEntryID: hypothesis_dwyer_lower_access_guidance
+    title: Dwyer's Route to the Lower Service Area
+    description: The October 17 dispatch communications slip records a request for Deputy Michael Dwyer to attend the waterworks lower service area. Caleb Turner explains that the passage was reached through maintenance routes unfamiliar to most visitors. If Dwyer attempted to reach the specified location, he may have needed directions from someone familiar with the facility. The evidence does not establish that he entered the passage or identify anyone who assisted him.
+    requiredInformationID1: dwyer_oct17_dispatch_slip
+    requiredInformationID2: caleb_lower_access_directions
+  - hypothesisID: possible_police_presence_in_chamber
+    informationEntryID: hypothesis_possible_police_presence_in_chamber
+    title: Possible Police Presence in Chamber L-02
+    description: A corroded equipment tag bearing the letters GSD was discovered beside the drainage channel in Chamber L-02. An October 17, 1991 dispatch slip records Deputy Michael Dwyer being sent to the waterworks lower service area. The tag may indicate sheriff's department equipment was present in the chamber, but its age, original owner, and connection to Dwyer's visit remain unverified.
+    requiredInformationID1: chamber_equipment_tag_marking
+    requiredInformationID2: dwyer_oct17_dispatch_slip
+  - hypothesisID: dwyer_missing_equipment_connection
+    informationEntryID: hypothesis_dwyer_missing_equipment_connection
+    title: Dwyer's Missing Equipment
+    description: A GSD-marked tag in L-02 may belong to the inspection lamp assigned to Dwyer.
+    requiredInformationID1: chamber_equipment_tag_marking
+    requiredInformationID2: dwyer_equipment_assignment_register
+  - hypothesisID: concealed_barrier_purpose
+    informationEntryID: hypothesis_concealed_barrier_purpose
+    title: The Barrier's Concealed Purpose
+    description: Bell's original order omitted chamber inspection, while the municipal register concealed that restriction.
+    requiredInformationID1: bell_original_barrier_work_order
+    requiredInformationID2: municipal_facilities_alteration_register
+  - hypothesisID: daniel_possible_platform_fall
+    informationEntryID: hypothesis_daniel_possible_platform_fall
+    title: Daniel's Possible Fall
+    description: Daniel's injuries are consistent with a fall from the damaged maintenance platform.
+    requiredInformationID1: daniel_skeletal_trauma_assessment
+    requiredInformationID2: chamber_damaged_platform_railing
+  - hypothesisID: billed_work_unverified
+    informationEntryID: hypothesis_billed_work_unverified
+    title: Unverified Billed Work
+    description: Bell billed the town for WW-91-184, but the municipal ledger does not confirm the work was completed.
+    requiredInformationID1: municipal_status_ledger
+    requiredInformationID2: bell_billing_copy
+--- !u!4 &72715994
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206822509}
+  m_GameObject: {fileID: 72715992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.8, z: -9.04}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -907,7 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: FromBellOffice
-  player: {fileID: 206822509}
+  player: {fileID: 0}
 --- !u!4 &684620673
 Transform:
   m_ObjectHideFlags: 0
@@ -1502,70 +1591,119 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &875058235
-GameObject:
+--- !u!1001 &949826023
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1365921733}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Name
+      value: Journalist
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8a0bfeeccec4b2448974737d64312dfa, type: 2}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 949826026}
+  m_SourcePrefab: {fileID: 100100000, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+--- !u!4 &949826024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 949826023}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 875058237}
-  - component: {fileID: 875058236}
-  m_Layer: 0
-  m_Name: Journalmanager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &875058236
+--- !u!1 &949826025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 949826023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &949826026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875058235}
+  m_GameObject: {fileID: 949826025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb88c33ac7b12447b79c6fd74f0c647, type: 3}
+  m_Script: {fileID: 11500000, guid: 08dbb56416d5fbc41b1dd2cb6848ef2b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JournalManager
-  journalPanel: {fileID: 0}
-  journalEntriesText: {fileID: 0}
-  closeButton: {fileID: 0}
-  entryList: {fileID: 0}
-  entryButtonPrefab: {fileID: 8510403111830143084, guid: 5f4b0cffd74292b43af0a0cb6a51660a, type: 3}
-  discoveryNotificationText: {fileID: 0}
-  notificationDuration: 3
-  connectButton: {fileID: 0}
-  connectionStatusText: {fileID: 0}
-  selectionSlot1Text: {fileID: 0}
-  selectionSlot2Text: {fileID: 0}
-  clearSelectionButton: {fileID: 0}
-  selectedEntryColor: {r: 0.39, g: 0.47, b: 0.52, a: 1}
-  hypothesisDefinitions:
-  - hypothesisID: unresolved_waterworks_work
-    informationEntryID: hypothesis_unresolved_waterworks_work
-    title: Unresolved Waterworks Work
-    description: The town log and Bell's work order refer to the same job, but neither establishes whether the proposed access work was completed.
-    requiredInformationID1: maintenance_record_copy
-    requiredInformationID2: work_order_fragment
---- !u!4 &875058237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875058235}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::JournalistAnimationController
+  agent: {fileID: 1365921729}
+  smoothTime: 0.12
+  movementThreshold: 0.05
 --- !u!1 &960777220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +2052,159 @@ Transform:
   - {fileID: 1626336864}
   - {fileID: 259945183}
   - {fileID: 244271621}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1365921727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365921733}
+  - component: {fileID: 1365921732}
+  - component: {fileID: 1365921731}
+  - component: {fileID: 1365921730}
+  - component: {fileID: 1365921729}
+  - component: {fileID: 1365921728}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1365921728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
+  gameCamera: {fileID: 0}
+  interactionDistance: 1.5
+--- !u!195 &1365921729
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 180
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &1365921730
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1365921731
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1365921732
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1365921733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365921727}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.79999995, z: -9.024}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 949826024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1483816427
@@ -2546,6 +2837,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1562125930}
     m_Modifications:
+    - target: {fileID: 1805931203247795187, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+      propertyPath: noteScrollRect
+      value: 
+      objectReference: {fileID: 1693157335}
     - target: {fileID: 3141073760002811926, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_Name
       value: JournalUIRoot
@@ -2664,6 +2959,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3359827545702142196, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
   m_PrefabInstance: {fileID: 1693157333}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1693157335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1762157244338385332, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+  m_PrefabInstance: {fileID: 1693157333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
 --- !u!1 &1716865145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,9 +3179,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1580356793}
   - {fileID: 768834714}
-  - {fileID: 875058237}
+  - {fileID: 72715994}
   - {fileID: 1562125930}
-  - {fileID: 206822515}
   - {fileID: 63417261}
   - {fileID: 603909357}
   - {fileID: 2081339048}
@@ -2883,3 +3188,4 @@ SceneRoots:
   - {fileID: 1179990264}
   - {fileID: 400156882}
   - {fileID: 732932372}
+  - {fileID: 1365921733}

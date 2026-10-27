@@ -64,10 +64,8 @@ public class WaterworksRecessContents : Interactable
                 () => journal.AddEntry(
                     ClothingID,
                     "Clothing Material in Floor Recess",
-                    "Deteriorated woven fabric was found " +
-                    "inside the floor recess of Chamber L-02. " +
-                    "It may be part of a garment, but its " +
-                    "original form and owner remain unknown.",
+                    "Deteriorated fabric resembling part of a garment " +
+"was found beneath sediment in the floor recess.",
                     "Observation",
                     Source
                 )
@@ -83,10 +81,8 @@ public class WaterworksRecessContents : Interactable
                 () => journal.AddEntry(
                     PersonalEffectID,
                     "Personal Effect in Floor Recess",
-                    "A small corroded metal object was found " +
-                    "beneath deteriorated clothing material " +
-                    "in Chamber L-02. Its original purpose " +
-                    "and ownership remain unknown.",
+                   "A small corroded metal object with an indistinct " +
+"marking was found beneath the fabric.",
                     "Evidence",
                     Source
                 )
@@ -106,12 +102,8 @@ public class WaterworksRecessContents : Interactable
                     () => journal.AddEntry(
                         MarkingID,
                         "Partial Marking on Metal Tag",
-                        "Closer examination of the corroded " +
-                        "metal object revealed three apparently " +
-                        "legible digits: 184. Other markings " +
-                        "remain obscured. The object's origin " +
-                        "and connection to Daniel Mercer " +
-                        "have not been established.",
+                        "The metal object's partially legible marking " +
+"appears to read 184.",
                         "Observation",
                         Source
                     )

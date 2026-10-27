@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WaterworksRecessDiscovery : Interactable
 {
-    private const string RequiredHypothesisID =
-        "metal_tag_record_connection";
+    private const string RequiredInformationID =
+    "chamber_recess_clothing";
 
     private const string RecessOpenID =
         "chamber_concealed_floor_recess";
@@ -40,7 +40,7 @@ public class WaterworksRecessDiscovery : Interactable
             journal.HasInformation(RecessOpenID);
 
         bool canInvestigate =
-            journal.HasHypothesis(RequiredHypothesisID);
+    journal.HasInformation(RequiredInformationID);
 
         bool remainsDiscovered =
             journal.HasInformation(DiscoveryID);
@@ -98,14 +98,9 @@ public class WaterworksRecessDiscovery : Interactable
                         journal.AddEntry(
                             DiscoveryID,
                             "Possible Human Remains in Chamber L-02",
-                            "Objects resembling human skeletal " +
-                            "remains were observed inside a narrow " +
-                            "service void adjoining the concealed " +
-                            "floor recess of Chamber L-02. " +
-                            "The remains have not been examined " +
-                            "or identified. Their relationship " +
-                            "to Daniel Mercer's disappearance " +
-                            "is unknown.",
+                            "Objects resembling human bones were found in a " +
+"concealed service void adjoining Chamber L-02's " +
+"floor recess. Their identity is unknown.",
                             "Observation",
                             Source
                         );

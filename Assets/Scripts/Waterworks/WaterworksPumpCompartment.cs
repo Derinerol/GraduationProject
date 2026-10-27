@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WaterworksPumpCompartment : Interactable
 {
-    private const string RequiredHypothesis =
-        "unexplained_chamber_disturbance";
+    private const string RequiredInformation =
+    "chamber_pump_cover_marks";
 
     private const string CoverEvidenceID =
         "chamber_pump_cover_marks";
@@ -31,7 +31,7 @@ public class WaterworksPumpCompartment : Interactable
             journal.HasInformation(CoverEvidenceID);
 
         bool canOpen =
-            journal.HasHypothesis(RequiredHypothesis);
+    journal.HasInformation(RequiredInformation);
 
         bool hasEnvelope =
             journal.HasInformation(EnvelopeEvidenceID);
@@ -49,12 +49,8 @@ public class WaterworksPumpCompartment : Interactable
                 () => journal.AddEntry(
                     CoverEvidenceID,
                     "Marks on Pump Maintenance Cover",
-                    "The old pump's maintenance cover has " +
-                    "scratches around its fasteners and a slight " +
-                    "misalignment with the housing. These marks " +
-                    "are consistent with the cover having been " +
-                    "removed or adjusted, but their age and " +
-                    "purpose are unknown.",
+                    "The pump's maintenance cover has scratched " +
+"fasteners and sits unevenly against its housing.",
                     "Observation",
                     Source
                 )
@@ -94,14 +90,9 @@ public class WaterworksPumpCompartment : Interactable
                     () => journal.AddEntry(
                         EnvelopeEvidenceID,
                         "Concealed October 1991 Access Note",
-                        "A deteriorated envelope was found behind " +
-                        "the pump maintenance cover in Chamber L-02. " +
-                        "It contains a folded note dated October " +
-                        "17, 1991, referring to an evening access " +
-                        "request for the lower service area. " +
-                        "The requester is not identified, and " +
-                        "the note does not confirm that the " +
-                        "requested access actually occurred.",
+                        "A note hidden behind the pump cover refers to " +
+"an evening access request for the lower service " +
+"area on October 17, 1991. The requester is unnamed.",
                         "Evidence",
                         Source
                     )

@@ -47,21 +47,14 @@ public class WaterworksPreliminaryReport : Interactable
                 () =>
                 {
                     journal.AddEntry(
-                        ReportID,
-                        "Preliminary Examination of Chamber L-02",
-                        "A preliminary official examination " +
-                        "confirmed human skeletal remains " +
-                        "inside the concealed service void " +
-                        "adjoining Chamber L-02. The remains " +
-                        "were associated with deteriorated " +
-                        "material and sediment. Their identity, " +
-                        "date of death, and cause of death " +
-                        "remain undetermined. The circumstances " +
-                        "of the enclosed location require " +
-                        "further investigation.",
-                        "Evidence",
-                        Source
-                    );
+    ReportID,
+    "Preliminary Examination of Chamber L-02",
+    "A preliminary examination confirmed human skeletal " +
+    "remains in a concealed void adjoining Chamber L-02. " +
+    "Their identity and cause of death remain unknown.",
+    "Evidence",
+    Source
+);
                 }
             ));
         }

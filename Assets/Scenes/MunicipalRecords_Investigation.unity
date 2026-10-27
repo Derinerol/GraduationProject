@@ -188,10 +188,10 @@ MonoBehaviour:
   documentTitle: "Deputy Activity Log \u2014 Evening Shift"
   reference: GSD-PAL-91-1017
   documentDate: October 17, 1991
-  documentBody: "Assigned Officer: Deputy Michael Dwyer\n\n18:15 \u2014 Routine patrol, eastern district.\n\n19:05 \u2014 Dispatched to North County Waterworks.\nReason: Site security inquiry.\n\n20:10 \u2014 Returned to general patrol.\nNo incident report reference entered.\n\nAdministrative Note\n\nNo corresponding incident report is indexed under the waterworks dispatch entry. The specific reason for the inquiry and its outcome are not documented in this activity log."
+  documentBody: "Assigned Officer: Deputy Michael Dwyer\r\n\r\n18:15 \u2014 Routine patrol, eastern district.\r\n\r\n19:05 \u2014 Dispatched to North County Waterworks.\r\nReason: Site security inquiry.\r\n\r\n20:10 \u2014 Returned to general patrol.\r\nNo incident report reference entered.\r\n\r\nAdministrative Note\r\n\r\nNo corresponding incident report is indexed under the waterworks dispatch entry. The specific reason for the inquiry and its outcome are not documented in this activity log."
   evidenceID: dwyer_oct17_activity_log
   evidenceTitle: October 17 Police Activity Log
-  journalNote: An archived sheriff's department activity log records Deputy Michael Dwyer being dispatched to North County Waterworks at 7:05 PM on October 17, 1991, for a site security inquiry. He returned to general patrol at 8:10 PM. No corresponding incident report is referenced, leaving the purpose and outcome of the dispatch unclear.
+  journalNote: Dwyer was dispatched to the waterworks at 7:05 PM on October 17, 1991, and returned to patrol at 8:10 PM. No incident report is referenced.
   evidenceSource: 'Grayford Sheriff''s Department '
 --- !u!65 &16014155
 BoxCollider:
@@ -563,8 +563,8 @@ MonoBehaviour:
   isSceneExit: 0
   destinationScene: Diner_Investigation
   destinationSpawnID: 
-  requiredInformationID: hypothesis_unexplained_access_obstruction
-  unavailableMessage: The engineering archive contains numerous historical drawings. You have no reason yet to request the original lower-service layout.
+  requiredInformationID: waterworks_original_access_mechanism
+  unavailableMessage: The archive holds many historical plans. I need a clearer reason to look for the original lower-access layout.
   department: "Grayford Public Works \u2014 Engineering Archives"
   documentTitle: Waterworks Floor Plan
   reference: NCW-PL-87-04 / Sheet L2
@@ -572,7 +572,7 @@ MonoBehaviour:
   documentBody: "NORTH COUNTY WATERWORKS\r\n\r\nLOWER SERVICE LEVEL \u2014 GENERAL ARRANGEMENT\r\n\r\nIDENTIFIED AREAS\r\n\r\nL-01 \u2014 Lower Service Corridor\r\n\r\nL-02 \u2014 Drainage Inspection Chamber\r\n\r\nL-03 \u2014 Auxiliary Pump Access\r\n\r\nL-04 \u2014 Pipe Maintenance Recess\r\n\r\nACCESS ARRANGEMENT\r\n\r\nThe drainage inspection chamber (L-02) is accessed from the lower service corridor (L-01) through a hinged service doorway.\r\n\r\nThe doorway is shown as part of the original facility arrangement. No secondary barrier is indicated on this revision.\r\n\r\nARCHIVE NOTE\r\n\r\nThis drawing represents the facility arrangement as recorded in June 1987. Subsequent modifications may not be reflected.\r\n\r\nLater revisions should be consulted before relying on this plan for current access or safety information."
   evidenceID: municipal_waterworks_archived_floor_plan
   evidenceTitle: Archived Waterworks Floor Plan
-  journalNote: An archived North County Waterworks floor plan, revised June 16, 1987, identifies a drainage inspection chamber designated L-02, accessible through a hinged doorway from the lower service corridor (L-01). The drawing shows no secondary barrier obstructing this entrance. As the plan predates the documented 1991 alterations, it does not establish the chamber's subsequent condition or accessibility.
+  journalNote: A 1987 plan shows Chamber L-02 reached through a hinged door from corridor L-01, with no additional barrier shown.
   evidenceSource: Grayford Municipal Records Office
 --- !u!65 &152857479
 BoxCollider:
@@ -955,7 +955,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: waterworks_preliminary_examination_report
-  unavailableMessage: The remains recovered from Chamber L-02 have not yet been formally examined. A preliminary examination report must be available before the supplemental identification findings can be accessed.
+  unavailableMessage: The identification findings are not available in the records I have seen.
   department: County Medical Examiner's Office
   documentTitle: "Supplemental Identification Report \u2014 Waterworks Remains"
   reference: CME-98-104-S1
@@ -967,12 +967,15 @@ MonoBehaviour:
     Lower Inspection Chamber L-02
 
 
+
     Subject:
 
     Previously unidentified human skeletal remains
 
 
+
     IDENTIFICATION FINDINGS
+
 
 
     Historical dental records obtained for
@@ -984,6 +987,7 @@ MonoBehaviour:
     recovered remains.
 
 
+
     Multiple corresponding dental features
 
     were identified, including the position
@@ -991,10 +995,13 @@ MonoBehaviour:
     and configuration of previous restorations.
 
 
+
     No unexplained discrepancies were observed.
 
 
+
     CONCLUSION
+
 
 
     The recovered remains are identified
@@ -1002,14 +1009,17 @@ MonoBehaviour:
     as those of Daniel Mercer.
 
 
+
     CAUSE OF DEATH:
 
     Undetermined.
 
 
+
     MANNER OF DEATH:
 
     Undetermined.
+
 
 
     The identification findings do not,
@@ -1021,12 +1031,13 @@ MonoBehaviour:
     were deposited in the chamber.
 
 
+
     Further investigative correlation is
 
     recommended.'
   evidenceID: daniel_remains_identification_report
   evidenceTitle: Daniel Mercer's Remains Identified
-  journalNote: A supplemental forensic report identifies the skeletal remains recovered from Chamber L-02 as Daniel Mercer through comparison with historical dental records. The cause and manner of death remain undetermined. The discovery establishes that Daniel's remains were present inside the sealed waterworks chamber.
+  journalNote: Dental records identify the remains in Chamber L-02 as Daniel Mercer. His cause and manner of death remain undetermined.
   evidenceSource: County Medical Examiner's Office
 --- !u!65 &276328555
 BoxCollider:
@@ -1365,7 +1376,7 @@ MonoBehaviour:
   response1: Daniel Mercer disappeared seven years ago.
   choice2: Ask about the town
   response2: Nothing much changes around here.
-  informationID: anonymous_package
+  informationID: municipal_maintenance_register
   informationTitle: Anonymous package
   informationSource: Anonymous package
   informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
@@ -1374,7 +1385,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: maintenance_record_copy
-  unavailableMessage: The maintenance registers are arranged by reference number. I should consult the photocopy from the package to identify the correct entry.
+  unavailableMessage: The register is indexed by reference number. The copied work order may help locate the original.
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Maintenance Register
   reference: WW-91-184
@@ -1382,7 +1393,7 @@ MonoBehaviour:
   documentBody: "NORTH COUNTY WATERWORKS\r\nMAINTENANCE REGISTER \u2014 OCTOBER 1991\r\n\r\nReference: WW-91-184\r\nDate Entered: October 8, 1991\r\nLocation: Lower Service Access\r\nAuthorized By: T. Reed\r\n\r\nDrainage inspection requested following reports of standing water near the lower service access.\r\n\r\nContractor work authorization referenced under WW-91-184.\r\n\r\nNo completion status recorded in this register."
   evidenceID: municipal_maintenance_register
   evidenceTitle: Municipal Maintenance Register
-  journalNote: The original municipal register confirms that WW-91-184 was entered on October 8, 1991, for drainage inspection near the waterworks' lower service access.
+  journalNote: WW-91-184 was entered on October 8, 1991, for drainage inspection near the lower waterworks access.
   evidenceSource: Grayford Municipal Records Office
 --- !u!1 &412259291
 GameObject:
@@ -1810,6 +1821,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 290188899}
     m_Modifications:
+    - target: {fileID: 1805931203247795187, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+      propertyPath: noteScrollRect
+      value: 
+      objectReference: {fileID: 620590249}
     - target: {fileID: 3141073760002811926, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
       propertyPath: m_Name
       value: JournalUIRoot
@@ -1932,6 +1947,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3359827545702142196, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
   m_PrefabInstance: {fileID: 620590247}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &620590249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1762157244338385332, guid: c3c7438c9262da24fbce1bba11687fc5, type: 3}
+  m_PrefabInstance: {fileID: 620590247}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
 --- !u!1 &628310389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,7 +2125,7 @@ MonoBehaviour:
   response1: Daniel Mercer disappeared seven years ago.
   choice2: Ask about the town
   response2: Nothing much changes around here.
-  informationID: anonymous_package
+  informationID: municipal_retention_index
   informationTitle: Anonymous package
   informationSource: Anonymous package
   informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
@@ -2108,7 +2134,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: municipal_status_ledger
-  unavailableMessage: The retention index lists several categories of contractor paperwork. I should establish what's missing from the municipal status ledger before searching further.
+  unavailableMessage: The retention index covers several record types. I need to narrow down which contractor file to trace.
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Records Retention Index
   reference: PW-CONTRACT/1991
@@ -2116,7 +2142,7 @@ MonoBehaviour:
   documentBody: "GRAYFORD MUNICIPAL RECORDS\r\nPUBLIC WORKS \u2014 RECORDS RETENTION INDEX\r\n\r\nRecord Category: Contractor Work Documentation\r\nPeriod: January\u2013December 1991\r\n\r\nMunicipal maintenance registers and work-order status ledgers are retained by the Public Works Department.\r\n\r\nContractor completion reports, site inspection notes, and supporting work documentation are maintained in separate contractor files.\r\n\r\nAssociated Contractor: Bell Municipal Services\r\nReferenced Work Order: WW-91-184\r\n\r\nThe index does not confirm whether a completion report was submitted for this work order."
   evidenceID: municipal_retention_index
   evidenceTitle: Records Retention Index
-  journalNote: The retention index identifies contractor completion reports as separate records. Bell Municipal Services is associated with WW-91-184, but the index does not confirm whether a completion report was submitted.
+  journalNote: "Contractor completion reports are indexed separately. The index does not confirm a report for Bell\u2019s WW-91-184."
   evidenceSource: Grayford Municipal Records Office
 --- !u!65 &647971856
 BoxCollider:
@@ -2377,7 +2403,7 @@ MonoBehaviour:
   response1: Daniel Mercer disappeared seven years ago.
   choice2: Ask about the town
   response2: Nothing much changes around here.
-  informationID: anonymous_package
+  informationID: municipal_status_ledger
   informationTitle: Anonymous package
   informationSource: Anonymous package
   informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
@@ -2386,15 +2412,15 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: municipal_maintenance_register
-  unavailableMessage: The status ledgers are organized by work-order reference. I should identify the original maintenance entry first.
+  unavailableMessage: "The status ledger is indexed by work order. I haven\u2019t identified the corresponding register entry yet."
   department: GRAYFORD MUNICIPAL RECORDS
   documentTitle: Work-Order Status Ledger
   reference: WW-91-184
   documentDate: OCT 1991
-  documentBody: "GRAYFORD MUNICIPAL RECORDS\r\nWORK-ORDER STATUS LEDGER \u2014 OCTOBER 1991\r\n\r\nReference: WW-91-184\r\nDepartment: Public Works\r\nContractor: Bell Municipal Services\r\nLocation: North County Waterworks\r\n\r\nWork Authorized: Drainage inspection and possible lower-access clearance.\r\n\r\nCompletion Date: \u2014\r\nCompletion Confirmation: Not recorded\r\nFinal Disposition: Unverified\r\n\r\nNo signed completion entry appears in the available municipal status ledger.\n"
+  documentBody: "GRAYFORD MUNICIPAL RECORDS\r\nWORK-ORDER STATUS LEDGER \u2014 OCTOBER 1991\r\n\r\nReference: WW-91-184\r\nDepartment: Public Works\r\nContractor: Bell Municipal Services\r\nLocation: North County Waterworks\r\n\r\nWork Authorized: Drainage inspection and possible lower-access clearance.\r\n\r\nCompletion Date: \u2014\r\nCompletion Confirmation: Not recorded\r\nFinal Disposition: Unverified\r\n\r\nNo signed completion entry appears in the available municipal status ledger.\r\n"
   evidenceID: municipal_status_ledger
   evidenceTitle: Work-Order Status Ledger
-  journalNote: The municipal status ledger contains no confirmed completion entry for WW-91-184. The available record does not establish whether the proposed work was carried out.
+  journalNote: WW-91-184 has no confirmed completion entry. The ledger does not establish whether the work was done.
   evidenceSource: Grayford Municipal Records Office
 --- !u!65 &690925507
 BoxCollider:
@@ -2816,15 +2842,15 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: dwyer_oct17_activity_log
-  unavailableMessage: The dispatch communications slips are filed separately from the patrol activity logs. Without a corresponding dispatch date and reference, there isn't enough information to identify the correct record.
+  unavailableMessage: The dispatch slips are indexed by date and call. I need the matching patrol entry to locate this one.
   department: Grayford Sheriff's Department
   documentTitle: "Dispatch Communications Slip \u2014 North County Waterworks"
   reference: GSD-COM-91-1017-07
   documentDate: October 17, 1991
-  documentBody: "Time Received: 18:58\nCommunication Type: Incoming telephone call\n\nOrigin: North County Waterworks\nCaller: Not identified\nNature of Call: Site security assistance\n\nOperator's Note:\n\"Request for deputy to attend lower service area.\nCaller reports a problem requiring attention.\nNo further details provided.\"\n\n19:05 \u2014 Deputy M. Dwyer dispatched.\n\nDisposition: See patrol activity log.\nIncident Report Number: Not entered."
+  documentBody: "Time Received: 18:58\r\nCommunication Type: Incoming telephone call\r\n\r\nOrigin: North County Waterworks\r\nCaller: Not identified\r\nNature of Call: Site security assistance\r\n\r\nOperator's Note:\r\n\"Request for deputy to attend lower service area.\r\nCaller reports a problem requiring attention.\r\nNo further details provided.\"\r\n\r\n19:05 \u2014 Deputy M. Dwyer dispatched.\r\n\r\nDisposition: See patrol activity log.\r\nIncident Report Number: Not entered."
   evidenceID: dwyer_oct17_dispatch_slip
   evidenceTitle: October 17 Dispatch Communications Slip
-  journalNote: A dispatch communications slip records an unidentified caller at North County Waterworks requesting police assistance in the lower service area at 6:58 PM on October 17, 1991. Deputy Michael Dwyer was dispatched seven minutes later. The record does not identify the caller or explain what occurred at the site.
+  journalNote: At 6:58 PM on October 17, 1991, an unidentified caller requested police assistance at the lower waterworks. Dwyer was dispatched at 7:05 PM.
   evidenceSource: 'Grayford Sheriff''s Department '
 --- !u!65 &740238594
 BoxCollider:
@@ -3478,6 +3504,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1055445329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2057471104}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Name
+      value: Journalist
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8a0bfeeccec4b2448974737d64312dfa, type: 2}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1055445332}
+  m_SourcePrefab: {fileID: 100100000, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+--- !u!4 &1055445330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 1055445329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1055445331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f74350eeadabfa246b0e7a42162403ff, type: 3}
+  m_PrefabInstance: {fileID: 1055445329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1055445332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055445331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dbb56416d5fbc41b1dd2cb6848ef2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JournalistAnimationController
+  agent: {fileID: 2057471100}
+  smoothTime: 0.12
+  movementThreshold: 0.05
 --- !u!1 &1087405382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,6 +4521,7 @@ MonoBehaviour:
   closeButton: {fileID: 0}
   entryList: {fileID: 0}
   entryButtonPrefab: {fileID: 8510403111830143084, guid: 5f4b0cffd74292b43af0a0cb6a51660a, type: 3}
+  noteScrollRect: {fileID: 0}
   discoveryNotificationText: {fileID: 0}
   notificationDuration: 3
   connectButton: {fileID: 0}
@@ -4585,7 +4725,7 @@ MonoBehaviour:
   response1: Daniel Mercer disappeared seven years ago.
   choice2: Ask about the town
   response2: Nothing much changes around here.
-  informationID: anonymous_package
+  informationID: municipal_facilities_alteration_register
   informationTitle: Anonymous package
   informationSource: Anonymous package
   informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
@@ -4594,7 +4734,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: helen_facilities_register_lead
-  unavailableMessage: The facilities alteration register is filed separately from the general maintenance records. You should ask the records clerk where to find it before examining this document.
+  unavailableMessage: This register is kept separately from the maintenance files. Helen may know where to find it.
   department: "Grayford Public Works \u2014 Facilities Division"
   documentTitle: Facilities Alteration Register
   reference: FAR-90-93 / Entry 184-A
@@ -4602,7 +4742,7 @@ MonoBehaviour:
   documentBody: "GRAYFORD PUBLIC WORKS\r\nFACILITIES ALTERATION REGISTER\r\nExtract: January 1990 \u2013 December 1993\r\n\r\nENTRY 041 \u2014 MARCH 12, 1990\r\nFacility: Municipal Garage\r\nWork: Replacement of exterior access doors\r\nAuthorization: PW-90-041\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nENTRY 116 \u2014 JUNE 4, 1991\r\nFacility: North County Waterworks\r\nWork: Upper pump housing ventilation modifications\r\nAuthorization: PW-91-116\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nENTRY 184-A \u2014 OCTOBER 1991\r\nFacility: North County Waterworks\r\nArea: Lower service access\r\nWork: Access / barrier arrangement\r\nAssociated reference: WW-91-184\r\nAuthorization: Not entered\r\nContractor: Not entered\r\nCompletion date: Not entered\r\nStatus: Unconfirmed\r\n\r\nENTRY 022 \u2014 FEBRUARY 18, 1992\r\nFacility: Municipal Storage Annex\r\nWork: Internal partition installation\r\nAuthorization: PW-92-022\r\nStatus: Closed\r\nCompletion documentation: Filed\r\n\r\nCLERK'S NOTE:\r\nEntry 184-A refers to associated maintenance documentation not included with this register extract. No installation specification or completion confirmation is attached."
   evidenceID: municipal_facilities_alteration_register
   evidenceTitle: Facilities Alteration Register
-  journalNote: A municipal facilities register contains an October 1991 entry concerning the lower service access at North County Waterworks, associated with WW-91-184. The authorization, contractor, and completion fields are blank. The entry refers to maintenance documentation that is not attached, leaving the nature and completion of the alteration unresolved.
+  journalNote: An October 1991 entry links the lower waterworks access to WW-91-184, but leaves authorization, contractor, and completion blank.
   evidenceSource: Grayford Public Works
 --- !u!65 &1334071064
 BoxCollider:
@@ -4910,22 +5050,27 @@ MonoBehaviour:
     Case status: Unresolved
 
 
+
     Summary of initial investigation
+
 
 
     Daniel Mercer was reported missing after failing to return home. Initial inquiries with local residents produced no confirmed account of his whereabouts after October 17.
 
 
+
     No verified evidence of criminal involvement was identified during the preliminary investigation. The subject''s last known movements remain undetermined.
+
 
 
     Disposition
 
 
+
     Case remains open pending additional information.'
   evidenceID: daniel_original_police_report
   evidenceTitle: Original Missing Person Report
-  journalNote: An archived missing-person report filed on October 19, 1991, identifies Deputy Michael Dwyer as the officer responsible for investigating Daniel Mercer's disappearance. The report states that Daniel's movements after October 17 could not be confirmed and that no verified evidence of criminal involvement was established. The case remained unresolved.
+  journalNote: "Dwyer handled Daniel\u2019s 1991 disappearance case. Daniel\u2019s movements after October 17 were unverified, and the case remained unresolved."
   evidenceSource: Grayford Sheriff's Office
 --- !u!65 &1399026271
 BoxCollider:
@@ -5475,158 +5620,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564732675}
   m_CullTransparentMesh: 1
---- !u!1 &1583145343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1583145349}
-  - component: {fileID: 1583145348}
-  - component: {fileID: 1583145347}
-  - component: {fileID: 1583145346}
-  - component: {fileID: 1583145345}
-  - component: {fileID: 1583145344}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1583145344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
-  gameCamera: {fileID: 1120149521}
-  interactionDistance: 1.5
---- !u!195 &1583145345
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!136 &1583145346
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1583145347
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1583145348
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1583145349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583145343}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 0.8, z: -3}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680718029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6200,7 +6193,7 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: daniel_remains_identification_report
-  unavailableMessage: The supplemental trauma assessment is filed under the identified subject's examination record. The remains must first be formally identified before the corresponding report can be located.
+  unavailableMessage: "The trauma findings are filed with an identified examination record. I can\u2019t locate the corresponding report yet."
   department: County Medical Examiner's Office
   documentTitle: "Supplemental Skeletal Trauma Assessment \u2014 Daniel Mercer"
   reference: CME-98-104-S2
@@ -6212,7 +6205,9 @@ MonoBehaviour:
     North County Waterworks, Chamber L-02
 
 
+
     EXAMINATION FINDINGS
+
 
 
     Examination identified fractures involving
@@ -6222,9 +6217,11 @@ MonoBehaviour:
     and upper extremity.
 
 
+
     The observed injury pattern is consistent
 
     with substantial blunt-force trauma.
+
 
 
     A fall from an elevated position is one
@@ -6232,9 +6229,11 @@ MonoBehaviour:
     possible mechanism.
 
 
+
     The skeletal findings do not establish
 
     the precise mechanism of injury.
+
 
 
     The available evidence is insufficient
@@ -6244,10 +6243,13 @@ MonoBehaviour:
     injuries directly caused death.
 
 
+
     CONCLUSION
 
 
+
     Significant skeletal trauma is present.
+
 
 
     CAUSE OF DEATH:
@@ -6255,9 +6257,11 @@ MonoBehaviour:
     Undetermined.
 
 
+
     MANNER OF DEATH:
 
     Undetermined.
+
 
 
     Correlation with scene findings and
@@ -6265,10 +6269,11 @@ MonoBehaviour:
     investigative evidence is recommended.
 
 
+
     End of supplemental assessment.'
   evidenceID: daniel_skeletal_trauma_assessment
   evidenceTitle: Daniel's Skeletal Trauma
-  journalNote: A supplemental forensic assessment identifies fractures consistent with substantial blunt-force trauma. A fall from height is one possible explanation. The medical examiner cannot determine the precise mechanism, cause of death, or manner of death from the skeletal findings alone.
+  journalNote: "Daniel\u2019s remains show blunt-force fractures consistent with a possible fall. The precise mechanism and cause of death remain undetermined."
   evidenceSource: County Medical Examiner's Office
 --- !u!65 &1790924077
 BoxCollider:
@@ -6412,12 +6417,13 @@ MonoBehaviour:
   destinationScene: Diner_Investigation
   destinationSpawnID: 
   requiredInformationID: chamber_equipment_tag_marking
-  unavailableMessage: The equipment assignment registers contain numerous archived entries. A department marking or inventory identifier is needed to locate the relevant assignment.
+  unavailableMessage: The equipment registers cover many items. A marking or inventory number would narrow the search.
   department: Grayford Sheriff's Department
   documentTitle: Equipment Assignment Register
   reference: GSD-EAR-91-10
   documentDate: October 31, 1991
   documentBody: 'Equipment Assignment Entry
+
 
 
     Item: Portable Inspection Lamp
@@ -6429,7 +6435,9 @@ MonoBehaviour:
     Date Issued: October 12, 1991
 
 
+
     Return Status: Not Recorded
+
 
 
     Administrative Remarks:
@@ -6439,15 +6447,17 @@ MonoBehaviour:
     October inventory reconciliation.
 
 
+
     No transfer or disposal authorization is
 
     attached to this entry.
 
 
+
     Disposition: Pending verification.'
   evidenceID: dwyer_equipment_assignment_register
   evidenceTitle: Dwyer's Equipment Assignment
-  journalNote: An October 1991 sheriff's department equipment register identifies portable inspection lamp GSD-2714 as assigned to Deputy Michael Dwyer. The lamp was listed as outstanding during the monthly inventory reconciliation, with no recorded return or authorized transfer. Its identifier may correspond to the corroded equipment tag recovered from Chamber L-02, although the incomplete marking prevents a definitive match.
+  journalNote: Inspection lamp GSD-2714 was assigned to Dwyer in October 1991 and was not recorded as returned. The chamber tag may bear the same number.
   evidenceSource: Grayford Sheriff's Department
 --- !u!65 &1812258370
 BoxCollider:
@@ -7079,6 +7089,159 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037451032}
   m_CullTransparentMesh: 1
+--- !u!1 &2057471098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057471104}
+  - component: {fileID: 2057471103}
+  - component: {fileID: 2057471102}
+  - component: {fileID: 2057471101}
+  - component: {fileID: 2057471100}
+  - component: {fileID: 2057471099}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2057471099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be390dc43a35bce4cb16e245b397a6e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
+  gameCamera: {fileID: 0}
+  interactionDistance: 1.5
+--- !u!195 &2057471100
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 180
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &2057471101
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2057471102
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2057471103
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2057471104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057471098}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.29, y: 0.79999995, z: -2.82}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1055445330}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064882124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7200,7 +7363,6 @@ SceneRoots:
   - {fileID: 1018701319}
   - {fileID: 1204171066}
   - {fileID: 290188899}
-  - {fileID: 1583145349}
   - {fileID: 1154755040}
   - {fileID: 578907135}
   - {fileID: 732945959}
@@ -7208,3 +7370,4 @@ SceneRoots:
   - {fileID: 801187113}
   - {fileID: 1167921037}
   - {fileID: 994092337}
+  - {fileID: 2057471104}

@@ -1,4 +1,3 @@
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +12,7 @@ public class JournalUIBinder : MonoBehaviour
     [Header("Selectable Entries")]
     [SerializeField] private Transform entryList;
     [SerializeField] private Button entryButtonPrefab;
+    [SerializeField] private ScrollRect noteScrollRect;
 
     [Header("Discovery Notification")]
     [SerializeField] private TMP_Text discoveryNotificationText;
@@ -23,15 +23,14 @@ public class JournalUIBinder : MonoBehaviour
 
     private void Start()
     {
-        if (JournalManager.Instance == null)
+        JournalManager journal = JournalManager.Instance;
+        if (journal == null)
         {
-            Debug.LogError(
-                "JournalUIBinder: No JournalManager found in the scene."
-            );
+            Debug.LogError("JournalUIBinder: No JournalManager found in the scene.");
             return;
         }
 
-        JournalManager.Instance.BindSceneUI(
+        journal.BindSceneUI(
             journalPanel,
             journalEntriesText,
             closeButton,
@@ -39,7 +38,8 @@ public class JournalUIBinder : MonoBehaviour
             entryButtonPrefab,
             discoveryNotificationText,
             connectButton,
-            connectionStatusText
+            connectionStatusText,
+            noteScrollRect
         );
     }
 }

@@ -56,10 +56,8 @@ public class DamagedInspectionLamp : Interactable
                     journal.AddEntry(
                         DiscoveryID,
                         "Damaged Inspection Lamp",
-                        "A damaged portable inspection lamp " +
-                        "was found lodged inside the drainage " +
-                        "assembly of Chamber L-02. Its casing " +
-                        "bears the inventory number GSD-2714.",
+                        "A damaged inspection lamp was found in Chamber L-02's " +
+                        "drainage assembly. Its inventory number is GSD-2714.",
                         "Evidence",
                         "Waterworks Chamber L-02");
                 }
@@ -82,16 +80,9 @@ public class DamagedInspectionLamp : Interactable
                     journal.AddEntry(
                         IdentificationID,
                         "Dwyer's Inspection Lamp Identified",
-                        "The damaged inspection lamp found " +
-                        "inside Chamber L-02 bears inventory " +
-                        "number GSD-2714. The October 1991 " +
-                        "sheriff's department equipment " +
-                        "register identifies this lamp as " +
-                        "assigned to Deputy Michael Dwyer " +
-                        "and subsequently unreturned. " +
-                        "The match establishes the identity " +
-                        "of the equipment, but not who " +
-                        "left it in the chamber.",
+                        "The lamp's inventory number, GSD-2714, matches one " +
+                        "assigned to Deputy Dwyer in October 1991. " +
+                        "It was never recorded as returned.",
                         "Evidence",
                         "Chamber L-02 / Sheriff's Equipment Register");
                 }

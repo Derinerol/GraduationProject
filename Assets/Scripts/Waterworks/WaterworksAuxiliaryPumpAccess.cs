@@ -46,7 +46,9 @@ public class WaterworksAuxiliaryPumpAccess : Interactable
                 () => journal.AddEntry(
                     ConnectionID,
                     "Auxiliary Pump Maintenance Connection",
-                    "The auxiliary pump access contains a narrow maintenance opening leading toward the older lower-service infrastructure. Its position appears consistent with the area surrounding Chamber L-02 on the archived waterworks floor plan. The opening is partially obstructed by disused equipment, and its destination cannot be confirmed from the accessible side.",
+                    "A narrow opening behind the auxiliary pump equipment " +
+"extends toward the older lower-service area, " +
+"possibly leading to Chamber L-02.",
                     "Observation",
                     Source)));
         }
@@ -75,7 +77,8 @@ public class WaterworksAuxiliaryPumpAccess : Interactable
                     () => journal.AddEntry(
                         ClearedID,
                         "Exposed Auxiliary Maintenance Passage",
-                        "The disused equipment rack has been moved away from the auxiliary pump access. A narrow maintenance passage is now visible beyond the hatch, extending toward the older lower-service infrastructure. The passage's far end and its connection to Chamber L-02 have not yet been verified.",
+                       "Moving the equipment rack exposed a narrow " +
+"maintenance passage toward the older lower-service area.",
                         "Observation",
                         Source)));
             }

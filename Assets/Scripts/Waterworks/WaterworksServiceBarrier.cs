@@ -7,7 +7,7 @@ public class WaterworksServiceBarrier : Interactable
     private const string HypothesisID = "unverified_lower_access_maintenance";
     private const string FastenersID = "waterworks_barrier_fasteners";
     private const string RecordGapID = "waterworks_barrier_record_gap";
-    private const string DetailedInspectionHypothesisID = "frank_lower_access_familiarity";
+    private const string DetailedInspectionHypothesisID = "changed_service_access";
     private const string OriginalAccessID = "waterworks_original_access_mechanism";
     private const string Source = "North County Waterworks";
 
@@ -27,7 +27,9 @@ public class WaterworksServiceBarrier : Interactable
             journal.AddEntry(
                 BarrierID,
                 "Sealed Lower Service Passage",
-                "A heavy metal barrier closes off an older section of the lower service passage. Its surface shows corrosion and several replacement fasteners. No maintenance notice or closure date is visible. The barrier appears intended to prevent access, but its installation date and purpose are unknown.",
+                "A metal barrier blocks the lower service passage. " +
+"Its fasteners show signs of replacement, but no " +
+"closure date is visible.",
                 "Observation",
                 Source
             );
@@ -45,7 +47,8 @@ public class WaterworksServiceBarrier : Interactable
                 () => journal.AddEntry(
                     FastenersID,
                     "Service Barrier Fasteners",
-                    "The sealed service barrier has replacement fasteners and scratches around several mounting points. These suggest the panel has been adjusted or removed previously, but the visible condition does not establish when or why.",
+                   "Several barrier fasteners have been replaced, " +
+"with scratches around their mounting points.",
                     "Observation",
                     Source
                 )
@@ -60,7 +63,8 @@ public class WaterworksServiceBarrier : Interactable
                 () => journal.AddEntry(
                     RecordGapID,
                     "Undocumented Service Barrier",
-                    "WW-91-184 references drainage and sealing work near the lower access, but the available records do not identify this particular barrier or explain its installation. Its connection to the assignment remains uncertain.",
+                   "WW-91-184 references drainage and sealing near " +
+"the lower access but does not identify this barrier.",
                     "Observation",
                     Source
                 )
@@ -75,7 +79,8 @@ public class WaterworksServiceBarrier : Interactable
                 () => journal.AddEntry(
                     OriginalAccessID,
                     "Obstructed Original Access",
-                    "A closer inspection of the lower service barrier reveals an older access door behind it. The original hinges, frame, and locking mechanism appear intact, although their functionality cannot be confirmed without opening the entrance. The newer barrier obstructs this existing access arrangement rather than visibly replacing a damaged doorway.",
+                    "An older doorway remains behind the newer barrier. " +
+"Its hinges, frame, and locking mechanism appear intact.",
                     "Observation",
                     Source
                 )
@@ -97,7 +102,7 @@ public class WaterworksServiceBarrier : Interactable
         dialogue.ShowDialogue(
             "Sealed Service Barrier",
             canInspectOriginalAccess
-                ? "Frank's remarks draw your attention back to the lower service entrance. You inspect the edges of the barrier more carefully."
+                ? "Caleb's recollection suggests the entrance once looked different. You examine the barrier for signs of the original access."
                 : hasHypothesis
                     ? "The markings and municipal records raise questions about the work performed here. You examine the sealed passage again."
                     : "A heavy metal barrier blocks the older service passage. Its closure date is not marked.",

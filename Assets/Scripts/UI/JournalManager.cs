@@ -139,8 +139,7 @@ public class JournalManager : MonoBehaviour
         discoveryNotificationText = newDiscoveryNotificationText;
         connectButton = newConnectButton;
         connectionStatusText = newConnectionStatusText;
-        if (newNoteScrollRect != null)
-            noteScrollRect = newNoteScrollRect;
+        noteScrollRect = newNoteScrollRect;
 
         // Prevent duplicate listeners when reconnecting UI.
         if (closeButton != null)

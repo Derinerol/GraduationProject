@@ -35,12 +35,8 @@ public class WaterworksEquipmentTag : Interactable
                     journal.AddEntry(
                         DiscoveryID,
                         "Corroded Equipment Tag",
-                        "A small, corroded metal tag was " +
-                        "found lodged beside the drainage " +
-                        "channel in Chamber L-02. It bears " +
-                        "a partially obscured stamped " +
-                        "identification number. Its origin " +
-                        "and purpose remain unknown.",
+                        "A corroded metal tag is lodged beside the chamber's " +
+"drainage channel. Its stamped number is partly obscured.",
                         "Observation",
                         "Waterworks Chamber L-02"
                     );
@@ -61,14 +57,9 @@ public class WaterworksEquipmentTag : Interactable
                     journal.AddEntry(
                         MarkingID,
                         "Marking on Corroded Equipment Tag",
-                        "Closer examination of the tag " +
-                        "reveals the letters GSD and " +
-                        "a partially legible inventory " +
-                        "number. The marking may indicate " +
-                        "a connection to the Grayford " +
-                        "Sheriff's Department, but the " +
-                        "tag's original assignment " +
-                        "has not been established.",
+                        "The tag bears the letters GSD and part of an " +
+"inventory number, possibly linking it to the " +
+"Grayford Sheriff's Department.",
                         "Evidence",
                         "Waterworks Chamber L-02"
                     );

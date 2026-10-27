@@ -40,12 +40,8 @@ public class WaterworksChamberEvidence : Interactable
                 "collected unevenly around its edges.";
 
             description =
-                "A section of the floor in Chamber L-02 shows an uneven " +
-                "distribution of dust and sediment compared with the " +
-                "surrounding concrete. The difference may indicate " +
-                "maintenance activity or disturbance after the chamber " +
-                "was originally constructed, but its cause and date " +
-                "cannot be established from visual inspection alone.";
+    "Dust and sediment are unevenly distributed " +
+    "around part of Chamber L-02's floor.";
         }
 
         else if (evidenceType == EvidenceType.MaintenanceCabinet)
@@ -59,11 +55,9 @@ public class WaterworksChamberEvidence : Interactable
                 "unevenly across the shelves.";
 
             description =
-                "The maintenance cabinet in Chamber L-02 contains " +
-                "old supplies and partially emptied compartments. " +
-                "The uneven dust accumulation suggests the contents " +
-                "may have been handled at different times, although " +
-                "there is no reliable indication of when or by whom.";
+    "Several compartments in the chamber's maintenance " +
+    "cabinet are empty. Dust has accumulated unevenly " +
+    "on the shelves.";
         }
         else
         {
@@ -77,12 +71,8 @@ public class WaterworksChamberEvidence : Interactable
                 "against its housing.";
 
             description =
-                "The maintenance cover on the old pump assembly " +
-                "shows scratches around its fasteners and a slight " +
-                "misalignment with the housing. These features are " +
-                "consistent with the cover having been removed or " +
-                "adjusted, although the timing and purpose of any " +
-                "such work are unknown.";
+    "The pump's maintenance cover has scratched " +
+    "fasteners and sits unevenly against its housing.";
         }
 
 
@@ -114,8 +104,10 @@ public class WaterworksChamberEvidence : Interactable
 
         dialogue.ShowDialogue(
             evidenceType == EvidenceType.DisturbedFloor
-                ? "Chamber Floor"
-                : "Maintenance Cabinet",
+    ? "Chamber Floor"
+    : evidenceType == EvidenceType.MaintenanceCabinet
+        ? "Maintenance Cabinet"
+        : "Pump Equipment",
             alreadyRecorded
                 ? "You've already recorded your observations here."
                 : "Something about this area warrants closer inspection.",

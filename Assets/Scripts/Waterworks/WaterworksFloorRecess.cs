@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WaterworksFloorRecess : Interactable
 {
-    private const string RequiredHypothesis =
-        "oct17_lower_service_access";
+    private const string RequiredInformation =
+    "chamber_disturbed_floor";
 
     private const string FloorEvidenceID =
         "chamber_disturbed_floor";
@@ -40,7 +40,7 @@ public class WaterworksFloorRecess : Interactable
             journal.HasInformation(FloorEvidenceID);
 
         bool canInvestigate =
-            journal.HasHypothesis(RequiredHypothesis);
+    journal.HasInformation(RequiredInformation);
 
         bool recessOpened =
             journal.HasInformation(RecessEvidenceID);
@@ -57,12 +57,8 @@ public class WaterworksFloorRecess : Interactable
                 () => journal.AddEntry(
                     FloorEvidenceID,
                     "Disturbed Chamber Floor",
-                    "A section of the floor in Chamber L-02 " +
-                    "shows an uneven distribution of dust and " +
-                    "sediment compared with the surrounding " +
-                    "concrete. The difference may indicate " +
-                    "maintenance activity or disturbance, " +
-                    "but its cause and date are unknown.",
+                   "Dust and sediment are unevenly distributed " +
+"around part of Chamber L-02's floor.",
                     "Observation",
                     Source
                 )
@@ -106,13 +102,9 @@ public class WaterworksFloorRecess : Interactable
                         journal.AddEntry(
                             RecessEvidenceID,
                             "Concealed Floor Recess",
-                            "A removable inspection cover was " +
-                            "discovered beneath sediment in " +
-                            "Chamber L-02. Beneath the cover is " +
-                            "a shallow utility recess containing " +
-                            "debris and unidentified deteriorated " +
-                            "material. The recess's contents " +
-                            "have not yet been examined closely.",
+                            "A removable floor panel conceals a shallow recess " +
+"in Chamber L-02. Debris and deteriorated material " +
+"lie beneath the cover.",
                             "Observation",
                             Source
                         );

@@ -249,8 +249,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "evelyn_daniel_memory",
                         "Daniel at the Diner",
-                        "Evelyn remembers Daniel as a quiet regular. " +
-                        "She heard he left town but never knew for certain.",
+                        "Evelyn remembers Daniel as a quiet diner regular. She never " +
+                        "knew whether he left town.",
                         "Evelyn Shaw");
                 }
             ));
@@ -270,8 +270,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "evelyn_daniel_last_days",
                         "Daniel's Last Days",
-                        "Evelyn noticed Daniel seemed unusually distracted " +
-                        "during the week before he disappeared. She doesn't know why.",
+                        "Evelyn noticed Daniel seemed distracted during the week " +
+                        "before he disappeared.",
                         "Evelyn Shaw");
                 }
             ));
@@ -291,8 +291,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "evelyn_accepted_account",
                         "Voluntary Departure",
-                        "Evelyn believed Daniel left because everyone said so. " +
-                        "She never saw him leave.",
+                        "Evelyn accepted the story that Daniel left town, but never " +
+                        "witnessed his departure.",
                         "Evelyn Shaw");
                 }
             ));
@@ -314,8 +314,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "evelyn_package_reaction",
                         "Evelyn's Recollection",
-                        "Mentioning the package reminded Evelyn that Daniel " +
-                        "had asked about the old waterworks shortly before disappearing.",
+                        "The anonymous package reminded Evelyn that Daniel had asked " +
+                        "about the waterworks before disappearing.",
                         "Evelyn Shaw");
                 }
             ));
@@ -336,8 +336,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "evelyn_waterworks_statement",
                         "Waterworks Records",
-                        "Daniel asked Evelyn where the waterworks records " +
-                        "were kept. She didn't know.",
+                        "Daniel asked Evelyn where the waterworks records were kept. " +
+                        "She couldn't tell him.",
                         "Evelyn Shaw");
                 }
             ));
@@ -366,12 +366,8 @@ public class Interactable : MonoBehaviour
                     JournalManager.Instance.RecordClaim(
                         "evelyn_daniel_metal_tag",
                         "Daniel's Numbered Metal Tag",
-                        "Evelyn Shaw recalls Daniel showing her a " +
-                        "small numbered metal tag associated with " +
-                        "his investigation into the waterworks. " +
-                        "She cannot remember the number or establish " +
-                        "whether the object found in Chamber L-02 " +
-                        "is the same one.",
+                        "Evelyn remembers Daniel showing her a numbered metal tag " +
+                        "linked to the waterworks. She cannot recall its number.",
                         "Evelyn Shaw"
                     );
                 }
@@ -398,11 +394,9 @@ public class Interactable : MonoBehaviour
                     JournalManager.Instance.RecordClaim(
                         "evelyn_dwyer_investigation_recollection",
                         "Evelyn's Account of the Original Investigation",
-                        "Evelyn Shaw recalls telling Deputy Michael " +
-                        "Dwyer that Daniel had been concerned about " +
-                        "the waterworks before his disappearance. " +
-                        "She believed Dwyer recorded the information, " +
-                        "but she was never informed of any follow-up.",
+                        "Evelyn says she told Dwyer about Daniel's waterworks " +
+                        "concerns during the original investigation. She believed he " +
+                        "noted them.",
                         "Evelyn Shaw"
                     );
                 }
@@ -456,8 +450,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "arthur_daniel_recollection",
                         "Arthur's Recollection",
-                        "Arthur remembers Daniel's mother visiting the Gazette to ask " +
-                        "whether the paper had information beyond the sheriff's office.",
+                        "Daniel's mother visited the Gazette seeking information " +
+                        "beyond what the sheriff's office had provided.",
                         "Arthur Finch");
                 }
             ));
@@ -478,9 +472,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "arthur_reporting_practice",
                         "The Gazette's Sources",
-                        "Arthur says the Gazette relied on the sheriff's office " +
-                        "for its assessment and had no independent witness " +
-                        "to Daniel's departure.",
+                        "The Gazette relied on the sheriff's office and had no " +
+                        "independent witness to Daniel leaving town.",
                         "Arthur Finch");
                 }
             ));
@@ -501,8 +494,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "arthur_coverage_stopped",
                         "End of the Gazette's Coverage",
-                        "Arthur says the Gazette stopped reporting on Daniel " +
-                        "because it had no new information it could substantiate.",
+                        "Arthur says the Gazette stopped covering the case because no " +
+                        "verifiable new information emerged.",
                         "Arthur Finch");
                 }
             ));
@@ -523,9 +516,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "arthur_departure_assessment",
                         "Arthur on the Departure Account",
-                        "Arthur acknowledges the Gazette could not verify Daniel's " +
-                        "departure and that readers may have treated the sheriff's " +
-                        "assessment as an established conclusion.",
+                        "Arthur admits the Gazette could not verify Daniel's " +
+                        "departure. Its reporting may have made the sheriff's theory " +
+                        "seem conclusive.",
                         "Arthur Finch");
                 }
             ));
@@ -546,9 +539,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "arthur_records_lead",
                         "Municipal Records Lead",
-                        "Arthur suggests checking the municipal records office " +
-                        "for the original waterworks paperwork. He doesn't " +
-                        "recall the Gazette covering that work order.",
+                        "Arthur recommends the municipal records office for the " +
+                        "original waterworks paperwork.",
                         "Arthur Finch");
                 }
             ));
@@ -602,8 +594,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_records_procedure",
                         "Municipal Filing Procedure",
-                        "Helen says Public Works retains registers and status " +
-                        "ledgers, while contractor paperwork is indexed separately.",
+                        "Public Works keeps registers and status ledgers; contractor " +
+                        "paperwork is indexed separately.",
                         "Helen Ward");
                 }
             ));
@@ -622,8 +614,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_work_order_context",
                         "Helen on Work-Order Authorization",
-                        "Helen confirms that the register records authorization " +
-                        "for WW-91-184, not completion of the work.",
+                        "Helen confirms WW-91-184 was authorized, but the register " +
+                        "does not establish completion.",
                         "Helen Ward");
                 }
             ));
@@ -642,8 +634,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_missing_completion",
                         "Helen on the Missing Completion Entry",
-                        "Helen says the blank completion field cannot establish " +
-                        "whether the work was performed.",
+                        "Helen says the blank completion field does not establish " +
+                        "whether the work was done.",
                         "Helen Ward");
                 }
             ));
@@ -662,15 +654,15 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_contractor_records",
                         "Contractor Records Lead",
-                        "Helen identifies Bell Municipal Services as the next " +
-                        "place to ask about supporting work documentation, " +
-                        "without confirming that such a report exists.",
+                        "Helen suggests asking Bell Municipal Services for supporting " +
+                        "records on WW-91-184.",
                         "Helen Ward");
                 }
             ));
         }
 
-        if (hasHypothesis && !HasAsked("helen_asked_about_discrepancy"))
+        if (hasRegister && hasLedger &&
+    !HasAsked("helen_asked_about_discrepancy"))
         {
             choices.Add(new DialogueChoice(
                 "Question the discrepancy between the work records",
@@ -683,9 +675,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_unresolved_work_assessment",
                         "Helen's Assessment of the Records",
-                        "Helen agrees the available records do not resolve " +
-                        "whether the waterworks job was completed. She cannot " +
-                        "verify what happened at the site.",
+                        "Helen confirms the available records cannot establish " +
+                        "whether the waterworks job was completed.",
                         "Helen Ward");
                 }
             ));
@@ -713,13 +704,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_facilities_register_lead",
                         "Facilities Alteration Register",
-                        "Helen Ward explains that permanent alterations to " +
-                        "municipal facilities would normally be documented " +
-                        "in a facilities alteration register or related " +
-                        "maintenance records. She identifies the register " +
-                        "as a possible source for information about the " +
-                        "sealed lower waterworks passage but does not " +
-                        "confirm that an authorization exists.",
+                        "Helen recommends checking the facilities alteration register " +
+                        "for records of changes to the lower passage.",
                         "Helen Ward");
                 }
             ));
@@ -755,14 +741,9 @@ public class Interactable : MonoBehaviour
                     JournalManager.Instance.AddEntry(
                         "helen_chamber_discovery_report",
                         "Chamber Discovery Reported to Helen Ward",
-                        "Helen Ward was informed of the suspected " +
-                        "human remains in Waterworks Chamber L-02. " +
-                        "She advised securing the location and " +
-                        "reporting the discovery to the appropriate " +
-                        "authorities for formal examination. " +
-                        "Helen offered to help identify the relevant " +
-                        "municipal contact but did not claim authority " +
-                        "to order an examination.",
+                        "I reported the suspected remains in Chamber L-02 to Helen. " +
+                        "She advised securing the site and contacting the " +
+                        "authorities.",
                         "Event",
                         "Conversation with Helen Ward"
                     );
@@ -789,12 +770,9 @@ public class Interactable : MonoBehaviour
                     JournalManager.Instance.AddEntry(
                         "chamber_official_examination_requested",
                         "Official Examination Requested",
-                        "Following the report of suspected human " +
-                        "remains in Chamber L-02, Helen Ward agreed " +
-                        "to forward the discovery and location " +
-                        "details to the appropriate authorities. " +
-                        "An official examination has been requested, " +
-                        "but no findings have yet been received.",
+                        "Helen agreed to forward the chamber discovery to the " +
+                        "appropriate authorities for examination. Findings are " +
+                        "pending.",
                         "Event",
                         "Conversation with Helen Ward"
                     );
@@ -827,12 +805,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "helen_daniel_identification_response",
                         "Helen on Daniel's Identification",
-                        "Helen Ward acknowledges the formal " +
-                        "identification of Daniel Mercer's " +
-                        "remains. She emphasizes that the " +
-                        "report does not explain his death " +
-                        "or why his remains were found in " +
-                        "the sealed chamber.",
+                        "Helen acknowledges Daniel's identification but says the " +
+                        "report does not explain his death or the chamber's closure.",
                         "Helen Ward");
                 }
             ));
@@ -882,8 +856,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_business_history",
                         "Bell Municipal Services",
-                        "Frank says his company has handled municipal maintenance " +
-                        "work for Grayford for many years.",
+                        "Frank says Bell Municipal Services has handled Grayford's " +
+                        "maintenance contracts for years.",
                         "Frank Bell");
                 }
             ));
@@ -903,8 +877,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_work_order_account",
                         "Frank on WW-91-184",
-                        "Frank says his company handled waterworks maintenance " +
-                        "but cannot recall the details of WW-91-184.",
+                        "Frank recalls waterworks maintenance jobs but claims not to " +
+                        "remember the details of WW-91-184.",
                         "Frank Bell");
                 }
             ));
@@ -923,9 +897,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_dispatch_explanation",
                         "Frank on the Dispatch Sheet",
-                        "Frank acknowledges that the sheet records a crew assignment " +
-                        "but says a field report would be needed to establish " +
-                        "what happened on site.",
+                        "Frank says the dispatch sheet confirms a crew assignment, " +
+                        "not what happened on site.",
                         "Frank Bell");
                 }
             ));
@@ -944,8 +917,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_billing_explanation",
                         "Frank on the Invoice",
-                        "Frank describes the invoice as routine billing for the " +
-                        "waterworks job and distinguishes it from a field report.",
+                        "Frank describes the invoice as routine billing for " +
+                        "inspection and equipment, not proof of completed work.",
                         "Frank Bell");
                 }
             ));
@@ -966,8 +939,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_completion_response",
                         "Frank on Missing Completion Records",
-                        "Frank attributes the missing completion confirmation to " +
-                        "incomplete records and rejects the suggestion of improper billing.",
+                        "Frank blames incomplete records for the missing completion " +
+                        "entry and denies improper billing.",
                         "Frank Bell");
                 }
             ));
@@ -985,8 +958,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_daniel_denial",
                         "Frank on Daniel Mercer",
-                        "Frank says he does not remember Daniel Mercer approaching " +
-                        "Bell Municipal Services about the waterworks.",
+                        "Frank claims he does not remember Daniel visiting Bell " +
+                        "Municipal Services.",
                         "Frank Bell");
                 }
             ));
@@ -1009,10 +982,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_former_workers",
                         "Former Bell Employees",
-                        "Frank says R. Hayes left Grayford and Caleb Turner " +
-                        "no longer works for Bell Municipal Services. He " +
-                        "believes Caleb may still do independent maintenance " +
-                        "work locally.",
+                        "Frank says R. Hayes left town and Caleb Turner now works " +
+                        "independently.",
                         "Frank Bell");
                 }
             ));
@@ -1039,12 +1010,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_barrier_responsibility",
                         "Frank on the Lower-Access Alteration",
-                        "Frank Bell acknowledges that his company handled " +
-                        "drainage work at the waterworks but says the municipal " +
-                        "alteration register does not establish that Bell " +
-                        "installed or modified the lower-access barrier. " +
-                        "He directs questions about authorization to Public " +
-                        "Works and does not identify who performed the alteration.",
+                        "Frank acknowledges Bell's drainage work but denies that the " +
+                        "records establish who installed the lower-access barrier.",
                         "Frank Bell");
                 }
             ));
@@ -1071,13 +1038,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_oct17_site_visit",
                         "Frank's Account of the October 17 Visit",
-                        "When questioned about the October 17, 1991 " +
-                        "supplementary access entry, Frank recalls " +
-                        "visiting the waterworks around that period " +
-                        "but does not confirm attending on that date. " +
-                        "He describes unresolved drainage complaints " +
-                        "and says internal access logs were not always " +
-                        "completed contemporaneously.",
+                        "Frank recalls visiting the waterworks around October 17, " +
+                        "1991, but will not confirm that date. He questions the " +
+                        "access log's accuracy.",
                         "Frank Bell");
                 }
             ));
@@ -1111,14 +1074,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_lower_access_knowledge",
                         "Frank's Unprompted Reference to Lower Access",
-                        "When confronted with a gatekeeper's register " +
-                        "listing an arrival under his name at 6:40 PM " +
-                        "on October 17, 1991, Frank questions the " +
-                        "register's reliability. Without being asked " +
-                        "about any particular part of the facility, " +
-                        "he refers to the lower service entrance and " +
-                        "insists there was nothing there worth " +
-                        "investigating.",
+                        "Confronted with the 6:40 PM entry, Frank questions the " +
+                        "register and brings up the lower service entrance without " +
+                        "prompting.",
                         "Frank Bell");
                 }
             ));
@@ -1148,13 +1106,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_original_barrier_order_response",
                         "Bell's Explanation for the Barrier Order",
-                        "Frank Bell acknowledges authorizing " +
-                        "the October 18, 1991 closure of the " +
-                        "lower service passage. He claims the " +
-                        "chamber was unsafe and that instructions " +
-                        "not to document its interior condition " +
-                        "were intended to keep the completion " +
-                        "report limited to work actually performed.",
+                        "Frank admits ordering the October 18 closure. He claims the " +
+                        "chamber was unsafe and that the paperwork covered only work " +
+                        "performed.",
                         "Frank Bell");
                 }
             ));
@@ -1187,12 +1141,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_yard_meeting_response",
                         "Bell's Response to Caleb's Testimony",
-                        "Frank Bell acknowledges changing the " +
-                        "October 18 waterworks crew assignment. " +
-                        "He characterizes visits by deputies " +
-                        "to the contractor yard as routine " +
-                        "and challenges Caleb Turner's " +
-                        "interpretation of the October 17 meeting.",
+                        "Frank admits changing the October 18 crew assignment but " +
+                        "describes deputies visiting the yard as routine.",
                         "Frank Bell");
                 }
             ));
@@ -1221,11 +1171,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_daniel_remains_response",
                         "Bell Denies Knowing About Daniel's Remains",
-                        "Confronted with the formal identification " +
-                        "of Daniel Mercer's remains in Chamber L-02, " +
-                        "Frank Bell claims he had no knowledge " +
-                        "that Daniel was inside the chamber " +
-                        "when he authorized the barrier closure.",
+                        "Frank denies knowing Daniel's body was in Chamber L-02 when " +
+                        "he ordered the passage sealed.",
                         "Frank Bell");
                 }
             ));
@@ -1253,12 +1200,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_platform_fall_response",
                         "Bell's Response to the Possible Fall",
-                        "When asked whether Daniel Mercer fell " +
-                        "from the maintenance platform, Frank " +
-                        "Bell describes the railing as having " +
-                        "been unsafe for months. He suggests " +
-                        "Daniel should not have been on the " +
-                        "platform but denies witnessing a fall.",
+                        "Frank says the platform railing was unsafe and denies " +
+                        "witnessing Daniel fall.",
                         "Frank Bell");
                 }
             ));
@@ -1290,13 +1233,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_daniel_meeting_admission",
                         "Bell Admits Meeting Daniel",
-                        "Frank Bell acknowledges meeting Daniel " +
-                        "Mercer to discuss discrepancies in the " +
-                        "North County Waterworks contracts. " +
-                        "He admits they argued about Daniel's " +
-                        "allegations but denies that the " +
-                        "disagreement establishes any connection " +
-                        "to Daniel's disappearance.",
+                        "Frank admits meeting Daniel about disputed waterworks " +
+                        "contracts. They argued, but Frank denies involvement in his " +
+                        "disappearance.",
                         "Frank Bell");
                 }
             ));
@@ -1326,13 +1265,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_platform_argument_admission",
                         "Bell Admits Arguing Near the Platform",
-                        "Frank Bell acknowledges that his " +
-                        "argument with Daniel Mercer took " +
-                        "place near the waterworks maintenance " +
-                        "level. He says Daniel wanted to " +
-                        "inspect the lower area and that " +
-                        "he warned him it was unsafe. " +
-                        "Bell explicitly denies pushing Daniel.",
+                        "Frank admits arguing with Daniel near the maintenance " +
+                        "platform. He says Daniel wanted to inspect the lower area " +
+                        "and denies pushing him.",
                         "Frank Bell");
                 }
             ));
@@ -1369,16 +1304,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_daniel_fall_confession",
                         "Bell Admits Witnessing Daniel's Fall",
-                        "Frank Bell admits that he physically " +
-                        "struggled with Daniel Mercer near the " +
-                        "waterworks maintenance platform on " +
-                        "October 17, 1991. Bell says he grabbed " +
-                        "Daniel's arm during their argument, " +
-                        "Daniel pulled away, and the damaged " +
-                        "railing gave way. Bell claims Daniel " +
-                        "fell accidentally and was motionless " +
-                        "when Bell reached him. His account " +
-                        "has not been independently verified.",
+                        "Frank admits grabbing Daniel during an argument near the " +
+                        "platform. He claims Daniel pulled away, the railing failed, " +
+                        "and the fall was accidental.",
                         "Frank Bell");
                 }
             ));
@@ -1406,12 +1334,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_called_for_help_after_fall",
                         "Bell Says He Called for Help",
-                        "Frank Bell says he panicked after " +
-                        "Daniel Mercer's fall because he feared " +
-                        "being blamed for Daniel's death. " +
-                        "He admits calling for help but refuses " +
-                        "to identify whom he contacted or " +
-                        "describe what happened afterward.",
+                        "Frank says he panicked after Daniel fell and called for " +
+                        "help, but refuses to say whom he contacted.",
                         "Frank Bell");
                 }
             ));
@@ -1444,14 +1368,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "frank_concealment_admission",
                         "Bell Admits Ordering the Concealment",
-                        "Confronted with Michael Dwyer's confession, " +
-                        "Frank Bell admits ordering the lower " +
-                        "service passage sealed and directing " +
-                        "how the maintenance work was documented. " +
-                        "He acknowledges concealing Daniel " +
-                        "Mercer's death for seven years while " +
-                        "maintaining that the original fall " +
-                        "was accidental.",
+                        "Frank admits ordering the passage sealed and controlling the " +
+                        "maintenance report to conceal Daniel's death. He maintains " +
+                        "the fall was accidental.",
                         "Frank Bell");
                 }
             ));
@@ -1513,9 +1432,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_workshop_history",
                         "Caleb's Repair Business",
-                        "Caleb runs an independent repair workshop, working " +
-                        "mainly on pumps, motors, and generators. He previously " +
-                        "handled larger jobs while employed by Bell.",
+                        "Caleb repairs pumps, motors, and generators independently " +
+                        "after leaving Bell Municipal Services.",
                         "Caleb Turner");
                 }
             ));
@@ -1534,9 +1452,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_bell_employment",
                         "Caleb's Former Employment",
-                        "Caleb confirms that he previously worked for Bell " +
-                        "Municipal Services on municipal maintenance and " +
-                        "drainage jobs. He says he left to work independently.",
+                        "Caleb confirms he worked on municipal drainage and " +
+                        "maintenance jobs for Bell before leaving to work " +
+                        "independently.",
                         "Caleb Turner");
                 }
             ));
@@ -1556,9 +1474,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_work_order_memory",
                         "Caleb's Waterworks Recollection",
-                        "Caleb recalls going to the old waterworks for a " +
-                        "lower-access drainage assignment, but cannot confirm " +
-                        "that all the assigned work was finished.",
+                        "Caleb recalls working near the waterworks' lower access but " +
+                        "cannot confirm that WW-91-184 was completed.",
                         "Caleb Turner");
                 }
             ));
@@ -1578,9 +1495,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_equipment_recollection",
                         "Caleb on the Dispatched Equipment",
-                        "Caleb recalls taking a portable pump and lamps to " +
-                        "the damp lower-access area at the waterworks. He " +
-                        "does not specify how much work was completed.",
+                        "Caleb recalls taking a portable pump and lamps to the damp " +
+                        "lower waterworks passage.",
                         "Caleb Turner");
                 }
             ));
@@ -1600,9 +1516,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_completion_uncertainty",
                         "Caleb on the Completion Record",
-                        "Caleb says Bell handled the office paperwork and " +
-                        "does not recall personally signing off on the " +
-                        "waterworks assignment.",
+                        "Caleb says Bell handled the paperwork. He does not remember " +
+                        "signing off on the waterworks job.",
                         "Caleb Turner");
                 }
             ));
@@ -1629,9 +1544,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_missing_pump_response",
                         "Caleb on the Missing Pump Return",
-                        "Caleb recalls following up on a pump that lacked a " +
-                        "recorded return after the 1991 waterworks assignment. " +
-                        "He says nobody gave him a clear answer about it.",
+                        "Caleb recalls an unreturned pump and says he never received " +
+                        "a clear explanation for the missing entry.",
                         "Caleb Turner");
                 }
             ));
@@ -1651,10 +1565,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_pump_ownership_account",
                         "Caleb on the Stored Pump",
-                        "Caleb says he acquired old Bell equipment when he " +
-                        "left the company and kept some for parts. He does " +
-                        "not establish whether this is the pump assigned " +
-                        "to WW-91-184.",
+                        "Caleb says he acquired used Bell equipment when he left, but " +
+                        "cannot identify the workshop pump as the one from WW-91-184.",
                         "Caleb Turner");
                 }
             ));
@@ -1680,10 +1592,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_lower_access_recollection",
                         "Caleb on the Lower Access",
-                        "When questioned about the missing pump, Caleb says " +
-                        "Bell owned several similar pumps. He recalls the " +
-                        "lower waterworks access more clearly than the " +
-                        "equipment but does not explain why.",
+                        "Caleb remembers the waterworks' lower access more clearly " +
+                        "than the equipment assigned there.",
                         "Caleb Turner");
                 }
             ));
@@ -1706,22 +1616,20 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_lower_access_description",
                         "Lower Waterworks Access",
-                        "Caleb describes an old service passage beneath the " +
-                        "waterworks buildings, with poor lighting and a " +
-                        "difficult gate. He says the crew was assigned to " +
-                        "inspect drainage there.",
+                        "Caleb describes a poorly lit lower service passage with a " +
+                        "heavy gate, used for drainage inspections.",
                         "Caleb Turner");
                 }
             ));
         }
 
         // Follow-up unlocked by the waterworks barrier hypothesis.
-        bool hasBarrierHypothesis = journal != null &&
-            journal.HasHypothesis("unexplained_service_barrier");
+        bool hasBarrierEvidence = journal != null &&
+    journal.HasInformation("waterworks_service_barrier");
         bool hasBarrierRecollection = journal != null &&
             journal.HasInformation("caleb_barrier_recollection");
 
-        if (hasBarrierHypothesis && !hasBarrierRecollection)
+        if (hasBarrierEvidence && !hasBarrierRecollection)
         {
             choices.Add(new DialogueChoice(
                 "Ask whether the lower service passage was sealed",
@@ -1734,13 +1642,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_barrier_recollection",
                         "Caleb's Recollection of the Service Gate",
-                        "Caleb Turner recalls a heavy gate in the lower waterworks " +
-                        "service passage during his employment with Bell Municipal " +
-                        "Services. He does not remember the solid barrier currently " +
-                        "present at the site, although he acknowledges that the " +
-                        "passage could have been modified after he last visited. " +
-                        "His recollection does not establish when the existing " +
-                        "barrier was installed.",
+                        "Caleb remembers a heavy gate where a solid barrier now " +
+                        "blocks the lower passage. He cannot date the change.",
                         "Caleb Turner");
                 }
             ));
@@ -1776,16 +1679,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_oct17_yard_witness_account",
                         "Caleb's Account of October 17",
-                        "Caleb Turner claims he saw Frank Bell " +
-                        "and Deputy Michael Dwyer together at " +
-                        "the Bell Municipal Services yard late " +
-                        "on October 17, 1991. He recalls the men " +
-                        "appearing agitated and Bell instructing " +
-                        "him not to report for the following " +
-                        "morning's waterworks assignment. " +
-                        "Caleb did not witness what happened " +
-                        "at the waterworks or hear the men's " +
-                        "complete conversation.",
+                        "Caleb says he saw Bell and Dwyer together at the yard late " +
+                        "on October 17, 1991. Bell told him not to report for the " +
+                        "next morning's waterworks job.",
                         "Caleb Turner");
                 }
             ));
@@ -1820,13 +1716,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_lower_access_directions",
                         "Caleb on Access to the Lower Service Area",
-                        "Caleb Turner explains that the lower " +
-                        "waterworks service passage was reached " +
-                        "through maintenance routes rather than " +
-                        "the main visitor entrance. He believes " +
-                        "someone unfamiliar with the facility " +
-                        "would likely have needed directions " +
-                        "to locate the passage.",
+                        "Caleb says the lower passage was reached by maintenance " +
+                        "routes that visitors might struggle to find.",
                         "Caleb Turner");
                 }
             ));
@@ -1861,16 +1752,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_package_sender_confession",
                         "Caleb Admits Sending the Anonymous Package",
-                        "Caleb Turner admits sending the anonymous " +
-                        "package that brought the journalist to " +
-                        "Grayford. He says he remained silent for " +
-                        "seven years because he feared Frank Bell, " +
-                        "Deputy Michael Dwyer, and the consequences " +
-                        "of becoming involved. He suspected that " +
-                        "the closure of the lower service passage " +
-                        "was connected to Daniel Mercer's " +
-                        "disappearance, but says he never " +
-                        "witnessed Daniel's death.",
+                        "Caleb admits sending the anonymous package. He suspected a " +
+                        "connection between the sealed passage and Daniel's " +
+                        "disappearance but feared speaking out.",
                         "Caleb Turner");
                 }
             ));
@@ -1900,14 +1784,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_package_motivation",
                         "Caleb's Reason for Reopening the Case",
-                        "Caleb says he sent the anonymous package " +
-                        "after revisiting materials from his time " +
-                        "working for Bell Municipal Services. " +
-                        "He hoped an outside journalist would " +
-                        "investigate Daniel's disappearance " +
-                        "without the influence of the people " +
-                        "involved in the original inquiry. " +
-                        "He did not know whether Daniel was dead.",
+                        "Caleb revisited old Bell records and sent the package hoping " +
+                        "an outside journalist would investigate. He did not know " +
+                        "Daniel was dead.",
                         "Caleb Turner");
                 }
             ));
@@ -1935,12 +1814,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "caleb_package_intent",
                         "Caleb's Intended Lead",
-                        "Caleb says the anonymous package was " +
-                        "intended to direct attention toward " +
-                        "North County Waterworks and discrepancies " +
-                        "in the records surrounding Daniel's " +
-                        "disappearance. He claims he did not know " +
-                        "the full circumstances of Daniel's death.",
+                        "Caleb intended the package to draw attention to the " +
+                        "waterworks and its records. He says he did not know how " +
+                        "Daniel died.",
                         "Caleb Turner");
                 }
             ));
@@ -2010,11 +1886,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_original_case_account",
                         "Dwyer's Account of the Mercer Case",
-                        "Deputy Michael Dwyer says he handled " +
-                        "the initial investigation into Daniel " +
-                        "Mercer's disappearance. He describes " +
-                        "the inquiries as inconclusive and " +
-                        "confirms that the case remained open.",
+                        "Dwyer says he investigated Daniel's disappearance. The " +
+                        "inquiries were inconclusive and the case remained open.",
                         "Michael Dwyer");
                 }
             ));
@@ -2041,12 +1914,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_departure_assessment",
                         "Dwyer on Voluntary Departure",
-                        "Dwyer says voluntary departure was " +
-                        "considered a possibility, not a " +
-                        "confirmed finding. He maintains " +
-                        "that the initial investigation " +
-                        "lacked sufficient evidence to " +
-                        "establish criminal involvement.",
+                        "Dwyer says voluntary departure was only a possibility and " +
+                        "that the original inquiry found no clear evidence of a " +
+                        "crime.",
                         "Michael Dwyer");
                 }
             ));
@@ -2073,12 +1943,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_evelyn_lead_response",
                         "Dwyer's Response to Evelyn's Recollection",
-                        "Dwyer acknowledges speaking with " +
-                        "Evelyn Shaw but says he cannot " +
-                        "recall every detail. He argues " +
-                        "that the surviving summary report " +
-                        "would not necessarily include " +
-                        "every lead received.",
+                        "Dwyer acknowledges interviewing Evelyn but claims the " +
+                        "summary report would not include every lead.",
                         "Michael Dwyer");
                 }
             ));
@@ -2105,13 +1971,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_bell_attendance_response",
                         "Dwyer on Bell's Waterworks Attendance",
-                        "When questioned about Frank Bell's " +
-                        "recorded attendance at the waterworks, " +
-                        "Dwyer emphasizes that Bell had " +
-                        "legitimate reasons to visit the site. " +
-                        "He does not establish whether Bell " +
-                        "was questioned during the original " +
-                        "Mercer investigation.",
+                        "Dwyer says Bell had legitimate reasons to visit the " +
+                        "waterworks and does not confirm whether Bell was questioned.",
                         "Michael Dwyer");
                 }
             ));
@@ -2140,15 +2001,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_chamber_discovery_response",
                         "Dwyer's Response to the Chamber Discovery",
-                        "Confronted with the preliminary " +
-                        "examination of human remains in " +
-                        "Chamber L-02, Dwyer acknowledges " +
-                        "that the discovery could change " +
-                        "the investigation. He stresses " +
-                        "that the remains have not been " +
-                        "identified and declines to discuss " +
-                        "the matter further outside " +
-                        "official channels.",
+                        "Dwyer acknowledges that the unidentified remains in Chamber " +
+                        "L-02 may change the investigation but declines further " +
+                        "comment.",
                         "Michael Dwyer");
                 }
             ));
@@ -2185,13 +2040,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_oct17_dispatch_response",
                         "Dwyer's Account of the October 17 Dispatch",
-                        "Confronted with an activity log showing " +
-                        "his dispatch to North County Waterworks " +
-                        "on October 17, 1991, Dwyer says he cannot " +
-                        "remember the call's details. He suggests " +
-                        "routine explanations for the dispatch " +
-                        "and denies that the records establish " +
-                        "any interaction with Frank Bell.",
+                        "Dwyer acknowledges the October 17 dispatch record but claims " +
+                        "not to remember the call or meeting Bell.",
                         "Michael Dwyer");
                 }
             ));
@@ -2220,19 +2070,15 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_lower_access_call_response",
                         "Dwyer on the Lower-Access Dispatch",
-                        "Confronted with the dispatch communications " +
-                        "slip, Dwyer acknowledges that the request " +
-                        "concerned the lower service area. He says " +
-                        "the record does not establish where he " +
-                        "went after arriving and claims he cannot " +
-                        "remember who was present.",
+                        "Dwyer admits the dispatch concerned the lower service area " +
+                        "but claims not to remember whom he encountered.",
                         "Michael Dwyer");
                 }
             ));
         }
 
         if (
-            journal.HasHypothesis("dwyer_lower_access_guidance") &&
+            journal.HasHypothesis("dwyer_lower_access_dispatch") &&
             !HasAsked("dwyer_asked_about_access_route")
         )
         {
@@ -2253,12 +2099,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_access_route_response",
                         "Dwyer on His Route Through the Waterworks",
-                        "When asked how he located the lower " +
-                        "service area, Dwyer disputes the " +
-                        "assumption that he entered the passage. " +
-                        "He says he cannot recall which entrance " +
-                        "he used or whether anyone provided " +
-                        "directions.",
+                        "Dwyer disputes having entered the lower passage and cannot " +
+                        "recall which entrance he used.",
                         "Michael Dwyer");
                 }
             ));
@@ -2288,13 +2130,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_missing_lamp_response",
                         "Dwyer on His Missing Inspection Lamp",
-                        "Confronted with the equipment register " +
-                        "and the corroded tag from Chamber L-02, " +
-                        "Dwyer acknowledges having used a portable " +
-                        "inspection lamp during patrol duties. " +
-                        "He argues that the incomplete tag marking " +
-                        "does not establish that the recovered " +
-                        "object belonged to his assigned lamp.",
+                        "Dwyer acknowledges using an inspection lamp but says the " +
+                        "partial GSD tag cannot identify his missing equipment.",
                         "Michael Dwyer");
                 }
             ));
@@ -2323,14 +2160,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_identified_lamp_response",
                         "Dwyer Confronted with His Inspection Lamp",
-                        "When confronted with an inspection lamp " +
-                        "recovered from Chamber L-02 and identified " +
-                        "by its inventory number, Dwyer acknowledges " +
-                        "that he may have brought the lamp to the " +
-                        "waterworks during his October 17 dispatch. " +
-                        "He claims not to remember entering the " +
-                        "chamber and denies knowing how the lamp " +
-                        "ended up there.",
+                        "Confronted with lamp GSD-2714 from Chamber L-02, Dwyer " +
+                        "concedes he may have brought it to the waterworks but denies " +
+                        "remembering the chamber.",
                         "Michael Dwyer");
                 }
             ));
@@ -2361,15 +2193,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_yard_meeting_response",
                         "Dwyer's Response to Caleb's Testimony",
-                        "Confronted with Caleb Turner's account " +
-                        "of seeing him with Frank Bell at the " +
-                        "contractor yard on October 17, 1991, " +
-                        "Dwyer acknowledges that he may have " +
-                        "spoken with Bell after the waterworks " +
-                        "dispatch but claims not to remember " +
-                        "visiting the yard. He denies that " +
-                        "such a meeting would establish " +
-                        "misconduct.",
+                        "Dwyer concedes he may have spoken with Bell after the " +
+                        "dispatch but claims not to remember visiting the yard.",
                         "Michael Dwyer");
                 }
             ));
@@ -2398,14 +2223,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_daniel_remains_response",
                         "Dwyer on the Identification of Daniel",
-                        "Michael Dwyer acknowledges that " +
-                        "Daniel Mercer's remains have been " +
-                        "identified in Chamber L-02. He " +
-                        "emphasizes that the cause and manner " +
-                        "of death remain undetermined and " +
-                        "maintains that he cannot recall " +
-                        "further details of his October 17 " +
-                        "waterworks dispatch.",
+                        "Dwyer acknowledges Daniel's remains were identified in L-02 " +
+                        "but maintains he cannot recall the October 17 dispatch " +
+                        "details.",
                         "Michael Dwyer");
                 }
             ));
@@ -2435,13 +2255,8 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_bell_help_call_response",
                         "Dwyer Responds to Bell's Admission",
-                        "Confronted with Bell's admission that " +
-                        "he called for help after Daniel's fall, " +
-                        "Dwyer refuses to confirm that Bell " +
-                        "contacted him personally. He acknowledges " +
-                        "his documented dispatch to the waterworks " +
-                        "but maintains that he cannot remember " +
-                        "the details of the call.",
+                        "Dwyer refuses to confirm Bell called him after the fall, " +
+                        "despite his documented waterworks dispatch.",
                         "Michael Dwyer");
                 }
             ));
@@ -2478,14 +2293,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_witnessed_daniel_after_fall",
                         "Dwyer Admits Finding Daniel After the Fall",
-                        "Michael Dwyer admits arriving at North " +
-                        "County Waterworks on October 17, 1991, " +
-                        "and being led by Frank Bell to Daniel " +
-                        "Mercer, who was motionless near the " +
-                        "lower inspection area. Dwyer says he " +
-                        "could not detect a pulse and acknowledges " +
-                        "that he failed to report the incident " +
-                        "through proper police channels.",
+                        "Dwyer admits Bell led him to an unresponsive Daniel at the " +
+                        "waterworks on October 17, 1991. He failed to report the " +
+                        "incident.",
                         "Michael Dwyer");
                 }
             ));
@@ -2527,16 +2337,9 @@ public class Interactable : MonoBehaviour
                     RecordClaimOnce(
                         "dwyer_concealment_confession",
                         "Dwyer Confesses to Concealing Daniel's Death",
-                        "Michael Dwyer admits helping Frank Bell " +
-                        "move Daniel Mercer's body into Chamber " +
-                        "L-02 after Daniel's fall on October 17, " +
-                        "1991. He says Bell arranged for the " +
-                        "lower passage to be sealed and the " +
-                        "closure documented as routine maintenance. " +
-                        "Dwyer also admits deliberately omitting " +
-                        "the waterworks connection from his " +
-                        "original missing-person investigation, " +
-                        "despite knowing Daniel was dead.",
+                        "Dwyer admits helping Bell move Daniel's body into Chamber " +
+                        "L-02 and omitting the waterworks lead from his " +
+                        "investigation. Bell arranged the closure.",
                         "Michael Dwyer");
                 }
             ));
