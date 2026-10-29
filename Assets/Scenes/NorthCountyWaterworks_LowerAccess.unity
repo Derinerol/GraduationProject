@@ -933,7 +933,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 7.45
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1027,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 496735964}
   serializedVersion: 2
   m_LocalRotation: {x: 0.28678817, y: -0.28678817, z: 0.09042394, w: 0.90957606}
-  m_LocalPosition: {x: 12, y: 14, z: -16}
+  m_LocalPosition: {x: 12, y: 16.3, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 613932277}
   - component: {fileID: 613932276}
   m_Layer: 0
-  m_Name: Spawn_OutsideVisitorRegister
+  m_Name: Spawn_OutsideHatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: loweraccess_hatch
-  player: {fileID: 0}
+  player: {fileID: 648217216}
 --- !u!4 &613932277
 Transform:
   m_ObjectHideFlags: 0

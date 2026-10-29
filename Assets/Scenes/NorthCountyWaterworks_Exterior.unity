@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_loweraccess
-  player: {fileID: 0}
+  player: {fileID: 1552291434}
 --- !u!4 &96784132
 Transform:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 11.26
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -723,7 +723,7 @@ Transform:
   m_GameObject: {fileID: 413461669}
   serializedVersion: 2
   m_LocalRotation: {x: 0.28678817, y: -0.28678817, z: 0.09042394, w: 0.90957606}
-  m_LocalPosition: {x: 12, y: 14, z: -16}
+  m_LocalPosition: {x: 12, y: 13.7, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2676,7 +2676,7 @@ MonoBehaviour:
   informationID: waterworks_access_notice
   informationTitle: Waterworks Access Procedures
   informationSource: North County Waterworks
-  informationDescription: A weathered notice beside the lower waterworks entrance instructs personnel and visitors to report after-hours access to the gatekeeper's office. The notice suggests that visits to the facility may have been recorded separately from contractor dispatch paperwork. Its age and current applicability are uncertain.
+  informationDescription: A weathered notice near the lower entrance directs after-hours visitors to the gatekeeper's office. Access may have been recorded separately from contractor dispatch records, though I can't tell whether this procedure was still in effect in 1991.
   informationType: 0
   isSceneExit: 0
   destinationScene: Diner_Investigation
@@ -4393,7 +4393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_visitorregister
-  player: {fileID: 0}
+  player: {fileID: 1552291434}
 --- !u!4 &1820428163
 Transform:
   m_ObjectHideFlags: 0

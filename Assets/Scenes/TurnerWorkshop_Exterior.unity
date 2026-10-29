@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_workshop
-  player: {fileID: 0}
+  player: {fileID: 463446451}
 --- !u!4 &298714019
 Transform:
   m_ObjectHideFlags: 0
@@ -4317,7 +4317,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4411,7 +4411,7 @@ Transform:
   m_GameObject: {fileID: 1863017796}
   serializedVersion: 2
   m_LocalRotation: {x: 0.28678817, y: -0.28678817, z: 0.09042394, w: 0.90957606}
-  m_LocalPosition: {x: 12, y: 14, z: -16}
+  m_LocalPosition: {x: 12, y: 15, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

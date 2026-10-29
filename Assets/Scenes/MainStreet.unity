@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_records
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &10927646
 Transform:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_gazette
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &1308013441
 Transform:
   m_ObjectHideFlags: 0
@@ -2717,7 +2717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_waterworks
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &1389657486
 Transform:
   m_ObjectHideFlags: 0
@@ -2813,7 +2813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_motel
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &1483556315
 Transform:
   m_ObjectHideFlags: 0
@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_workshop
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &1604315847
 Transform:
   m_ObjectHideFlags: 0
@@ -3939,7 +3939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: outside_diner
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &1774726862
 Transform:
   m_ObjectHideFlags: 0
@@ -3949,7 +3949,7 @@ Transform:
   m_GameObject: {fileID: 1774726860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.46308, y: 0.56, z: -0.7908702}
+  m_LocalPosition: {x: -16.001, y: 0.56, z: -0.7908702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5044,7 +5044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnPoint
   spawnID: FromBellContractorYard
-  player: {fileID: 0}
+  player: {fileID: 1757776648}
 --- !u!4 &2134157278
 Transform:
   m_ObjectHideFlags: 0
