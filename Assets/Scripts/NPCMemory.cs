@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
 /// Stores an NPC's knowledge, remembered events and asked questions.
-/// Runtime changes survive scene reloads within the current play session.
-/// </summary>
+
 public class NPCMemory : MonoBehaviour
 {
     [Header("Persistent Identity")]
@@ -32,8 +30,6 @@ public class NPCMemory : MonoBehaviour
 
     private static readonly Dictionary<string, MemoryState> savedMemories = new();
 
-    // Unity resets static fields at the beginning of a new Play session,
-    // including when Enter Play Mode Options disables domain reload.
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetRuntimeMemories()
     {

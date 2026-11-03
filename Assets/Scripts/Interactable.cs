@@ -81,7 +81,6 @@ public class Interactable : MonoBehaviour
     [SerializeField] private string destinationScene = "Diner_Investigation";
     [SerializeField] private string destinationSpawnID = "";
 
-    // Fallback memory for NPCs without an NPCMemory component.
     private readonly HashSet<string> localQuestions =
         new HashSet<string>();
 
@@ -167,9 +166,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // GENERIC NPC
-    // ---------------------------------------------------------
 
     private void InteractWithGenericNPC()
     {
@@ -196,9 +193,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // EVELYN SHAW — SHAW'S DINER
-    // ---------------------------------------------------------
 
     private void InteractWithEvelyn()
     {
@@ -298,7 +293,7 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // The player must actively disclose the package.
+        // The player must disclose the package.
         if (playerHasPackage && !knowsAboutPackage)
         {
             choices.Add(new DialogueChoice(
@@ -346,8 +341,7 @@ public class Interactable : MonoBehaviour
         choices.Add(new DialogueChoice(
             "Ask about the town",
             "Grayford doesn't change much. Same faces, same tables, " +
-            "same complaints about the weather. People remember things, " +
-            "though. Even when they'd rather not talk about them.",
+            "same complaints about the weather.",
             null
         ));
 
@@ -411,9 +405,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // ARTHUR FINCH — GRAYFORD GAZETTE
-    // ---------------------------------------------------------
 
     private void InteractWithArthur()
     {
@@ -553,9 +545,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // HELEN WARD — MUNICIPAL RECORDS OFFICE
-    // ---------------------------------------------------------
 
     private void InteractWithHelen()
     {
@@ -682,8 +672,7 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // The player can ask about the changed waterworks access only
-        // after connecting Caleb's recollection to the physical barrier.
+
         bool hasChangedServiceAccess = journal != null &&
             journal.HasHypothesis("changed_service_access");
 
@@ -819,9 +808,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // FRANK BELL — BELL MUNICIPAL SERVICES
-    // ---------------------------------------------------------
 
     private void InteractWithFrank()
     {
@@ -965,7 +952,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // The personnel register identifies the assigned workers, not attendance.
         bool hasPersonnelRegister = journal != null &&
             journal.HasInformation("bell_personnel_register");
 
@@ -989,8 +975,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Follow-up unlocked by comparing the alteration register with
-        // Caleb's recollection of the lower service gate.
         bool hasUnverifiedAccessAlteration = journal != null &&
             journal.HasHypothesis("unverified_access_alteration");
 
@@ -1017,8 +1001,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Follow-up: Frank is named in the supplementary
-        // access log on the day Daniel disappeared.
         bool hasSupplementaryAccessLog = journal != null &&
             journal.HasInformation("bell_supplementary_access_log");
 
@@ -1046,8 +1028,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Follow-up: confront Frank with the gatekeeper's
-        // October 17 visitor register.
         bool hasPossibleOct17Attendance = journal != null &&
             journal.HasHypothesis("possible_oct17_attendance");
 
@@ -1392,9 +1372,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // CALEB TURNER — TURNER'S REPAIR WORKSHOP
-    // ---------------------------------------------------------
 
     private void InteractWithCaleb()
     {
@@ -1523,7 +1501,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Follow-up: the personal equipment log does not record a pump return.
         bool hasEquipmentLog = journal != null &&
             journal.HasInformation("caleb_equipment_log");
         bool hasStoredPump = journal != null &&
@@ -1572,8 +1549,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // The journal hypothesis links an unreturned pump with Bell-marked
-        // equipment, but does not establish that they are the same unit.
         bool hasUnresolvedPumpHypothesis = journal != null &&
             journal.HasHypothesis("unresolved_pump_return");
 
@@ -1599,7 +1574,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Only available after Caleb himself brings up the lower access.
         if (HasAsked("caleb_asked_about_pump_connection") &&
             !HasAsked("caleb_asked_about_lower_access"))
         {
@@ -1623,7 +1597,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Follow-up unlocked by the waterworks barrier hypothesis.
         bool hasBarrierEvidence = journal != null &&
     journal.HasInformation("waterworks_service_barrier");
         bool hasBarrierRecollection = journal != null &&
@@ -1822,7 +1795,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-
         DialogueManager.Instance.ShowDialogue(
             interactionName,
             greeting,
@@ -1830,9 +1802,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-    // ---------------------------------------------------------
     // MICHAEL DWYER — GRAYFORD MAIN STREET
-    // ---------------------------------------------------------
 
     private void InteractWithDwyer()
     {
@@ -1867,7 +1837,6 @@ public class Interactable : MonoBehaviour
             : "Deputy Michael Dwyer. " +
               "Can I help you with something?";
 
-        // Basic introduction, available from the beginning.
         if (!HasAsked("dwyer_asked_about_case"))
         {
             choices.Add(new DialogueChoice(
@@ -1893,7 +1862,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // The archived report establishes his official role.
         if (hasPoliceReport &&
             !HasAsked("dwyer_asked_about_departure"))
         {
@@ -1922,7 +1890,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Evelyn recalls telling Dwyer about the waterworks.
         if (hasEvelynLead &&
             !HasAsked("dwyer_asked_about_evelyn_lead"))
         {
@@ -1950,7 +1917,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Bell's attendance has documentary support.
         if (hasBellAttendance &&
             !HasAsked("dwyer_asked_about_bell"))
         {
@@ -1978,7 +1944,6 @@ public class Interactable : MonoBehaviour
             ));
         }
 
-        // Major confrontation after official findings.
         if (hasInvestigationGap &&
             hasExaminationReport &&
             !HasAsked("dwyer_asked_about_remains"))
@@ -2353,10 +2318,7 @@ public class Interactable : MonoBehaviour
         );
     }
 
-
-    // ---------------------------------------------------------
     // MEMORY HELPERS
-    // ---------------------------------------------------------
 
     private NPCMemory GetMemory()
     {
@@ -2425,9 +2387,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    // ---------------------------------------------------------
     // JOURNAL HELPERS
-    // ---------------------------------------------------------
 
     private void RecordClaimOnce(
         string entryID,

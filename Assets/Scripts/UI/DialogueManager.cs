@@ -84,7 +84,6 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
     }
 
-    // Compatibility method for existing Interactable.cs calls.
     public void ShowDialogue(
         string npcName,
         string openingLine,
@@ -160,7 +159,6 @@ public class DialogueManager : MonoBehaviour
     }
 }
 
-// Represents one available question or dialogue action.
 public class DialogueChoice
 {
     public string Text { get; }

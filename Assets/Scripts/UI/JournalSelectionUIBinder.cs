@@ -3,8 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Add to the always-active JournalUIRoot prefab.
-// Keeps the existing JournalUIBinder unchanged.
 public class JournalSelectionUIBinder : MonoBehaviour
 {
     [SerializeField] private TMP_Text firstSelectionText;
@@ -13,7 +11,6 @@ public class JournalSelectionUIBinder : MonoBehaviour
 
     private IEnumerator Start()
     {
-        // Allow the existing JournalUIBinder to bind the scene UI first.
         yield return null;
         if (JournalManager.Instance != null)
             JournalManager.Instance.BindConnectionUI(

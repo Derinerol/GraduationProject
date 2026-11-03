@@ -141,7 +141,6 @@ public class JournalManager : MonoBehaviour
         connectionStatusText = newConnectionStatusText;
         noteScrollRect = newNoteScrollRect;
 
-        // Prevent duplicate listeners when reconnecting UI.
         if (closeButton != null)
         {
             closeButton.onClick.RemoveListener(CloseJournal);
@@ -338,8 +337,6 @@ public class JournalManager : MonoBehaviour
 
     private IEnumerator ResetNoteScrollNextFrame()
     {
-        // TextMeshPro and the Content Size Fitter need a layout pass
-        // before ScrollRect can calculate the correct scroll range.
         yield return null;
 
         if (noteScrollRect != null && noteScrollRect.isActiveAndEnabled)
@@ -513,7 +510,6 @@ public class JournalManager : MonoBehaviour
         return true;
     }
 
-    // Called by the optional JournalSelectionUIBinder on the always-active UI root.
     public void BindConnectionUI(TMP_Text firstSlot, TMP_Text secondSlot, Button clearButton)
     {
         if (clearSelectionButton != null)
@@ -550,9 +546,7 @@ public class JournalManager : MonoBehaviour
             if (pair.Value == null) continue;
             bool selected = selectedInformationIDs.Contains(pair.Key);
             ColorBlock colors = pair.Value.colors;
-            // Use a normal-state tint to make selection visible without
-            // relying on Unity's transient UI Selected navigation state.
-            colors.normalColor = selected ? selectedEntryColor : Color.white;
+             colors.normalColor = selected ? selectedEntryColor : Color.white;
             colors.selectedColor = colors.normalColor;
             pair.Value.colors = colors;
         }

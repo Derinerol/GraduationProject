@@ -14,8 +14,6 @@ public class WaterworksAuxiliaryPumpAccess : Interactable
     [SerializeField] private string chamberSceneName = "WaterworksLowerChamber_Interior";
     [SerializeField] private string chamberSpawnID = "";
 
-    // Shared across instances and scene re-entries during this play session.
-    // The final completion state is stored in the journal itself.
     private static bool rackInspected;
     private static bool latchReleased;
 

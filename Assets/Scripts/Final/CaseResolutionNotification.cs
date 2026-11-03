@@ -24,7 +24,6 @@ public class CaseResolutionNotification : MonoBehaviour
 
         subscribedManager.OnCaseResolved += ShowResolutionNotification;
 
-        // The resolution may have happened in a different scene.
         if (subscribedManager.IsCaseResolved)
             ShowResolutionNotification();
     }
