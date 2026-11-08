@@ -35,7 +35,6 @@ public class WaterworksAuxiliaryPumpAccess : Interactable
 
         var choices = new List<DialogueChoice>();
 
-        // Preserve the original detailed inspection.
         if (hasChamberHypothesis && !hasConnection)
         {
             choices.Add(new DialogueChoice(

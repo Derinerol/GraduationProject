@@ -1706,6 +1706,10 @@ MonoBehaviour:
   agent: {fileID: 1118736677}
   smoothTime: 0.12
   movementThreshold: 0.05
+  walkingTurnSpeed: 240
+  turnThreshold: 60
+  turnDuration: 0.4
+  maxSpeedForTurn: 0.4
 --- !u!1 &377115958
 GameObject:
   m_ObjectHideFlags: 0

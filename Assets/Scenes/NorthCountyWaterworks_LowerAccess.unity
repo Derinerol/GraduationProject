@@ -4195,6 +4195,10 @@ MonoBehaviour:
   agent: {fileID: 648217218}
   smoothTime: 0.12
   movementThreshold: 0.05
+  walkingTurnSpeed: 240
+  turnThreshold: 60
+  turnDuration: 0.4
+  maxSpeedForTurn: 0.4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

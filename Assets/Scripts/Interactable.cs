@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     private NPCProfile npcProfile =
         NPCProfile.GenericResident;
+
+    [Header("Information Discovery Event")]
+    [SerializeField]
+    private UnityEvent onInformationCollected;
 
     [Header("Generic NPC Dialogue")]
     [TextArea(2, 5)]
@@ -147,6 +152,7 @@ public class Interactable : MonoBehaviour
         InteractWithGenericNPC();
     }
 
+
     private void InteractWithInformationSource()
     {
         if (JournalManager.Instance == null)
@@ -164,6 +170,11 @@ public class Interactable : MonoBehaviour
             informationType.ToString(),
             informationSource
         );
+
+        if (JournalManager.Instance.HasInformation(informationID))
+        {
+            onInformationCollected?.Invoke();
+        }
     }
 
     // GENERIC NPC
