@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -575,32 +574,48 @@ public class Interactable : MonoBehaviour
         bool hasHypothesis = journal != null &&
             journal.HasHypothesis("unresolved_waterworks_work");
 
-        string greeting = HasAsked("helen_asked_about_procedure") ||
-            HasAsked("helen_asked_about_work_order")
-            ? "Back again? If you have a reference number, I can explain " +
-              "what the records say."
-            : "Good afternoon. I'm Helen Ward. The public registers are " +
-              "available for inspection. Is there something specific you need?";
+        string greeting =
+            HasAsked("helen_asked_about_procedure")
+            ? "Need help finding something? The archives " +
+              "are available if you have a reference " +
+              "number or a specific lead."
+            : "Good afternoon. I'm Helen Ward. " +
+              "I handle the municipal records here. " +
+              "Is there something I can help you find?";
+
 
         if (!HasAsked("helen_asked_about_procedure"))
         {
             choices.Add(new DialogueChoice(
                 "Ask how the records office organizes its files",
-                "Public Works keeps the original registers and status ledgers. " +
-                "Contractor paperwork is indexed separately. A reference " +
-                "number is the best way to find the right file.",
+                "We keep the records in separate collections. " +
+                "Public Works has the maintenance registers, " +
+                "status ledgers, and facilities records. " +
+                "We also hold archived copies of certain police " +
+                "reports, while supplemental findings are filed " +
+                "separately as they become available.\n\n" +
+                "You can consult the cabinets here. Just remember " +
+                "that a reference number or a specific lead is " +
+                "usually needed to find an older record. " +
+                "Contractor paperwork is maintained separately.",
                 () =>
                 {
-                    RecordQuestionOnce("helen_asked_about_procedure");
+                    RecordQuestionOnce(
+                        "helen_asked_about_procedure"
+                    );
+
                     RecordClaimOnce(
                         "helen_records_procedure",
                         "Municipal Filing Procedure",
-                        "Public Works keeps registers and status ledgers; contractor " +
-                        "paperwork is indexed separately.",
-                        "Helen Ward");
+                        "Helen explained the Public Works, police " +
+                        "records, and supplemental reports collections. " +
+                        "She permitted me to search the archives.",
+                        "Helen Ward"
+                    );
                 }
             ));
         }
+
 
         if (hasRegister && !HasAsked("helen_asked_about_work_order"))
         {

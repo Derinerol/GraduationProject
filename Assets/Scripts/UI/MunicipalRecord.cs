@@ -22,6 +22,26 @@ public class MunicipalRecord : Interactable
     [TextArea(2, 6)][SerializeField] private string journalNote;
     [SerializeField] private string evidenceSource = "Grayford Municipal Records Office";
 
+
+    public string DisplayTitle =>
+        string.IsNullOrWhiteSpace(documentTitle)
+            ? evidenceTitle
+            : documentTitle;
+
+    public bool IsAvailable
+    {
+        get
+        {
+            JournalManager journal = JournalManager.Instance;
+
+            if (journal == null)
+                return false;
+
+            return string.IsNullOrWhiteSpace(requiredInformationID) ||
+                   journal.HasInformation(requiredInformationID);
+        }
+    }
+
     public override void Interact()
     {
         var reader = MunicipalDocumentReaderUI.Instance;

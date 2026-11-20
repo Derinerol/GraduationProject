@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -21,30 +22,60 @@ public class ClickToMove : MonoBehaviour
 
     private void Update()
     {
-
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // Block movement and pending interactions
+        // whenever a gameplay UI is open.
+        if (IsAnyUIOpen())
         {
-            bool dialogueOpen =
-                DialogueManager.Instance != null &&
-                DialogueManager.Instance.IsDialogueOpen();
+            StopMovement();
+            return;
+        }
 
-            bool journalOpen =
-                JournalManager.Instance != null &&
-                JournalManager.Instance.IsJournalOpen();
-
-            if (dialogueOpen || journalOpen)
-                return;
-
-            if (NewspaperReaderUI.Instance != null &&
-    NewspaperReaderUI.Instance.IsOpen)
-
-            {
-                return;
-            }
+        if (Mouse.current != null &&
+            Mouse.current.leftButton.wasPressedThisFrame)
+        {
             HandleClick();
         }
 
         CheckInteractionDistance();
+    }
+
+    private bool IsAnyUIOpen()
+    {
+        bool dialogueOpen =
+            DialogueManager.Instance != null &&
+            DialogueManager.Instance.IsDialogueOpen();
+
+        bool journalOpen =
+            JournalManager.Instance != null &&
+            JournalManager.Instance.IsJournalOpen();
+
+        bool newspaperOpen =
+            NewspaperReaderUI.Instance != null &&
+            NewspaperReaderUI.Instance.IsOpen;
+
+        bool municipalReaderOpen =
+            MunicipalDocumentReaderUI.Instance != null &&
+            MunicipalDocumentReaderUI.Instance.IsOpen;
+
+        bool municipalArchiveOpen =
+            MunicipalArchiveUI.Instance != null &&
+            MunicipalArchiveUI.Instance.IsOpen;
+
+        return dialogueOpen ||
+               journalOpen ||
+               newspaperOpen ||
+               municipalReaderOpen ||
+               municipalArchiveOpen;
+    }
+
+    private void StopMovement()
+    {
+        targetInteractable = null;
+
+        if (agent != null && agent.isOnNavMesh)
+        {
+            agent.ResetPath();
+        }
     }
 
     private void HandleClick()
@@ -76,8 +107,10 @@ public class ClickToMove : MonoBehaviour
                 direction.normalized * interactionDistance;
 
             if (NavMesh.SamplePosition(
-                destination, out NavMeshHit navHit,
-                2f, agent.areaMask))
+                destination,
+                out NavMeshHit navHit,
+                2f,
+                agent.areaMask))
             {
                 if (agent.isOnNavMesh)
                     agent.SetDestination(navHit.position);
@@ -86,12 +119,15 @@ public class ClickToMove : MonoBehaviour
             return;
         }
 
-        // Clicking ordinary scenery or ground cancels the NPC target
+        // Clicking ordinary scenery or ground
+        // cancels the previous interaction target.
         targetInteractable = null;
 
         if (NavMesh.SamplePosition(
-            hit.point, out NavMeshHit groundHit,
-            1f, agent.areaMask))
+            hit.point,
+            out NavMeshHit groundHit,
+            1f,
+            agent.areaMask))
         {
             if (agent.isOnNavMesh)
                 agent.SetDestination(groundHit.position);
@@ -101,23 +137,22 @@ public class ClickToMove : MonoBehaviour
     private void CheckInteractionDistance()
     {
         if (targetInteractable == null)
-        {
             return;
-        }
 
         if (!agent.isOnNavMesh)
-        {
             return;
-        }
 
         Vector3 playerPosition = transform.position;
-        Vector3 targetPosition = targetInteractable.transform.position;
+        Vector3 targetPosition =
+            targetInteractable.transform.position;
 
         playerPosition.y = 0f;
         targetPosition.y = 0f;
 
-        float distance =
-            Vector3.Distance(playerPosition, targetPosition);
+        float distance = Vector3.Distance(
+            playerPosition,
+            targetPosition
+        );
 
         if (distance <= interactionDistance + 0.2f &&
             !agent.pathPending)

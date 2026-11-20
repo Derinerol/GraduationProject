@@ -14,7 +14,34 @@ public class WaterworksChamberEvidence : Interactable
     [Header("Chamber Evidence")]
     [SerializeField] private EvidenceType evidenceType;
 
-    private const string Source = "Waterworks Lower Chamber L-02";
+    [Header("Cabinet Visuals")]
+    [SerializeField] private GameObject cabinetDoor;
+
+    private const string Source =
+        "Waterworks Lower Chamber L-02";
+
+    private const string CabinetEvidenceID =
+        "chamber_maintenance_cabinet";
+
+    private void Start()
+    {
+        RefreshVisuals();
+    }
+
+    private void RefreshVisuals()
+    {
+        // Only the maintenance cabinet uses this visual change.
+        if (evidenceType != EvidenceType.MaintenanceCabinet)
+            return;
+
+        JournalManager journal = JournalManager.Instance;
+
+        bool cabinetExamined = journal != null &&
+            journal.HasInformation(CabinetEvidenceID);
+
+        if (cabinetDoor != null)
+            cabinetDoor.SetActive(!cabinetExamined);
+    }
 
     public override void Interact()
     {
@@ -40,13 +67,12 @@ public class WaterworksChamberEvidence : Interactable
                 "collected unevenly around its edges.";
 
             description =
-    "Dust and sediment are unevenly distributed " +
-    "around part of Chamber L-02's floor.";
+                "Dust and sediment are unevenly distributed " +
+                "around part of Chamber L-02's floor.";
         }
-
         else if (evidenceType == EvidenceType.MaintenanceCabinet)
         {
-            evidenceID = "chamber_maintenance_cabinet";
+            evidenceID = CabinetEvidenceID;
             title = "Chamber Maintenance Cabinet";
 
             inspectionText =
@@ -55,9 +81,9 @@ public class WaterworksChamberEvidence : Interactable
                 "unevenly across the shelves.";
 
             description =
-    "Several compartments in the chamber's maintenance " +
-    "cabinet are empty. Dust has accumulated unevenly " +
-    "on the shelves.";
+                "Several compartments in the chamber's maintenance " +
+                "cabinet are empty. Dust has accumulated unevenly " +
+                "on the shelves.";
         }
         else
         {
@@ -71,12 +97,12 @@ public class WaterworksChamberEvidence : Interactable
                 "against its housing.";
 
             description =
-    "The pump's maintenance cover has scratched " +
-    "fasteners and sits unevenly against its housing.";
+                "The pump's maintenance cover has scratched " +
+                "fasteners and sits unevenly against its housing.";
         }
 
-
-        bool alreadyRecorded = journal.HasInformation(evidenceID);
+        bool alreadyRecorded =
+            journal.HasInformation(evidenceID);
 
         var choices = new List<DialogueChoice>();
 
@@ -85,13 +111,19 @@ public class WaterworksChamberEvidence : Interactable
             choices.Add(new DialogueChoice(
                 "Examine carefully",
                 inspectionText,
-                () => journal.AddEntry(
-                    evidenceID,
-                    title,
-                    description,
-                    "Observation",
-                    Source
-                )
+                () =>
+                {
+                    journal.AddEntry(
+                        evidenceID,
+                        title,
+                        description,
+                        "Observation",
+                        Source
+                    );
+
+                    if (evidenceType == EvidenceType.MaintenanceCabinet)
+                        RefreshVisuals();
+                }
             ));
         }
         else
@@ -104,10 +136,10 @@ public class WaterworksChamberEvidence : Interactable
 
         dialogue.ShowDialogue(
             evidenceType == EvidenceType.DisturbedFloor
-    ? "Chamber Floor"
-    : evidenceType == EvidenceType.MaintenanceCabinet
-        ? "Maintenance Cabinet"
-        : "Pump Equipment",
+                ? "Chamber Floor"
+                : evidenceType == EvidenceType.MaintenanceCabinet
+                    ? "Maintenance Cabinet"
+                    : "Pump Equipment",
             alreadyRecorded
                 ? "You've already recorded your observations here."
                 : "Something about this area warrants closer inspection.",

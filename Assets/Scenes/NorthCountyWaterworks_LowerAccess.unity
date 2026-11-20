@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.5686275, g: 0.6156863, b: 0.6392157, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -119,6 +119,194 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &49387869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+  m_PrefabInstance: {fileID: 355304136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &67875378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67875379}
+  m_Layer: 0
+  m_Name: UpdatedEnvironment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &67875379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67875378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.63331, y: 0.0165, z: -0.02067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 218781071}
+  - {fileID: 989717405}
+  - {fileID: 825691684}
+  - {fileID: 49387869}
+  - {fileID: 1523429805}
+  - {fileID: 735314602}
+  - {fileID: 1292178478}
+  - {fileID: 320738647}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &96767332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96767333}
+  - component: {fileID: 96767335}
+  - component: {fileID: 96767334}
+  - component: {fileID: 96767337}
+  - component: {fileID: 96767336}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96767333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96767332}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.49699998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &96767334
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96767332}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &96767335
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96767332}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &96767336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96767332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &96767337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96767332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7149999, z: -0.010999999}
 --- !u!1 &101359022
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +749,37 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!4 &218781071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &295222639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1242835635487869209, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &295222643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295222639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.88, y: 6.6799994, z: 0.35999998}
+  m_Center: {x: 0.09000015, y: 0.090000026, z: -0.17999999}
 --- !u!1 &320738643
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +828,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320738643}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -667,13 +886,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320738643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: -5.87}
-  m_LocalScale: {x: 2, y: 2.2, z: 0.3}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -5.07931, y: 1.0485001, z: -2.07633}
+  m_LocalScale: {x: 0.9841842, y: 2.1796203, z: 0.17959727}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 67875379}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &320738648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +908,9 @@ MonoBehaviour:
   interactionName: Resident
   isInformationSource: 0
   npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
   openingLine: It's been a quiet day around here.
   choice1: Ask about Daniel
   response1: Daniel Mercer disappeared seven years ago.
@@ -830,6 +1052,9 @@ MonoBehaviour:
   interactionName: Resident
   isInformationSource: 0
   npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
   openingLine: It's been a quiet day around here.
   choice1: Ask about Daniel
   response1: Daniel Mercer disappeared seven years ago.
@@ -843,6 +1068,63 @@ MonoBehaviour:
   isSceneExit: 0
   destinationScene: WaterworksLowerChamber_Interior
   destinationSpawnID: 
+--- !u!1001 &355304136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63331
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3225
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1106699
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLower_ReturnPipe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d556123ebdd5fb1448410d639836fe70, type: 3}
 --- !u!1 &355756054
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &355756055
 Transform:
   m_ObjectHideFlags: 0
@@ -878,6 +1160,63 @@ Transform:
   - {fileID: 1369976805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &403865840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63331
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4865
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1106699
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLower_MidPipe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
 --- !u!1 &496735964
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,8 +1246,8 @@ Camera:
   m_GameObject: {fileID: 496735964}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.38431373, g: 0.41568628, b: 0.42745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -933,7 +1272,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 7.45
+  orthographic size: 4.99
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -989,7 +1328,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1027,7 +1366,7 @@ Transform:
   m_GameObject: {fileID: 496735964}
   serializedVersion: 2
   m_LocalRotation: {x: 0.28678817, y: -0.28678817, z: 0.09042394, w: 0.90957606}
-  m_LocalPosition: {x: 12, y: 16.3, z: -16}
+  m_LocalPosition: {x: 12.4, y: 16.3, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1256,12 +1595,69 @@ Transform:
   m_GameObject: {fileID: 613932275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.76, y: 0.8, z: 3.8}
+  m_LocalPosition: {x: 3.02, y: 0.8, z: 2.379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &622706720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4258235569952898320, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &622706724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622706720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd51e33e6bfb4245840b40f7ca6fbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterworksServiceBarrier
+  interactionName: Resident
+  isInformationSource: 0
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: anonymous_package
+  informationTitle: Anonymous package
+  informationSource: Anonymous package
+  informationDescription: An anonymous sender sent me two waterworks records and a note claiming the original search missed something.
+  informationType: 2
+  isSceneExit: 0
+  destinationScene: WaterworksLowerChamber_Interior
+  destinationSpawnID: 
+--- !u!65 &622706725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622706720}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.49, y: 0.173, z: 2.156}
+  m_Center: {x: 0, y: -0.16549999, z: 1.1049999}
 --- !u!1 &622922332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,13 +1916,39 @@ Transform:
   m_GameObject: {fileID: 648217216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.179, y: 0.79999995, z: -4.79}
+  m_LocalPosition: {x: -3.638, y: 0.79999995, z: -2.102}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2131568080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &683964765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9005528558471014031, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &683964767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683964765}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.90250003, y: 3.7799995, z: 0.05549998}
+  m_Center: {x: 0.0037500113, y: 0, z: -0.23674998}
 --- !u!1 &700176109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &714428245
 Transform:
   m_ObjectHideFlags: 0
@@ -1707,6 +2129,135 @@ Transform:
   - {fileID: 1048294876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &717448349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63331
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8591935883279547825, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.172
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLowerAccess_Architecture
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188345664104448326, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.252
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1649649932}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1097169929}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1524415204}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 96767333}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 882045160}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1595443024}
+    - targetCorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400998096}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9005528558471014031, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683964767}
+    - targetCorrespondingSourceObject: {fileID: -8288202520133452548, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1036621318}
+    - targetCorrespondingSourceObject: {fileID: -8288202520133452548, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1036621317}
+    - targetCorrespondingSourceObject: {fileID: 3653605361391551988, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 752512439}
+    - targetCorrespondingSourceObject: {fileID: 3653605361391551988, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 752512438}
+    - targetCorrespondingSourceObject: {fileID: 4640277420725168336, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870603992}
+    - targetCorrespondingSourceObject: {fileID: 4640277420725168336, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870603991}
+    - targetCorrespondingSourceObject: {fileID: 1242835635487869209, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 295222643}
+    - targetCorrespondingSourceObject: {fileID: 4258235569952898320, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622706725}
+    - targetCorrespondingSourceObject: {fileID: 4258235569952898320, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622706724}
+  m_SourcePrefab: {fileID: 100100000, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!4 &717448350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4864881449997624085, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &731912581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +2370,388 @@ Transform:
   m_Children: []
   m_Father: {fileID: 714428245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &735314602 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+  m_PrefabInstance: {fileID: 1564373309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &752512434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3653605361391551988, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &752512438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752512434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Inspection Marks
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_inspection_marks
+  informationTitle: Lower Access Inspection Marks
+  informationSource: North County Waterworks
+  informationDescription: Faded maintenance markings remain on the wall beside the drainage channel. One includes the reference WW-91-184, matching the work order found in the municipal and contractor records. The marking establishes a connection to the assignment.
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &752512439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752512434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.95698404, y: 0.0013000055, z: 0.21214393}
+  m_Center: {x: 0.0026680082, y: -0.0000000027357598, z: 0.0150719825}
+--- !u!4 &825691684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7bc0e4515525fdc48a3004e62aff1736, type: 3}
+  m_PrefabInstance: {fileID: 403865840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &870603988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4640277420725168336, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &870603991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870603988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &870603992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870603988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7149998, z: -0.010999999}
+--- !u!1 &882045159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882045160}
+  - component: {fileID: 882045162}
+  - component: {fileID: 882045161}
+  - component: {fileID: 882045164}
+  - component: {fileID: 882045163}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882045160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882045159}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.5179996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &882045161
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882045159}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &882045162
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882045159}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &882045163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882045159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &882045164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882045159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7150003, z: -0.010999999}
+--- !u!1001 &906734934
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63331
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1106699
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLower_HighPipe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+--- !u!1001 &929516207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.20169
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0055
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.58967
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLowerAccess_MovableRack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
 --- !u!1 &987483555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,8 +2780,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8980392, g: 0.92156863, b: 0.9411765, a: 1}
+  m_Intensity: 0.65
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1857,7 +2790,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.6
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -1910,13 +2843,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987483555}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.4030582, y: -0.272532, z: 0.12708373, w: 0.86436117}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -35, z: 0}
 --- !u!114 &987483558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,6 +2879,74 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!4 &989717405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50fe893e61b28c84290fd2a0facff7c2, type: 3}
+  m_PrefabInstance: {fileID: 906734934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1036621313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8288202520133452548, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_PrefabInstance: {fileID: 717448349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1036621317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036621313}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.22, y: 0.9654999, z: 1.9884998}
+  m_Center: {x: 0, y: 0.29224995, z: 0.89624983}
+--- !u!114 &1036621318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036621313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152d0de3b871633499c6ac2e486827bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterworksAuxiliaryPumpAccess
+  interactionName: Resident
+  isInformationSource: 0
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_auxiliary_pump_connection
+  informationTitle: Auxiliary Pump Maintenance Connection
+  informationSource: North County Waterworks
+  informationDescription: 'The auxiliary pump access contains a narrow maintenance opening leading toward the older lower-service infrastructure. Its position appears consistent with the area surrounding Chamber L-02 on the archived waterworks floor plan. The opening is partially obstructed by disused equipment, and its destination cannot be confirmed from the accessible side.
+
+'
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: WaterworksLowerChamber_Interior
+  destinationSpawnID: 
+  chamberSceneName: WaterworksLowerChamber_Interior
+  chamberSpawnID: 
+  equipmentRack: {fileID: 1292178478}
+  clearedLocalOffset: {x: -1.5, y: 0, z: 0}
 --- !u!1 &1047498552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +3283,150 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062445176}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1097169928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097169929}
+  - component: {fileID: 1097169931}
+  - component: {fileID: 1097169930}
+  - component: {fileID: 1097169933}
+  - component: {fileID: 1097169932}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1097169929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097169928}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.99899995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1097169930
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097169928}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1097169931
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097169928}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &1097169932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097169928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1097169933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097169928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7149999, z: -0.010999999}
 --- !u!1 &1226230348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +3555,9 @@ MonoBehaviour:
   interactionName: Drainage Channel
   isInformationSource: 1
   npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
   openingLine: It's been a quiet day around here.
   choice1: Ask about Daniel
   response1: Daniel Mercer disappeared seven years ago.
@@ -2535,6 +3683,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250746167}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1292178478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5294a94a9e04114c863844d8822d44a, type: 3}
+  m_PrefabInstance: {fileID: 929516207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1303158148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,6 +3931,9 @@ MonoBehaviour:
   interactionName: Resident
   isInformationSource: 0
   npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
   openingLine: It's been a quiet day around here.
   choice1: Ask about Daniel
   response1: Daniel Mercer disappeared seven years ago.
@@ -2795,6 +3951,8 @@ MonoBehaviour:
   destinationSpawnID: 
   chamberSceneName: WaterworksLowerChamber_Interior
   chamberSpawnID: 
+  equipmentRack: {fileID: 0}
+  clearedLocalOffset: {x: 1.5, y: 0, z: 0}
 --- !u!1 &1373556614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +4204,150 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388768947}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1400998095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400998096}
+  - component: {fileID: 1400998098}
+  - component: {fileID: 1400998097}
+  - component: {fileID: 1400998100}
+  - component: {fileID: 1400998099}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1400998096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.5169997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1400998097
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998095}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1400998098
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998095}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &1400998099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1400998100
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7150003, z: -0.010999999}
 --- !u!1 &1469433850
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +4460,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469433850}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1491846406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491846408}
+  - component: {fileID: 1491846407}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1491846407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491846406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 651fd2856baa2374fae90230ef8e1649, type: 2}
+--- !u!4 &1491846408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491846406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.883, y: 2.515, z: 2.573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492514276
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,6 +4613,212 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &1523429805 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+  m_PrefabInstance: {fileID: 2093744897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1524415203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524415204}
+  - component: {fileID: 1524415206}
+  - component: {fileID: 1524415205}
+  - component: {fileID: 1524415208}
+  - component: {fileID: 1524415207}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524415204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524415203}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.0199997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1524415205
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524415203}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1524415206
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524415203}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &1524415207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524415203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1524415208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524415203}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7150003, z: -0.010999999}
+--- !u!1001 &1564373309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.95568997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3295
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1106699
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLower_Valve
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1bb9db9ede953974eb84364f983984b1, type: 3}
 --- !u!1 &1578517022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +5052,421 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580467158}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1595443023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595443024}
+  - component: {fileID: 1595443026}
+  - component: {fileID: 1595443025}
+  - component: {fileID: 1595443028}
+  - component: {fileID: 1595443027}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595443024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595443023}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.4959999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1595443025
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595443023}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1595443026
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595443023}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &1595443027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595443023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1595443028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595443023}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.715, z: -0.010999999}
+--- !u!1 &1643875831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643875834}
+  - component: {fileID: 1643875833}
+  - component: {fileID: 1643875832}
+  m_Layer: 0
+  m_Name: Work_Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1643875832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643875831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &1643875833
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643875831}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 0
+  m_Color: {r: 1, g: 0.9411765, b: 0.84705883, a: 1}
+  m_Intensity: 1
+  m_Range: 5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1643875834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643875831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
+  m_LocalPosition: {x: 2.883, y: 2.748, z: 2.372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
+--- !u!1 &1649649931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649649932}
+  - component: {fileID: 1649649934}
+  - component: {fileID: 1649649933}
+  - component: {fileID: 1649649936}
+  - component: {fileID: 1649649935}
+  m_Layer: 0
+  m_Name: WaterworksLower_ChannelGrating (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649649932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649649931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.0209997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717448350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1649649933
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649649931}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7108631595466352291, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1649649934
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649649931}
+  m_Mesh: {fileID: -5392053386929821578, guid: db75b66ef00bf324782e2b07addde80b, type: 3}
+--- !u!114 &1649649935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649649931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e5b7c09ad7ea74cbc560009ea1fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  interactionName: Drainage Channel
+  isInformationSource: 1
+  npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  openingLine: It's been a quiet day around here.
+  choice1: Ask about Daniel
+  response1: Daniel Mercer disappeared seven years ago.
+  choice2: Ask about the town
+  response2: Nothing much changes around here.
+  informationID: waterworks_drainage_condition
+  informationTitle: Condition of the Drainage Channel
+  informationSource: North County Waterworks
+  informationDescription: 'The lower drainage channel contains mineral staining, worn concrete, and sections that appear to have been patched at different times. '
+  informationType: 0
+  isSceneExit: 0
+  destinationScene: Diner_Investigation
+  destinationSpawnID: 
+--- !u!65 &1649649936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649649931}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0350001, y: 0.49299997, z: 0.054999992}
+  m_Center: {x: -0.635, y: 1.7150002, z: -0.010999999}
 --- !u!1 &1697770470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,6 +5517,9 @@ MonoBehaviour:
   interactionName: Inspection Marks
   isInformationSource: 1
   npcProfile: 0
+  onInformationCollected:
+    m_PersistentCalls:
+      m_Calls: []
   openingLine: It's been a quiet day around here.
   choice1: Ask about Daniel
   response1: Daniel Mercer disappeared seven years ago.
@@ -4018,6 +5993,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+--- !u!1001 &2093744897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 67875379}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.2066898
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.92867
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
+      propertyPath: m_Name
+      value: WaterworksLower_Pump
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90a2ee6df1a7bf64e9a719882d265c02, type: 3}
 --- !u!1 &2116411455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +6095,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 82851a329b8952f44a3c148d67b4f58c, type: 2}
   m_BuildHeightMesh: 0
@@ -4210,9 +6242,11 @@ SceneRoots:
   - {fileID: 159434997}
   - {fileID: 2066084996}
   - {fileID: 2116411457}
-  - {fileID: 320738647}
   - {fileID: 714428245}
   - {fileID: 355756055}
   - {fileID: 544240509}
   - {fileID: 613932277}
   - {fileID: 648217222}
+  - {fileID: 67875379}
+  - {fileID: 1643875834}
+  - {fileID: 1491846408}

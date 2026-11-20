@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterworksPumpCompartment : Interactable
 {
     private const string RequiredInformation =
-    "chamber_pump_cover_marks";
+        "chamber_pump_cover_marks";
 
     private const string CoverEvidenceID =
         "chamber_pump_cover_marks";
@@ -16,8 +16,31 @@ public class WaterworksPumpCompartment : Interactable
     private const string Source =
         "Waterworks Lower Chamber L-02";
 
+    [Header("Maintenance Cover Visuals")]
+    [SerializeField] private GameObject attachedCover;
+    [SerializeField] private GameObject removedCover;
+
     private static bool coverInspected;
     private static bool fastenerReleased;
+
+    private void Start()
+    {
+        RefreshVisuals();
+    }
+
+    private void RefreshVisuals()
+    {
+        JournalManager journal = JournalManager.Instance;
+
+        bool coverRemoved = journal != null &&
+            journal.HasInformation(EnvelopeEvidenceID);
+
+        if (attachedCover != null)
+            attachedCover.SetActive(!coverRemoved);
+
+        if (removedCover != null)
+            removedCover.SetActive(coverRemoved);
+    }
 
     public override void Interact()
     {
@@ -31,14 +54,13 @@ public class WaterworksPumpCompartment : Interactable
             journal.HasInformation(CoverEvidenceID);
 
         bool canOpen =
-    journal.HasInformation(RequiredInformation);
+            journal.HasInformation(RequiredInformation);
 
         bool hasEnvelope =
             journal.HasInformation(EnvelopeEvidenceID);
 
         var choices = new List<DialogueChoice>();
 
-        // Preserve the existing pump observation.
         if (!hasCoverObservation)
         {
             choices.Add(new DialogueChoice(
@@ -50,7 +72,7 @@ public class WaterworksPumpCompartment : Interactable
                     CoverEvidenceID,
                     "Marks on Pump Maintenance Cover",
                     "The pump's maintenance cover has scratched " +
-"fasteners and sits unevenly against its housing.",
+                    "fasteners and sits unevenly against its housing.",
                     "Observation",
                     Source
                 )
@@ -83,19 +105,23 @@ public class WaterworksPumpCompartment : Interactable
                 choices.Add(new DialogueChoice(
                     "Remove the cover and inspect inside",
                     "Behind the cover is a shallow service " +
-                    "compartment. A deteriorated paper envelope " +
-                    "has been pushed behind a section of piping. " +
+                    "compartment. There is a paper envelope. " +
                     "Inside is a folded maintenance note dated " +
                     "October 17, 1991.",
-                    () => journal.AddEntry(
-                        EnvelopeEvidenceID,
-                        "Concealed October 1991 Access Note",
-                        "A note hidden behind the pump cover refers to " +
-"an evening access request for the lower service " +
-"area on October 17, 1991. The requester is unnamed.",
-                        "Evidence",
-                        Source
-                    )
+                    () =>
+                    {
+                        journal.AddEntry(
+                            EnvelopeEvidenceID,
+                            "Concealed October 1991 Access Note",
+                            "A note hidden behind the pump cover refers to " +
+                            "an evening access request for the lower service " +
+                            "area on October 17, 1991. The requester is unnamed.",
+                            "Evidence",
+                            Source
+                        );
+
+                        RefreshVisuals();
+                    }
                 ));
             }
         }
